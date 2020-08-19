@@ -1,0 +1,891 @@
+{
+  "contractName": "PriceOracle",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "isPriceOracle",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract PToken",
+          "name": "pToken",
+          "type": "address"
+        }
+      ],
+      "name": "getUnderlyingPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract PToken",
+          "name": "pToken",
+          "type": "address"
+        }
+      ],
+      "name": "UpdateAndGetUnderlyingPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract PToken",
+          "name": "pToken",
+          "type": "address"
+        }
+      ],
+      "name": "getPriceCost",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract PToken\",\"name\":\"pToken\",\"type\":\"address\"}],\"name\":\"UpdateAndGetUnderlyingPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract PToken\",\"name\":\"pToken\",\"type\":\"address\"}],\"name\":\"getPriceCost\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract PToken\",\"name\":\"pToken\",\"type\":\"address\"}],\"name\":\"getUnderlyingPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isPriceOracle\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol\":\"PriceOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/IRiskManager.sol\":{\"keccak256\":\"0xeef6e8a349d6c0e9aa3b078e691be8b67dd67966d7bae59749e81cf825c3587e\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://c8035f04588c85fdeb7f7ce8903cbe9e60ff24b073d38f3bd2dd6b3668674779\",\"dweb:/ipfs/QmZvwPL7UUGcmhqstkkJCrj2c8z1D9RAmC9h9ZQ5E6t81o\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0xebc8b04724ce437fcb5fad6917781a10809c7eeddccea54781622f5bf91a1b9d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://516e5400372defd61f456b2f7d1e1da36b3cdf52a85e6a107871e09b92ad11e8\",\"dweb:/ipfs/QmQHQt6KAsvp1L7uPQKh52Z9UPtgEpaKeYJ5bVvDFj5aX4\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol\":{\"keccak256\":\"0xb6aa83dbb94d53aab92265a3ed737373e8c2c07d24e6f39078a66aafb213b580\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8c61ec0953b3231ec3318e28d0bfe35323996d1588207b1759972b17a76040b6\",\"dweb:/ipfs/QmRfw2FWegbAR2C3Y28kvTad23x4uNuq6urWuPR1iovybx\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/IPToken.sol\":{\"keccak256\":\"0x04af6f903236d8f7f3363897e2b971fc7dff339855b9ff511b153e94cc47b138\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://d2fdc53242f4accb2e60b8ba005b71e8ddc71ba13f0d7d9d359831be14f0bd22\",\"dweb:/ipfs/QmdCXRC7x7xwSXWbPCBtvA5eePidgNEksok2DkDeAWq2kU\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol\":{\"keccak256\":\"0xe459f8914e2f15544e156ce41ba757235f1e12027ca1512ab711c78c9d9b6549\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://e92a745447067e06a630f79f39d4313cb0605e9016030512650e553e94fb0d54\",\"dweb:/ipfs/QmYEsJ8LvPBtkxxf5jixSpLEDN6VRVZL8Gkn1DroqkCtCD\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/CarefulMath.sol\":{\"keccak256\":\"0xd6059e7c284e10c49391ebbe7cc3bf7cae051ba61d3133707939f3f6a7bf6228\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8252ab2c06a25f9021b10326d8849e4089059af5c4f1c3c1917328cb7f59d453\",\"dweb:/ipfs/QmdSUk2pPXhW9VXG51pdA8XUrKm9P6WB2LPxwh1Pfj9emo\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/ErrorReporter.sol\":{\"keccak256\":\"0xa6901777b13ed4079596ba35ed9341ba24f4e183a05660c084fa2c49e171f262\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://c895deda982c68b181b9d3100c9e9566d87b005bc89753fde9bf85a89b305f57\",\"dweb:/ipfs/QmWsNzvFGVo7aEkRpdgphBf7w5XHo4RXfHMQ3F1z5zW6EW\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/Exponential.sol\":{\"keccak256\":\"0x1264cbbdcec3f64b790c9145f6911a962e6681f42e5ce16c5b1211584cf6e1d4\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2fa666faf022d092e67a9ea98173224d92e1f50149e72c7fb3bed7ac039bc4ac\",\"dweb:/ipfs/QmXfHb2detnH1q8C9qSoiWgRPq8e35EdipeNJxuCjCKkpe\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.6.9;\n\nimport \"../tokenization/PToken.sol\";\n\nabstract contract PriceOracle {\n    bool public constant isPriceOracle = true;\n\n    function getUnderlyingPrice(PToken pToken) public view virtual returns (uint256, uint256);\n\n    function UpdateAndGetUnderlyingPrice(PToken pToken) external payable virtual returns (uint256);\n\n    function getPriceCost(PToken pToken) external virtual returns (uint256);\n}",
+  "sourcePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
+  "ast": {
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
+    "exportedSymbols": {
+      "PriceOracle": [
+        3171
+      ]
+    },
+    "id": 3172,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3143,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:7"
+      },
+      {
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
+        "file": "../tokenization/PToken.sol",
+        "id": 3144,
+        "nodeType": "ImportDirective",
+        "scope": 3172,
+        "sourceUnit": 8261,
+        "src": "64:36:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3171,
+        "linearizedBaseContracts": [
+          3171
+        ],
+        "name": "PriceOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "66331bba",
+            "id": 3147,
+            "mutability": "constant",
+            "name": "isPriceOracle",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 3171,
+            "src": "138:41:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 3145,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "138:4:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "74727565",
+              "id": 3146,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "175:4:7",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "fc57d4df",
+            "id": 3156,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnderlyingPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3150,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3149,
+                  "mutability": "mutable",
+                  "name": "pToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3156,
+                  "src": "214:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_PToken_$8260",
+                    "typeString": "contract PToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3148,
+                    "name": "PToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 8260,
+                    "src": "214:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PToken_$8260",
+                      "typeString": "contract PToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "213:15:7"
+            },
+            "returnParameters": {
+              "id": 3155,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3152,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3156,
+                  "src": "258:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3151,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "258:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3154,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3156,
+                  "src": "267:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3153,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "267:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "257:18:7"
+            },
+            "scope": 3171,
+            "src": "186:90:7",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "69ed5a62",
+            "id": 3163,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "UpdateAndGetUnderlyingPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3159,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3158,
+                  "mutability": "mutable",
+                  "name": "pToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3163,
+                  "src": "319:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_PToken_$8260",
+                    "typeString": "contract PToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3157,
+                    "name": "PToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 8260,
+                    "src": "319:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PToken_$8260",
+                      "typeString": "contract PToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "318:15:7"
+            },
+            "returnParameters": {
+              "id": 3162,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3161,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3163,
+                  "src": "368:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3160,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "368:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "367:9:7"
+            },
+            "scope": 3171,
+            "src": "282:95:7",
+            "stateMutability": "payable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "ea67db22",
+            "id": 3170,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPriceCost",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3166,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3165,
+                  "mutability": "mutable",
+                  "name": "pToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3170,
+                  "src": "405:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_PToken_$8260",
+                    "typeString": "contract PToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3164,
+                    "name": "PToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 8260,
+                    "src": "405:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PToken_$8260",
+                      "typeString": "contract PToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "404:15:7"
+            },
+            "returnParameters": {
+              "id": 3169,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3168,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3170,
+                  "src": "446:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3167,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "446:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "445:9:7"
+            },
+            "scope": 3171,
+            "src": "383:72:7",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3172,
+        "src": "102:355:7"
+      }
+    ],
+    "src": "39:418:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
+    "exportedSymbols": {
+      "PriceOracle": [
+        3171
+      ]
+    },
+    "id": 3172,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3143,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:7"
+      },
+      {
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
+        "file": "../tokenization/PToken.sol",
+        "id": 3144,
+        "nodeType": "ImportDirective",
+        "scope": 3172,
+        "sourceUnit": 8261,
+        "src": "64:36:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3171,
+        "linearizedBaseContracts": [
+          3171
+        ],
+        "name": "PriceOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "66331bba",
+            "id": 3147,
+            "mutability": "constant",
+            "name": "isPriceOracle",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 3171,
+            "src": "138:41:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 3145,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "138:4:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "74727565",
+              "id": 3146,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "175:4:7",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "fc57d4df",
+            "id": 3156,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnderlyingPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3150,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3149,
+                  "mutability": "mutable",
+                  "name": "pToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3156,
+                  "src": "214:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_PToken_$8260",
+                    "typeString": "contract PToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3148,
+                    "name": "PToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 8260,
+                    "src": "214:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PToken_$8260",
+                      "typeString": "contract PToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "213:15:7"
+            },
+            "returnParameters": {
+              "id": 3155,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3152,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3156,
+                  "src": "258:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3151,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "258:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3154,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3156,
+                  "src": "267:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3153,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "267:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "257:18:7"
+            },
+            "scope": 3171,
+            "src": "186:90:7",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "69ed5a62",
+            "id": 3163,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "UpdateAndGetUnderlyingPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3159,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3158,
+                  "mutability": "mutable",
+                  "name": "pToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3163,
+                  "src": "319:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_PToken_$8260",
+                    "typeString": "contract PToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3157,
+                    "name": "PToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 8260,
+                    "src": "319:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PToken_$8260",
+                      "typeString": "contract PToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "318:15:7"
+            },
+            "returnParameters": {
+              "id": 3162,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3161,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3163,
+                  "src": "368:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3160,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "368:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "367:9:7"
+            },
+            "scope": 3171,
+            "src": "282:95:7",
+            "stateMutability": "payable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "ea67db22",
+            "id": 3170,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPriceCost",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3166,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3165,
+                  "mutability": "mutable",
+                  "name": "pToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3170,
+                  "src": "405:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_PToken_$8260",
+                    "typeString": "contract PToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3164,
+                    "name": "PToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 8260,
+                    "src": "405:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PToken_$8260",
+                      "typeString": "contract PToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "404:15:7"
+            },
+            "returnParameters": {
+              "id": 3169,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3168,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3170,
+                  "src": "446:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3167,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "446:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "445:9:7"
+            },
+            "scope": 3171,
+            "src": "383:72:7",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3172,
+        "src": "102:355:7"
+      }
+    ],
+    "src": "39:418:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-08-13T21:54:51.633Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

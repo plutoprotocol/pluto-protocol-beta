@@ -1,0 +1,957 @@
+{
+  "contractName": "InterestRateModel",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "isInterestRateModel",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "cash",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "borrows",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "reserves",
+          "type": "uint256"
+        }
+      ],
+      "name": "getBorrowRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "cash",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "borrows",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "reserves",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "reserveFactorMantissa",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSupplyRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"cash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"borrows\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserves\",\"type\":\"uint256\"}],\"name\":\"getBorrowRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"cash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"borrows\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserves\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserveFactorMantissa\",\"type\":\"uint256\"}],\"name\":\"getSupplyRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isInterestRateModel\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getBorrowRate(uint256,uint256,uint256)\":{\"params\":{\"borrows\":\"\\u8be5\\u5e02\\u573a\\u5df2\\u51fa\\u501f\\u91d1\\u989d\",\"cash\":\"\\u8be5\\u5e02\\u573a\\u7684\\u73b0\\u91d1\\u91cf\",\"reserves\":\"\\u8be5\\u5e02\\u573a\\u5907\\u4ed8\\u91d1\"},\"returns\":{\"_0\":\"\\u501f\\u6b3e\\u5229\\u7387\"}},\"getSupplyRate(uint256,uint256,uint256,uint256)\":{\"params\":{\"borrows\":\"\\u8be5\\u5e02\\u573a\\u51fa\\u501f\\u91cf\",\"cash\":\"\\u8be5\\u5e02\\u573a\\u73b0\\u91d1\\u91cf\",\"reserveFactorMantissa\":\"\\u5907\\u4ed8\\u91d1\\u6bd4\\u4f8b\",\"reserves\":\"\\u5e02\\u573a\\u5907\\u4ed8\\u91d1\"},\"returns\":{\"_0\":\"\\u5f53\\u524d\\u533a\\u5757\\u51fa\\u501f\\u5229\\u7387\"}}}},\"userdoc\":{\"methods\":{\"getBorrowRate(uint256,uint256,uint256)\":{\"notice\":\"\\u8ba1\\u7b97\\u533a\\u5757\\u501f\\u6b3e\\u5229\\u7387\"},\"getSupplyRate(uint256,uint256,uint256,uint256)\":{\"notice\":\"\\u8ba1\\u7b97\\u5f53\\u524d\\u533a\\u5757\\u51fa\\u501f\\u5229\\u7387 = utilizationRate * BorrowRate * \\uff081 - reserveFactor\\uff09\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol\":\"InterestRateModel\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0xebc8b04724ce437fcb5fad6917781a10809c7eeddccea54781622f5bf91a1b9d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://516e5400372defd61f456b2f7d1e1da36b3cdf52a85e6a107871e09b92ad11e8\",\"dweb:/ipfs/QmQHQt6KAsvp1L7uPQKh52Z9UPtgEpaKeYJ5bVvDFj5aX4\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.6.9;\n\n\nabstract contract InterestRateModel {\n    bool public constant isInterestRateModel = true;\n\n    /**\n     * @notice 计算区块借款利率\n     * @param cash 该市场的现金量\n     * @param borrows 该市场已出借金额\n     * @param reserves 该市场备付金\n     * @return 借款利率\n     */\n    function getBorrowRate(uint cash, uint borrows, uint reserves) external virtual view returns (uint);\n\n    /**\n     * @notice 计算当前区块出借利率 = utilizationRate * BorrowRate * （1 - reserveFactor）\n     * @param cash 该市场现金量\n     * @param borrows 该市场出借量\n     * @param reserves 市场备付金\n     * @param reserveFactorMantissa 备付金比例\n     * @return 当前区块出借利率\n     */\n    function getSupplyRate(uint cash, uint borrows, uint reserves, uint reserveFactorMantissa) external virtual view returns (uint);\n\n}\n",
+  "sourcePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol",
+  "ast": {
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol",
+    "exportedSymbols": {
+      "InterestRateModel": [
+        379
+      ]
+    },
+    "id": 380,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 349,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:3"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 379,
+        "linearizedBaseContracts": [
+          379
+        ],
+        "name": "InterestRateModel",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "2191f92a",
+            "id": 352,
+            "mutability": "constant",
+            "name": "isInterestRateModel",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 379,
+            "src": "107:47:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 350,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "107:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "74727565",
+              "id": 351,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "150:4:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 353,
+              "nodeType": "StructuredDocumentation",
+              "src": "161:209:3",
+              "text": " @notice 计算区块借款利率\n @param cash 该市场的现金量\n @param borrows 该市场已出借金额\n @param reserves 该市场备付金\n @return 借款利率"
+            },
+            "functionSelector": "15f24053",
+            "id": 364,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBorrowRate",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 355,
+                  "mutability": "mutable",
+                  "name": "cash",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 364,
+                  "src": "398:9:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 354,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "398:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 357,
+                  "mutability": "mutable",
+                  "name": "borrows",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 364,
+                  "src": "409:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 356,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "409:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 359,
+                  "mutability": "mutable",
+                  "name": "reserves",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 364,
+                  "src": "423:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 358,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "423:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "397:40:3"
+            },
+            "returnParameters": {
+              "id": 363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 362,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 364,
+                  "src": "469:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 361,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "469:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "468:6:3"
+            },
+            "scope": 379,
+            "src": "375:100:3",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 365,
+              "nodeType": "StructuredDocumentation",
+              "src": "481:324:3",
+              "text": " @notice 计算当前区块出借利率 = utilizationRate * BorrowRate * （1 - reserveFactor）\n @param cash 该市场现金量\n @param borrows 该市场出借量\n @param reserves 市场备付金\n @param reserveFactorMantissa 备付金比例\n @return 当前区块出借利率"
+            },
+            "functionSelector": "b8168816",
+            "id": 378,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSupplyRate",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 374,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 367,
+                  "mutability": "mutable",
+                  "name": "cash",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 378,
+                  "src": "833:9:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 366,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "833:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 369,
+                  "mutability": "mutable",
+                  "name": "borrows",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 378,
+                  "src": "844:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 368,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "844:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 371,
+                  "mutability": "mutable",
+                  "name": "reserves",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 378,
+                  "src": "858:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 370,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "858:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 373,
+                  "mutability": "mutable",
+                  "name": "reserveFactorMantissa",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 378,
+                  "src": "873:26:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 372,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "873:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "832:68:3"
+            },
+            "returnParameters": {
+              "id": 377,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 376,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 378,
+                  "src": "932:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 375,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "932:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "931:6:3"
+            },
+            "scope": 379,
+            "src": "810:128:3",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "external"
+          }
+        ],
+        "scope": 380,
+        "src": "65:876:3"
+      }
+    ],
+    "src": "39:903:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol",
+    "exportedSymbols": {
+      "InterestRateModel": [
+        379
+      ]
+    },
+    "id": 380,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 349,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:3"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 379,
+        "linearizedBaseContracts": [
+          379
+        ],
+        "name": "InterestRateModel",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "2191f92a",
+            "id": 352,
+            "mutability": "constant",
+            "name": "isInterestRateModel",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 379,
+            "src": "107:47:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 350,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "107:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "74727565",
+              "id": 351,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "150:4:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 353,
+              "nodeType": "StructuredDocumentation",
+              "src": "161:209:3",
+              "text": " @notice 计算区块借款利率\n @param cash 该市场的现金量\n @param borrows 该市场已出借金额\n @param reserves 该市场备付金\n @return 借款利率"
+            },
+            "functionSelector": "15f24053",
+            "id": 364,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBorrowRate",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 355,
+                  "mutability": "mutable",
+                  "name": "cash",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 364,
+                  "src": "398:9:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 354,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "398:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 357,
+                  "mutability": "mutable",
+                  "name": "borrows",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 364,
+                  "src": "409:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 356,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "409:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 359,
+                  "mutability": "mutable",
+                  "name": "reserves",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 364,
+                  "src": "423:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 358,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "423:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "397:40:3"
+            },
+            "returnParameters": {
+              "id": 363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 362,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 364,
+                  "src": "469:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 361,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "469:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "468:6:3"
+            },
+            "scope": 379,
+            "src": "375:100:3",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 365,
+              "nodeType": "StructuredDocumentation",
+              "src": "481:324:3",
+              "text": " @notice 计算当前区块出借利率 = utilizationRate * BorrowRate * （1 - reserveFactor）\n @param cash 该市场现金量\n @param borrows 该市场出借量\n @param reserves 市场备付金\n @param reserveFactorMantissa 备付金比例\n @return 当前区块出借利率"
+            },
+            "functionSelector": "b8168816",
+            "id": 378,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSupplyRate",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 374,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 367,
+                  "mutability": "mutable",
+                  "name": "cash",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 378,
+                  "src": "833:9:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 366,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "833:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 369,
+                  "mutability": "mutable",
+                  "name": "borrows",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 378,
+                  "src": "844:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 368,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "844:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 371,
+                  "mutability": "mutable",
+                  "name": "reserves",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 378,
+                  "src": "858:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 370,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "858:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 373,
+                  "mutability": "mutable",
+                  "name": "reserveFactorMantissa",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 378,
+                  "src": "873:26:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 372,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "873:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "832:68:3"
+            },
+            "returnParameters": {
+              "id": 377,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 376,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 378,
+                  "src": "932:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 375,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "932:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "931:6:3"
+            },
+            "scope": 379,
+            "src": "810:128:3",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "external"
+          }
+        ],
+        "scope": 380,
+        "src": "65:876:3"
+      }
+    ],
+    "src": "39:903:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-08-07T07:56:57.035Z",
+  "devdoc": {
+    "methods": {
+      "getBorrowRate(uint256,uint256,uint256)": {
+        "params": {
+          "borrows": "该市场已出借金额",
+          "cash": "该市场的现金量",
+          "reserves": "该市场备付金"
+        },
+        "returns": {
+          "_0": "借款利率"
+        }
+      },
+      "getSupplyRate(uint256,uint256,uint256,uint256)": {
+        "params": {
+          "borrows": "该市场出借量",
+          "cash": "该市场现金量",
+          "reserveFactorMantissa": "备付金比例",
+          "reserves": "市场备付金"
+        },
+        "returns": {
+          "_0": "当前区块出借利率"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "getBorrowRate(uint256,uint256,uint256)": {
+        "notice": "计算区块借款利率"
+      },
+      "getSupplyRate(uint256,uint256,uint256,uint256)": {
+        "notice": "计算当前区块出借利率 = utilizationRate * BorrowRate * （1 - reserveFactor）"
+      }
+    }
+  }
+}

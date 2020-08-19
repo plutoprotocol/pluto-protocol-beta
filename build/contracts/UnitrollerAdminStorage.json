@@ -1,0 +1,1847 @@
+{
+  "contractName": "UnitrollerAdminStorage",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "riskManagerImplementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pendingAdmin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pendingRiskManagerImplementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"riskManagerImplementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pendingAdmin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pendingRiskManagerImplementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{\"admin()\":{\"notice\":\"Administrator for this contract\"},\"riskManagerImplementation()\":{\"notice\":\"Active brains of Unitroller\"},\"pendingAdmin()\":{\"notice\":\"Pending administrator for this contract\"},\"pendingRiskManagerImplementation()\":{\"notice\":\"Pending brains of Unitroller\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/PoolXControllerStorage.sol\":\"UnitrollerAdminStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0x3666f4819b16d1251a053780ed0ed4431241a82b2afd1199f759c6b5bdd881f9\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://713b0ee3911ab8ced1fb98c932b8d96a088fdbb645f32f4fbd9ca88312629a8b\",\"dweb:/ipfs/QmeKJZuG2JrRERSBMhrCGkuYPaXFgd49jBYUvWFn5hVBMt\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/PoolXControllerInterface.sol\":{\"keccak256\":\"0x2bb1a5132eb008420bcf1b9161637a452dc84b3be78c5a28a7203124f130a504\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://f7f6499d6eca1b226d0496598d29f003aff21bd2f0d0e3483e4528f5cb5a85fa\",\"dweb:/ipfs/QmVqyiCPTXio4oeZDE6qF9nfmFncd4zhJeGDGRWgukPFNJ\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/PoolXControllerStorage.sol\":{\"keccak256\":\"0x31588c53d2573a01595f3a84869768e1fb2b103d4fb082554d5be1fed162f237\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2f75ffd2dbdefb0fd6d6720af208fb3d3cde8821ac2833ee3ae6f554a7041f37\",\"dweb:/ipfs/QmWm81Jaca8NiTf5GwSorWaDfDRchAnatwW2iphMRHh7LY\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol\":{\"keccak256\":\"0xf22518bb126f04415cfc54379dc2730521b40c85397df3d3108eda719c13aa69\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://cc93fe2236f0c9372ce2399ee043d60d188b007ae10e385639b0e3765f3edae9\",\"dweb:/ipfs/QmepnLxBwfEEJ7rxA1MUDeSQ6yp3iht8FyQ77Ub2WhtNiV\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/EIP20Interface.sol\":{\"keccak256\":\"0x84d3c53dabe5885a9a14ab395cd640a4fd8f703f801d567175eee041c0ecfc62\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://b6e3c96bc76f03d0f7d221bdc063e7df9ab1dac3273827a8d70434ba4213ccab\",\"dweb:/ipfs/Qmd8861KUJEjdtMwTxzD81S76Qpnia1z3erCkzfTexBsDg\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/EIP20NonStandardInterface.sol\":{\"keccak256\":\"0x64a4cefb7621ec83563a046fa88401a3c6dbb1f89ff52aa7c3093bb91f660481\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8409ce8d4b19baa03e86c4f1440a8b578f033c0cf3cb1e559a8f35528309c2d5\",\"dweb:/ipfs/QmYhx3ytdDuXRcsmQGn5B7eejptUcgRhrqZvEr961Ncm6Q\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol\":{\"keccak256\":\"0x9b60fffa71f95dbb07ff5941cbb4b36880834308516ce2bc379cb56bd03d0b0e\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://151d948e37f945d3e5b6970b2c0e7ef196b03b3a2fe42aa955a65686cb6c305b\",\"dweb:/ipfs/QmX6QLJ3pU7nutdGt28owKoA9h2N45BmRZqzbw5RrHcRR2\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PTokenInterfaces.sol\":{\"keccak256\":\"0x86066d85bbf4a8f414e1252163ea2f2ba998a533bd90cb56678edd866f5d89a5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://1242e0bd4b2fba3174a10ba446cbd8f207770cd25badf5010310379e0bb10cde\",\"dweb:/ipfs/QmSZKwZTA4A6wKWV7NHKL45ovbVZxWsYfn8vkK7yvmtsQx\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/CarefulMath.sol\":{\"keccak256\":\"0xd6059e7c284e10c49391ebbe7cc3bf7cae051ba61d3133707939f3f6a7bf6228\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8252ab2c06a25f9021b10326d8849e4089059af5c4f1c3c1917328cb7f59d453\",\"dweb:/ipfs/QmdSUk2pPXhW9VXG51pdA8XUrKm9P6WB2LPxwh1Pfj9emo\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/ErrorReporter.sol\":{\"keccak256\":\"0xee4fed695cf30773bdf8ec6d8c563c70f2a80453c91a0b6be4155a299ab24294\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://9973bb486635f5a4d70438e5cc292793fca7855e06ffebc28c7d603376a7c08a\",\"dweb:/ipfs/QmaMGgipxLTRZZ2VAqLgZ6qMjJyr6usT5d1sojaG18MqEM\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/Exponential.sol\":{\"keccak256\":\"0x1264cbbdcec3f64b790c9145f6911a962e6681f42e5ce16c5b1211584cf6e1d4\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2fa666faf022d092e67a9ea98173224d92e1f50149e72c7fb3bed7ac039bc4ac\",\"dweb:/ipfs/QmXfHb2detnH1q8C9qSoiWgRPq8e35EdipeNJxuCjCKkpe\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060f18061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060465760003560e01c80632678224714604b578063bb82aa5e14606d578063dcfbc0c7146073578063f851a440146079575b600080fd5b6051607f565b604080516001600160a01b039092168252519081900360200190f35b6051608e565b6051609d565b605160ac565b6001546001600160a01b031681565b6002546001600160a01b031681565b6003546001600160a01b031681565b6000546001600160a01b03168156fea2646970667358221220edd81b34a54b1ad02ee4db6dd27e0c46aaa0bc0734cf4c8af6031d45c782032f64736f6c63430006090033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060465760003560e01c80632678224714604b578063bb82aa5e14606d578063dcfbc0c7146073578063f851a440146079575b600080fd5b6051607f565b604080516001600160a01b039092168252519081900360200190f35b6051608e565b6051609d565b605160ac565b6001546001600160a01b031681565b6002546001600160a01b031681565b6003546001600160a01b031681565b6000546001600160a01b03168156fea2646970667358221220edd81b34a54b1ad02ee4db6dd27e0c46aaa0bc0734cf4c8af6031d45c782032f64736f6c63430006090033",
+  "immutableReferences": {},
+  "sourceMap": "138:441:5:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "138:441:5:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;333:27;;;:::i;:::-;;;;-1:-1:-1;;;;;333:27:5;;;;;;;;;;;;;;424:40;;;:::i;529:47::-;;;:::i;237:20::-;;;:::i;333:27::-;;;-1:-1:-1;;;;;333:27:5;;:::o;424:40::-;;;-1:-1:-1;;;;;424:40:5;;:::o;529:47::-;;;-1:-1:-1;;;;;529:47:5;;:::o;237:20::-;;;-1:-1:-1;;;;;237:20:5;;:::o",
+  "source": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.6.9;\n\nimport \"../tokenization/PToken.sol\";\nimport \"../oracle/PriceOracle.sol\";\n\ncontract UnitrollerAdminStorage {\n    /**\n    * @notice Administrator for this contract\n    */\n    address public admin;\n\n    /**\n    * @notice Pending administrator for this contract\n    */\n    address public pendingAdmin;\n\n    /**\n    * @notice Active brains of Unitroller\n    */\n    address public riskManagerImplementation;\n\n    /**\n    * @notice Pending brains of Unitroller\n    */\n    address public pendingRiskManagerImplementation;\n}\n\ncontract PoolXControllerStorage is UnitrollerAdminStorage {\n\n    /**\n     * @notice Oracle which gives the price of any given asset\n     */\n    PriceOracle public oracle;\n\n    /**\n     * @notice Multiplier used to calculate the maximum repayAmount when liquidating a borrow\n     */\n    uint public closeFactorMantissa;\n\n    /**\n     * @notice Multiplier representing the discount on collateral that a liquidator receives\n     */\n    uint public liquidationIncentiveMantissa;\n\n    /**\n     * @notice Max number of assets a single account can participate in (borrow or use as collateral)\n     */\n    uint public maxAssets;\n\n    /**\n     * @notice Per-account mapping of \"assets you are in\", capped by maxAssets\n     */\n    mapping(address => PToken[]) public accountAssets;\n\n    struct Market {\n\n        bool isListed;\n\n        uint collateralFactorMantissa;\n\n        mapping(address => bool) accountMembership;\n    }\n\n    /**\n     * @notice Official mapping of PTokens -> Market metadata\n     * @dev Used e.g. to determine if a market is supported\n     */\n    mapping(address => Market) public markets;\n\n\n    /**\n     * @notice The Pause Guardian can pause certain actions as a safety mechanism.\n     *  Actions which allow users to remove their own assets cannot be paused.\n     *  Liquidation / seizing / transfer can only be paused globally, not by market.\n     */\n    address public pauseGuardian;\n    bool public _mintGuardianPaused;\n    bool public _borrowGuardianPaused;\n    bool public transferGuardianPaused;\n    bool public seizeGuardianPaused;\n    mapping(address => bool) public mintGuardianPaused;\n    mapping(address => bool) public borrowGuardianPaused;\n}\n",
+  "sourcePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/PoolXControllerStorage.sol",
+  "ast": {
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/PoolXControllerStorage.sol",
+    "exportedSymbols": {
+      "PoolXControllerStorage": [
+        2748
+      ],
+      "UnitrollerAdminStorage": [
+        2694
+      ]
+    },
+    "id": 2749,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2679,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:5"
+      },
+      {
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
+        "file": "../tokenization/PToken.sol",
+        "id": 2680,
+        "nodeType": "ImportDirective",
+        "scope": 2749,
+        "sourceUnit": 7633,
+        "src": "64:36:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
+        "file": "../oracle/PriceOracle.sol",
+        "id": 2681,
+        "nodeType": "ImportDirective",
+        "scope": 2749,
+        "sourceUnit": 2765,
+        "src": "101:35:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2694,
+        "linearizedBaseContracts": [
+          2694
+        ],
+        "name": "UnitrollerAdminStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2682,
+              "nodeType": "StructuredDocumentation",
+              "src": "176:56:5",
+              "text": " @notice Administrator for this contract"
+            },
+            "functionSelector": "f851a440",
+            "id": 2684,
+            "mutability": "mutable",
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2694,
+            "src": "237:20:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2683,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "237:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2685,
+              "nodeType": "StructuredDocumentation",
+              "src": "264:64:5",
+              "text": " @notice Pending administrator for this contract"
+            },
+            "functionSelector": "26782247",
+            "id": 2687,
+            "mutability": "mutable",
+            "name": "pendingAdmin",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2694,
+            "src": "333:27:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2686,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "333:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2688,
+              "nodeType": "StructuredDocumentation",
+              "src": "367:52:5",
+              "text": " @notice Active brains of Unitroller"
+            },
+            "functionSelector": "bb82aa5e",
+            "id": 2690,
+            "mutability": "mutable",
+            "name": "riskManagerImplementation",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2694,
+            "src": "424:40:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2689,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "424:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2691,
+              "nodeType": "StructuredDocumentation",
+              "src": "471:53:5",
+              "text": " @notice Pending brains of Unitroller"
+            },
+            "functionSelector": "dcfbc0c7",
+            "id": 2693,
+            "mutability": "mutable",
+            "name": "pendingRiskManagerImplementation",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2694,
+            "src": "529:47:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2692,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "529:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2749,
+        "src": "138:441:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2695,
+              "name": "UnitrollerAdminStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2694,
+              "src": "616:22:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UnitrollerAdminStorage_$2694",
+                "typeString": "contract UnitrollerAdminStorage"
+              }
+            },
+            "id": 2696,
+            "nodeType": "InheritanceSpecifier",
+            "src": "616:22:5"
+          }
+        ],
+        "contractDependencies": [
+          2694
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2748,
+        "linearizedBaseContracts": [
+          2748,
+          2694
+        ],
+        "name": "PoolXControllerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2697,
+              "nodeType": "StructuredDocumentation",
+              "src": "646:74:5",
+              "text": " @notice Oracle which gives the price of any given asset"
+            },
+            "functionSelector": "7dc0d1d0",
+            "id": 2699,
+            "mutability": "mutable",
+            "name": "oracle",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "725:25:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_PriceOracle_$2764",
+              "typeString": "contract PriceOracle"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 2698,
+              "name": "PriceOracle",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2764,
+              "src": "725:11:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_PriceOracle_$2764",
+                "typeString": "contract PriceOracle"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2700,
+              "nodeType": "StructuredDocumentation",
+              "src": "757:105:5",
+              "text": " @notice Multiplier used to calculate the maximum repayAmount when liquidating a borrow"
+            },
+            "functionSelector": "e8755446",
+            "id": 2702,
+            "mutability": "mutable",
+            "name": "closeFactorMantissa",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "867:31:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2701,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "867:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2703,
+              "nodeType": "StructuredDocumentation",
+              "src": "905:104:5",
+              "text": " @notice Multiplier representing the discount on collateral that a liquidator receives"
+            },
+            "functionSelector": "4ada90af",
+            "id": 2705,
+            "mutability": "mutable",
+            "name": "liquidationIncentiveMantissa",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1014:40:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2704,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "1014:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2706,
+              "nodeType": "StructuredDocumentation",
+              "src": "1061:113:5",
+              "text": " @notice Max number of assets a single account can participate in (borrow or use as collateral)"
+            },
+            "functionSelector": "94b2294b",
+            "id": 2708,
+            "mutability": "mutable",
+            "name": "maxAssets",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1179:21:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2707,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "1179:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2709,
+              "nodeType": "StructuredDocumentation",
+              "src": "1207:90:5",
+              "text": " @notice Per-account mapping of \"assets you are in\", capped by maxAssets"
+            },
+            "functionSelector": "dce15449",
+            "id": 2714,
+            "mutability": "mutable",
+            "name": "accountAssets",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1302:49:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$7632_$dyn_storage_$",
+              "typeString": "mapping(address => contract PToken[])"
+            },
+            "typeName": {
+              "id": 2713,
+              "keyType": {
+                "id": 2710,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1310:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1302:28:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$7632_$dyn_storage_$",
+                "typeString": "mapping(address => contract PToken[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 2711,
+                  "name": "PToken",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 7632,
+                  "src": "1321:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_PToken_$7632",
+                    "typeString": "contract PToken"
+                  }
+                },
+                "id": 2712,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1321:8:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_contract$_PToken_$7632_$dyn_storage_ptr",
+                  "typeString": "contract PToken[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "PoolXControllerStorage.Market",
+            "id": 2723,
+            "members": [
+              {
+                "constant": false,
+                "id": 2716,
+                "mutability": "mutable",
+                "name": "isListed",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 2723,
+                "src": "1383:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 2715,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1383:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2718,
+                "mutability": "mutable",
+                "name": "collateralFactorMantissa",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 2723,
+                "src": "1407:29:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2717,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1407:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2722,
+                "mutability": "mutable",
+                "name": "accountMembership",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 2723,
+                "src": "1447:42:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "typeName": {
+                  "id": 2721,
+                  "keyType": {
+                    "id": 2719,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1455:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "1447:24:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                    "typeString": "mapping(address => bool)"
+                  },
+                  "valueType": {
+                    "id": 2720,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1466:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Market",
+            "nodeType": "StructDefinition",
+            "scope": 2748,
+            "src": "1358:138:5",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2724,
+              "nodeType": "StructuredDocumentation",
+              "src": "1502:133:5",
+              "text": " @notice Official mapping of PTokens -> Market metadata\n @dev Used e.g. to determine if a market is supported"
+            },
+            "functionSelector": "8e8f294b",
+            "id": 2728,
+            "mutability": "mutable",
+            "name": "markets",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1640:41:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2723_storage_$",
+              "typeString": "mapping(address => struct PoolXControllerStorage.Market)"
+            },
+            "typeName": {
+              "id": 2727,
+              "keyType": {
+                "id": 2725,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1648:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1640:26:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2723_storage_$",
+                "typeString": "mapping(address => struct PoolXControllerStorage.Market)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 2726,
+                "name": "Market",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 2723,
+                "src": "1659:6:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Market_$2723_storage_ptr",
+                  "typeString": "struct PoolXControllerStorage.Market"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2729,
+              "nodeType": "StructuredDocumentation",
+              "src": "1689:258:5",
+              "text": " @notice The Pause Guardian can pause certain actions as a safety mechanism.\n  Actions which allow users to remove their own assets cannot be paused.\n  Liquidation / seizing / transfer can only be paused globally, not by market."
+            },
+            "functionSelector": "24a3d622",
+            "id": 2731,
+            "mutability": "mutable",
+            "name": "pauseGuardian",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1952:28:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2730,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1952:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "3c94786f",
+            "id": 2733,
+            "mutability": "mutable",
+            "name": "_mintGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1986:31:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2732,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "1986:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "e6653f3d",
+            "id": 2735,
+            "mutability": "mutable",
+            "name": "_borrowGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "2023:33:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2734,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "2023:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "87f76303",
+            "id": 2737,
+            "mutability": "mutable",
+            "name": "transferGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "2062:34:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2736,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "2062:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "ac0b0bb7",
+            "id": 2739,
+            "mutability": "mutable",
+            "name": "seizeGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "2102:31:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2738,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "2102:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "731f0c2b",
+            "id": 2743,
+            "mutability": "mutable",
+            "name": "mintGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "2139:50:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 2742,
+              "keyType": {
+                "id": 2740,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2147:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2139:24:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 2741,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "2158:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "6d154ea5",
+            "id": 2747,
+            "mutability": "mutable",
+            "name": "borrowGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "2195:52:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 2746,
+              "keyType": {
+                "id": 2744,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2203:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2195:24:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 2745,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "2214:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2749,
+        "src": "581:1669:5"
+      }
+    ],
+    "src": "39:2212:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/PoolXControllerStorage.sol",
+    "exportedSymbols": {
+      "PoolXControllerStorage": [
+        2748
+      ],
+      "UnitrollerAdminStorage": [
+        2694
+      ]
+    },
+    "id": 2749,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2679,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:5"
+      },
+      {
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
+        "file": "../tokenization/PToken.sol",
+        "id": 2680,
+        "nodeType": "ImportDirective",
+        "scope": 2749,
+        "sourceUnit": 7633,
+        "src": "64:36:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
+        "file": "../oracle/PriceOracle.sol",
+        "id": 2681,
+        "nodeType": "ImportDirective",
+        "scope": 2749,
+        "sourceUnit": 2765,
+        "src": "101:35:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2694,
+        "linearizedBaseContracts": [
+          2694
+        ],
+        "name": "UnitrollerAdminStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2682,
+              "nodeType": "StructuredDocumentation",
+              "src": "176:56:5",
+              "text": " @notice Administrator for this contract"
+            },
+            "functionSelector": "f851a440",
+            "id": 2684,
+            "mutability": "mutable",
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2694,
+            "src": "237:20:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2683,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "237:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2685,
+              "nodeType": "StructuredDocumentation",
+              "src": "264:64:5",
+              "text": " @notice Pending administrator for this contract"
+            },
+            "functionSelector": "26782247",
+            "id": 2687,
+            "mutability": "mutable",
+            "name": "pendingAdmin",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2694,
+            "src": "333:27:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2686,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "333:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2688,
+              "nodeType": "StructuredDocumentation",
+              "src": "367:52:5",
+              "text": " @notice Active brains of Unitroller"
+            },
+            "functionSelector": "bb82aa5e",
+            "id": 2690,
+            "mutability": "mutable",
+            "name": "riskManagerImplementation",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2694,
+            "src": "424:40:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2689,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "424:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2691,
+              "nodeType": "StructuredDocumentation",
+              "src": "471:53:5",
+              "text": " @notice Pending brains of Unitroller"
+            },
+            "functionSelector": "dcfbc0c7",
+            "id": 2693,
+            "mutability": "mutable",
+            "name": "pendingRiskManagerImplementation",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2694,
+            "src": "529:47:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2692,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "529:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2749,
+        "src": "138:441:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2695,
+              "name": "UnitrollerAdminStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2694,
+              "src": "616:22:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UnitrollerAdminStorage_$2694",
+                "typeString": "contract UnitrollerAdminStorage"
+              }
+            },
+            "id": 2696,
+            "nodeType": "InheritanceSpecifier",
+            "src": "616:22:5"
+          }
+        ],
+        "contractDependencies": [
+          2694
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2748,
+        "linearizedBaseContracts": [
+          2748,
+          2694
+        ],
+        "name": "PoolXControllerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2697,
+              "nodeType": "StructuredDocumentation",
+              "src": "646:74:5",
+              "text": " @notice Oracle which gives the price of any given asset"
+            },
+            "functionSelector": "7dc0d1d0",
+            "id": 2699,
+            "mutability": "mutable",
+            "name": "oracle",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "725:25:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_PriceOracle_$2764",
+              "typeString": "contract PriceOracle"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 2698,
+              "name": "PriceOracle",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2764,
+              "src": "725:11:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_PriceOracle_$2764",
+                "typeString": "contract PriceOracle"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2700,
+              "nodeType": "StructuredDocumentation",
+              "src": "757:105:5",
+              "text": " @notice Multiplier used to calculate the maximum repayAmount when liquidating a borrow"
+            },
+            "functionSelector": "e8755446",
+            "id": 2702,
+            "mutability": "mutable",
+            "name": "closeFactorMantissa",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "867:31:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2701,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "867:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2703,
+              "nodeType": "StructuredDocumentation",
+              "src": "905:104:5",
+              "text": " @notice Multiplier representing the discount on collateral that a liquidator receives"
+            },
+            "functionSelector": "4ada90af",
+            "id": 2705,
+            "mutability": "mutable",
+            "name": "liquidationIncentiveMantissa",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1014:40:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2704,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "1014:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2706,
+              "nodeType": "StructuredDocumentation",
+              "src": "1061:113:5",
+              "text": " @notice Max number of assets a single account can participate in (borrow or use as collateral)"
+            },
+            "functionSelector": "94b2294b",
+            "id": 2708,
+            "mutability": "mutable",
+            "name": "maxAssets",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1179:21:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2707,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "1179:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2709,
+              "nodeType": "StructuredDocumentation",
+              "src": "1207:90:5",
+              "text": " @notice Per-account mapping of \"assets you are in\", capped by maxAssets"
+            },
+            "functionSelector": "dce15449",
+            "id": 2714,
+            "mutability": "mutable",
+            "name": "accountAssets",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1302:49:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$7632_$dyn_storage_$",
+              "typeString": "mapping(address => contract PToken[])"
+            },
+            "typeName": {
+              "id": 2713,
+              "keyType": {
+                "id": 2710,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1310:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1302:28:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$7632_$dyn_storage_$",
+                "typeString": "mapping(address => contract PToken[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 2711,
+                  "name": "PToken",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 7632,
+                  "src": "1321:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_PToken_$7632",
+                    "typeString": "contract PToken"
+                  }
+                },
+                "id": 2712,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "1321:8:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_contract$_PToken_$7632_$dyn_storage_ptr",
+                  "typeString": "contract PToken[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "PoolXControllerStorage.Market",
+            "id": 2723,
+            "members": [
+              {
+                "constant": false,
+                "id": 2716,
+                "mutability": "mutable",
+                "name": "isListed",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 2723,
+                "src": "1383:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 2715,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1383:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2718,
+                "mutability": "mutable",
+                "name": "collateralFactorMantissa",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 2723,
+                "src": "1407:29:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2717,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1407:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2722,
+                "mutability": "mutable",
+                "name": "accountMembership",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 2723,
+                "src": "1447:42:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "typeName": {
+                  "id": 2721,
+                  "keyType": {
+                    "id": 2719,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1455:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "1447:24:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                    "typeString": "mapping(address => bool)"
+                  },
+                  "valueType": {
+                    "id": 2720,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1466:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Market",
+            "nodeType": "StructDefinition",
+            "scope": 2748,
+            "src": "1358:138:5",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2724,
+              "nodeType": "StructuredDocumentation",
+              "src": "1502:133:5",
+              "text": " @notice Official mapping of PTokens -> Market metadata\n @dev Used e.g. to determine if a market is supported"
+            },
+            "functionSelector": "8e8f294b",
+            "id": 2728,
+            "mutability": "mutable",
+            "name": "markets",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1640:41:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2723_storage_$",
+              "typeString": "mapping(address => struct PoolXControllerStorage.Market)"
+            },
+            "typeName": {
+              "id": 2727,
+              "keyType": {
+                "id": 2725,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "1648:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1640:26:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2723_storage_$",
+                "typeString": "mapping(address => struct PoolXControllerStorage.Market)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 2726,
+                "name": "Market",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 2723,
+                "src": "1659:6:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Market_$2723_storage_ptr",
+                  "typeString": "struct PoolXControllerStorage.Market"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 2729,
+              "nodeType": "StructuredDocumentation",
+              "src": "1689:258:5",
+              "text": " @notice The Pause Guardian can pause certain actions as a safety mechanism.\n  Actions which allow users to remove their own assets cannot be paused.\n  Liquidation / seizing / transfer can only be paused globally, not by market."
+            },
+            "functionSelector": "24a3d622",
+            "id": 2731,
+            "mutability": "mutable",
+            "name": "pauseGuardian",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1952:28:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2730,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1952:7:5",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "3c94786f",
+            "id": 2733,
+            "mutability": "mutable",
+            "name": "_mintGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "1986:31:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2732,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "1986:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "e6653f3d",
+            "id": 2735,
+            "mutability": "mutable",
+            "name": "_borrowGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "2023:33:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2734,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "2023:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "87f76303",
+            "id": 2737,
+            "mutability": "mutable",
+            "name": "transferGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "2062:34:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2736,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "2062:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "ac0b0bb7",
+            "id": 2739,
+            "mutability": "mutable",
+            "name": "seizeGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "2102:31:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2738,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "2102:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "731f0c2b",
+            "id": 2743,
+            "mutability": "mutable",
+            "name": "mintGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "2139:50:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 2742,
+              "keyType": {
+                "id": 2740,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2147:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2139:24:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 2741,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "2158:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "6d154ea5",
+            "id": 2747,
+            "mutability": "mutable",
+            "name": "borrowGuardianPaused",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 2748,
+            "src": "2195:52:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 2746,
+              "keyType": {
+                "id": 2744,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2203:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2195:24:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 2745,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "2214:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2749,
+        "src": "581:1669:5"
+      }
+    ],
+    "src": "39:2212:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-08-01T02:09:26.240Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {
+      "admin()": {
+        "notice": "Administrator for this contract"
+      },
+      "riskManagerImplementation()": {
+        "notice": "Active brains of Unitroller"
+      },
+      "pendingAdmin()": {
+        "notice": "Pending administrator for this contract"
+      },
+      "pendingRiskManagerImplementation()": {
+        "notice": "Pending brains of Unitroller"
+      }
+    }
+  }
+}
