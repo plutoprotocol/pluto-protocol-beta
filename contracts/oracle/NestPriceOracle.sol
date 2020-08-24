@@ -21,7 +21,7 @@ contract NestPriceOracle is PriceOracle {
         _voteFactory = Nest3VoteFactory(address(voteFactory));
     }
 
-    function UpdateAndGetUnderlyingPrice(PToken pToken) external payable override returns (uint256) {
+    function updateAndGetUnderlyingPrice(PToken pToken) external payable override returns (uint256) {
         (uint256 tokenPrice, uint256 priceUpdateBlock) = getUnderlyingPrice(pToken);
         uint256 currentBlock = block.number;
         // TODO: 退款
@@ -70,7 +70,7 @@ contract NestPriceOracle is PriceOracle {
     }
 
     receive() external payable {
-
+        tx.origin.transfer(msg.value);
     }
 
     function getNestOfferPrice() internal view returns (Nest3OfferPrice) {

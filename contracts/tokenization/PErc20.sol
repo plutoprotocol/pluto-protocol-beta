@@ -76,7 +76,7 @@ contract PErc20 is PToken, IPErc20 {
       * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
       */
     function borrow(uint borrowAmount) external payable override returns (uint) {
-
+        uint256 priceCost = riskManager.getPriceCost(address(this));
         riskManager.updateAndGetTokenPrice{value: priceCost}(address(this));
         return borrowInternal(borrowAmount);
     }
@@ -87,7 +87,8 @@ contract PErc20 is PToken, IPErc20 {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function repayBorrow(uint repayAmount) external payable override returns (uint) {
-        riskManager.updateAndGetTokenPrice(address(this));
+        uint256 priceCost = riskManager.getPriceCost(address(this));
+        riskManager.updateAndGetTokenPrice{value: priceCost}(address(this));
         (uint err,) = repayBorrowInternal(repayAmount);
         return err;
     }
@@ -99,7 +100,8 @@ contract PErc20 is PToken, IPErc20 {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function repayBorrowBehalf(address borrower, uint repayAmount) external payable override returns (uint) {
-        riskManager.updateAndGetTokenPrice(address(this));
+        uint256 priceCost = riskManager.getPriceCost(address(this));
+        riskManager.updateAndGetTokenPrice{value: priceCost}(address(this));
         (uint err,) = repayBorrowBehalfInternal(borrower, repayAmount);
         return err;
     }
@@ -113,7 +115,8 @@ contract PErc20 is PToken, IPErc20 {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function liquidateBorrow(address borrower, uint repayAmount, IPToken pTokenCollateral) external payable override returns (uint) {
-        riskManager.updateAndGetTokenPrice(address(this));
+        uint256 priceCost = riskManager.getPriceCost(address(this));
+        riskManager.updateAndGetTokenPrice{value: priceCost}(address(this));
         (uint err,) = liquidateBorrowInternal(borrower, repayAmount, pTokenCollateral);
         return err;
     }

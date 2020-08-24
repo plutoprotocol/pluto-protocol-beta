@@ -505,7 +505,11 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
         return (uint(err), liquidity, shortfall);
     }
 
-    function getTokenPrice(address asset) internal view returns (uint256) {
+    function getPriceCost(address asset) external view override returns (uint256) {
+        return oracle.getPriceCost(PToken(asset));
+    }
+
+    function getTokenPrice(address asset) private view returns (uint256) {
         (uint256 oraclePriceMantissa,) = oracle.getUnderlyingPrice(PToken(asset));
         return oraclePriceMantissa;
     }
