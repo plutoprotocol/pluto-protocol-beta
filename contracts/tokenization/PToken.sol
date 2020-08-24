@@ -64,7 +64,7 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
         /* Fail if transfer not allowed */
         uint allowed = riskManager.transferAllowed(address(this), src, dst, tokens);
         if (allowed != 0) {
-            return failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.TRANSFER_POOLXCONTROLLER_REJECTION, allowed);
+            return failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.TRANSFER_RISKMANAGER_REJECTION, allowed);
         }
 
         /* Do not allow self-transfers */
@@ -490,7 +490,7 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
         /* Fail if mint not allowed */
         uint allowed = riskManager.mintAllowed(address(this), minter, mintAmount);
         if (allowed != 0) {
-            return (failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.MINT_POOLXCONTROLLER_REJECTION, allowed), 0);
+            return (failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.MINT_RISKMANAGER_REJECTION, allowed), 0);
         }
 
         /* Verify market's block number equals current block number */
@@ -632,7 +632,7 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
         /* Fail if redeem not allowed */
         uint allowed = riskManager.redeemAllowed(address(this), redeemer, vars.redeemTokens);
         if (allowed != 0) {
-            return failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.REDEEM_POOLXCONTROLLER_REJECTION, allowed);
+            return failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.REDEEM_RISKMANAGER_REJECTION, allowed);
         }
 
         /* Verify market's block number equals current block number */
@@ -714,7 +714,7 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
         /* Fail if borrow not allowed */
         uint allowed = riskManager.borrowAllowed(address(this), borrower, borrowAmount);
         if (allowed != 0) {
-            return failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.BORROW_POOLXCONTROLLER_REJECTION, allowed);
+            return failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.BORROW_RISKMANAGER_REJECTION, allowed);
         }
 
         /* Verify market's block number equals current block number */
@@ -827,7 +827,7 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
         /* Fail if repayBorrow not allowed */
         uint allowed = riskManager.repayBorrowAllowed(address(this), payer, borrower, repayAmount);
         if (allowed != 0) {
-            return (failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.REPAY_BORROW_POOLXCONTROLLER_REJECTION, allowed), 0);
+            return (failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.REPAY_BORROW_RISKMANAGER_REJECTION, allowed), 0);
         }
 
         /* Verify market's block number equals current block number */
@@ -926,7 +926,7 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
         /* Fail if liquidate not allowed */
         uint allowed = riskManager.liquidateBorrowAllowed(address(this), address(pTokenCollateral), liquidator, borrower, repayAmount);
         if (allowed != 0) {
-            return (failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.LIQUIDATE_POOLXCONTROLLER_REJECTION, allowed), 0);
+            return (failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.LIQUIDATE_RISKMANAGER_REJECTION, allowed), 0);
         }
 
         /* Verify market's block number equals current block number */
@@ -967,7 +967,7 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
 
         /* We calculate the number of collateral tokens that will be seized */
         (uint amountSeizeError, uint seizeTokens) = riskManager.liquidateCalculateSeizeTokens(address(this), address(pTokenCollateral), actualRepayAmount);
-        require(amountSeizeError == uint(Error.NO_ERROR), "LIQUIDATE_POOLXCONTROLLER_CALCULATE_AMOUNT_SEIZE_FAILED");
+        require(amountSeizeError == uint(Error.NO_ERROR), "LIQUIDATE_RISKMANAGER_CALCULATE_AMOUNT_SEIZE_FAILED");
 
         /* Revert if borrower collateral token balance < seizeTokens */
         require(pTokenCollateral.balanceOf(borrower) >= seizeTokens, "LIQUIDATE_SEIZE_TOO_MUCH");
@@ -1016,7 +1016,7 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
         /* Fail if seize not allowed */
         uint allowed = riskManager.seizeAllowed(address(this), seizerToken, liquidator, borrower, seizeTokens);
         if (allowed != 0) {
-            return failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.LIQUIDATE_SEIZE_POOLXCONTROLLER_REJECTION, allowed);
+            return failOpaque(Error.RISKMANAGER_REJECTION, FailureInfo.LIQUIDATE_SEIZE_RISKMANAGER_REJECTION, allowed);
         }
 
         /* Fail if borrower = liquidator */
@@ -1119,7 +1119,7 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
     function _setRiskManager(IRiskManager newRiskManager) public override returns (uint) {
         // Check caller is admin
         if (msg.sender != admin) {
-            return fail(Error.UNAUTHORIZED, FailureInfo.SET_POOLXCONTROLLER_OWNER_CHECK);
+            return fail(Error.UNAUTHORIZED, FailureInfo.SET_RISKMANAGER_OWNER_CHECK);
         }
 
         IRiskManager oldRiskManager = riskManager;
