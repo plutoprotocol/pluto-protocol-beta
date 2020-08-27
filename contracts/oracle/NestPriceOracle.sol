@@ -3,7 +3,6 @@ pragma solidity ^0.6.9;
 
 import "../tokenization/PToken.sol";
 import "../tokenization/PErc20.sol";
-import "../tokenization/IERC20Metadata.sol";
 import "./PriceOracle.sol";
 import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
