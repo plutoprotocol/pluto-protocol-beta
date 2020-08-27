@@ -24,6 +24,7 @@ contract NestPriceOracle is PriceOracle {
         (uint256 tokenPrice, uint256 priceUpdateBlock) = getUnderlyingPrice(pToken);
         uint256 currentBlock = block.number;
         if (tokenPrice == 1e18 || currentBlock == priceUpdateBlock) {
+            tx.origin.transfer(msg.value);
             return tokenPrice;
         }
 
