@@ -56,6 +56,8 @@ contract RiskManagerStorage {
      */
     mapping(address => Market) public markets;
 
+    /// @notice A list of all markets
+    PToken[] public allMarkets;
 
     /**
      * @notice The Pause Guardian can pause certain actions as a safety mechanism.

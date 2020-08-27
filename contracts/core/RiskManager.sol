@@ -831,9 +831,28 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
         pToken.isPToken(); // Sanity check to make sure its really a PToken
 
         markets[address(pToken)] = Market({isListed: true, collateralFactorMantissa: 0});
+
+        _addMarketInternal(address(pToken));
+
         emit MarketListed(pToken);
 
         return uint(Error.NO_ERROR);
+    }
+
+    function _addMarketInternal(address pToken) internal {
+        for (uint i = 0; i < allMarkets.length; i ++) {
+            require(allMarkets[i] != PToken(pToken), "market already added");
+        }
+        allMarkets.push(PToken(pToken));
+    }
+
+    /**
+     * @notice Return all of the markets
+     * @dev The automatic getter may be used to access an individual market.
+     * @return The list of market addresses
+     */
+    function getAllMarkets() public view returns (PToken[] memory) {
+        return allMarkets;
     }
 
     /**
