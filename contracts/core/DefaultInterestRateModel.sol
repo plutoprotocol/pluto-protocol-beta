@@ -10,25 +10,25 @@ contract DefaultInterestRateModel is InterestRateModel {
     event NewInterestParams(uint256 baseRatePerBlock, uint256 multiplierPerBlock);
 
     /**
-     * @notice 该利率模型所使用的每年区块数，按 每 15 秒出一个块，每年 365 天来计算
+     * @notice The approximate number of blocks per year that is assumed by the interest rate model
      * blocksPerYear = (60/15) * 60 * 24 * 365
      */
     uint256 public constant blocksPerYear = 2102400;
 
     /**
-     * @notice 资金利用率乘数因子，基于此可以得到利率曲线
+     * @notice The multiplier of utilization rate that gives the slope of the interest rate
      */
     uint256 public multiplierPerBlock;
 
     /**
-     * @notice 基础年化利率，可看作利率函数在 y 轴的截距
+     * @notice The base interest rate which is the y-intercept when utilization rate is 0
      */
     uint256 public baseRatePerBlock;
 
     /**
-     * @notice 构造一个利率模型
-     * @param baseRatePerYear 年化基础利率
-     * @param multiplierPerYear 加给利率
+     * @notice Construct an interest rate model
+     * @param baseRatePerYear The approximate target base APR, as a mantissa (scaled by 1e18)
+     * @param multiplierPerYear The rate of increase in interest rate with regard to utilization (scaled by 1e18)
      */
     constructor(uint256 baseRatePerYear, uint256 multiplierPerYear) public {
         baseRatePerBlock = baseRatePerYear.div(blocksPerYear);
@@ -38,14 +38,14 @@ contract DefaultInterestRateModel is InterestRateModel {
     }
 
     /**
-     * @notice 计算当前市场的资金使用率: `borrows / (cash + borrows - reserves)`
-     * @param cash 当前市场中的现金
-     * @param borrows 当前市场已借出总金额
-     * @param reserves 市场中未使用储备金
-     * @return 资金使用率，范围在 [0, 1e18]
+     * @notice Calculates the utilization rate of the market: `borrows / (cash + borrows - reserves)`
+     * @param cash The amount of cash in the market
+     * @param borrows The amount of borrows in the market
+     * @param reserves The amount of reserves in the market (currently unused)
+     * @return The utilization rate as a mantissa between [0, 1e18]
      */
     function utilizationRate(uint256 cash, uint256 borrows, uint256 reserves) public pure returns (uint256) {
-        // 无借款时资金使用率为 0
+        // Utilization rate is 0 when there are no borrows
         if (borrows == 0) {
             return 0;
         }
@@ -54,11 +54,11 @@ contract DefaultInterestRateModel is InterestRateModel {
     }
 
     /**
-     * @notice 计算区块借款利率 = baseRatePerBlock + utilizationRate * multiplierPerBlock
-     * @param cash 该市场的现金量
-     * @param borrows 该市场已出借金额
-     * @param reserves 该市场备付金
-     * @return 借款利率
+     * @notice Calculates the current borrow rate per block(baseRatePerBlock + utilizationRate * multiplierPerBlock), with the error code expected by the market
+     * @param cash The amount of cash in the market
+     * @param borrows The amount of borrows in the market
+     * @param reserves The amount of reserves in the market
+     * @return The borrow rate percentage per block as a mantissa (scaled by 1e18)
      */
     function getBorrowRate(uint256 cash, uint256 borrows, uint256 reserves) public view override returns (uint256) {
         uint256 ur = utilizationRate(cash, borrows, reserves);
@@ -66,12 +66,11 @@ contract DefaultInterestRateModel is InterestRateModel {
     }
 
     /**
-     * @notice 计算当前区块出借利率 = utilizationRate * BorrowRate * （1 - reserveFactor）
-     * @param cash 该市场现金量
-     * @param borrows 该市场出借量
-     * @param reserves 市场备付金
-     * @param reserveFactorMantissa 备付金比例
-     * @return 当前区块出借利率
+     * @notice Calculates the current borrow rate per block(utilizationRate * BorrowRate * （1 - reserveFactor）), with the error code expected by the market
+     * @param cash The amount of cash in the market
+     * @param borrows The amount of borrows in the market
+     * @param reserves The amount of reserves in the market
+     * @return The borrow rate percentage per block as a mantissa (scaled by 1e18)
      */
     function getSupplyRate(uint256 cash, uint256 borrows, uint256 reserves, uint256 reserveFactorMantissa) public view override returns (uint256) {
         uint256 oneMinusReserveFactor = uint256(1e18).sub(reserveFactorMantissa);

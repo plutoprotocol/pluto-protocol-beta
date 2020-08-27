@@ -6,22 +6,22 @@ abstract contract InterestRateModel {
     bool public constant isInterestRateModel = true;
 
     /**
-     * @notice 计算区块借款利率
-     * @param cash 该市场的现金量
-     * @param borrows 该市场已出借金额
-     * @param reserves 该市场备付金
-     * @return 借款利率
-     */
-    function getBorrowRate(uint cash, uint borrows, uint reserves) external virtual view returns (uint);
+      * @notice Calculates the current borrow interest rate per block
+      * @param cash The total amount of cash the market has
+      * @param borrows The total amount of borrows the market has outstanding
+      * @param reserves The total amount of reserves the market has
+      * @return The borrow rate per block (as a percentage, and scaled by 1e18)
+      */
+    function getBorrowRate(uint256 cash, uint256 borrows, uint256 reserves) external virtual view returns (uint256);
 
     /**
-     * @notice 计算当前区块出借利率 = utilizationRate * BorrowRate * （1 - reserveFactor）
-     * @param cash 该市场现金量
-     * @param borrows 该市场出借量
-     * @param reserves 市场备付金
-     * @param reserveFactorMantissa 备付金比例
-     * @return 当前区块出借利率
-     */
-    function getSupplyRate(uint cash, uint borrows, uint reserves, uint reserveFactorMantissa) external virtual view returns (uint);
+      * @notice Calculates the current supply interest rate per block
+      * @param cash The total amount of cash the market has
+      * @param borrows The total amount of borrows the market has outstanding
+      * @param reserves The total amount of reserves the market has
+      * @param reserveFactorMantissa The current reserve factor the market has
+      * @return The supply rate per block (as a percentage, and scaled by 1e18)
+      */
+    function getSupplyRate(uint256 cash, uint256 borrows, uint256 reserves, uint256 reserveFactorMantissa) external virtual view returns (uint256);
 
 }
