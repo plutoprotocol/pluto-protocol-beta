@@ -24,7 +24,6 @@ contract NestPriceOracle is PriceOracle {
     function updateAndGetUnderlyingPrice(PToken pToken) external payable override returns (uint256) {
         (uint256 tokenPrice, uint256 priceUpdateBlock) = getUnderlyingPrice(pToken);
         uint256 currentBlock = block.number;
-        // TODO: 退款
         if (tokenPrice == 1e18 || currentBlock == priceUpdateBlock) {
             return tokenPrice;
         }
@@ -36,9 +35,7 @@ contract NestPriceOracle is PriceOracle {
 
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
         (uint256 ethAmount, uint256 tokenAmount,) = _offerPrice.updateAndCheckPriceNow{value: priceCost}(underlyingToken);
-        uint256 tokenDecimal = IERC20Metadata(underlyingToken).decimals();
-        uint256 oneToken = 10 ** tokenDecimal;
-        uint256 ethForToken = ethAmount.mul(oneToken).div(tokenAmount);
+        uint256 ethForToken = ethAmount.mul(10e18).div(tokenAmount);
         prices[underlyingToken] = ethForToken;
         lastUpdateBlocks[underlyingToken] = currentBlock;
 

@@ -34,7 +34,7 @@ contract RiskManagerStorage {
     /**
      * @notice Max number of assets a single account can participate in (borrow or use as collateral)
      */
-    uint public maxAssets;
+    uint public maxAssets = 10;
 
     /**
      * @notice Per-account mapping of "assets you are in", capped by maxAssets

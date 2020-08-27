@@ -918,7 +918,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-08-24T06:27:07.300Z",
+  "updatedAt": "2020-08-27T05:54:20.379Z",
   "devdoc": {
     "methods": {
       "getBorrowRate(uint256,uint256,uint256)": {
