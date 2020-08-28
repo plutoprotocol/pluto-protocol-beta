@@ -35,7 +35,7 @@ contract NestPriceOracle is PriceOracle {
 
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
         (uint256 ethAmount, uint256 tokenAmount,) = _offerPrice.updateAndCheckPriceNow{value: priceCost}(underlyingToken);
-        uint256 ethForToken = ethAmount.mul(10e18).div(tokenAmount);
+        uint256 ethForToken = ethAmount.mul(1e18).div(tokenAmount);
         prices[underlyingToken] = ethForToken;
         lastUpdateBlocks[underlyingToken] = currentBlock;
 
