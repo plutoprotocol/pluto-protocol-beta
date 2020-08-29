@@ -76,8 +76,7 @@ contract PErc20 is PToken, IPErc20 {
       * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
       */
     function borrow(uint borrowAmount) external payable override returns (uint) {
-        uint256 priceCost = riskManager.getPriceCost(address(this));
-        riskManager.updateAndGetTokenPrice{value: priceCost}(address(this));
+        riskManager.updateAndGetTokenPrice{value: msg.value}(address(this));
         return borrowInternal(borrowAmount);
     }
 
@@ -87,8 +86,7 @@ contract PErc20 is PToken, IPErc20 {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function repayBorrow(uint repayAmount) external payable override returns (uint) {
-        uint256 priceCost = riskManager.getPriceCost(address(this));
-        riskManager.updateAndGetTokenPrice{value: priceCost}(address(this));
+        riskManager.updateAndGetTokenPrice{value: msg.value}(address(this));
         (uint err,) = repayBorrowInternal(repayAmount);
         return err;
     }
@@ -100,11 +98,10 @@ contract PErc20 is PToken, IPErc20 {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function repayBorrowBehalf(address borrower, uint repayAmount) external payable override returns (uint) {
-        uint256 priceCost = riskManager.getPriceCost(address(this));
-        riskManager.updateAndGetTokenPrice{value: priceCost}(address(this));
+        riskManager.updateAndGetTokenPrice{value: msg.value}(address(this));
         (uint err,) = repayBorrowBehalfInternal(borrower, repayAmount);
-        return err;
-    }
+            return err;
+        }
 
     /**
      * @notice The sender liquidates the borrowers collateral.
@@ -115,8 +112,7 @@ contract PErc20 is PToken, IPErc20 {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function liquidateBorrow(address borrower, uint repayAmount, IPToken pTokenCollateral) external payable override returns (uint) {
-        uint256 priceCost = riskManager.getPriceCost(address(this));
-        riskManager.updateAndGetTokenPrice{value: priceCost}(address(this));
+        riskManager.updateAndGetTokenPrice{value: msg.value}(address(this));
         (uint err,) = liquidateBorrowInternal(borrower, repayAmount, pTokenCollateral);
         return err;
     }

@@ -520,7 +520,7 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
 
         uint256 priceCost = oracle.getPriceCost(PToken(asset));
         require(msg.value >= priceCost, "No enough balance.");
-        oraclePriceMantissa = oracle.updateAndGetUnderlyingPrice{value: priceCost}(PToken(asset));
+        oraclePriceMantissa = oracle.updateAndGetUnderlyingPrice{value: msg.value}(PToken(asset));
         return oraclePriceMantissa;
     }
 
@@ -723,7 +723,9 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
       * @param newCollateralFactorMantissa The new collateral factor, scaled by 1e18
       * @return uint 0=success, otherwise a failure. (See ErrorReporter for details)
       */
-    function _setCollateralFactor(PToken pToken, uint newCollateralFactorMantissa) external returns (uint256) {
+    function _setCollateralFactor(PToken pToken, uint newCollateralFactorMantissa) external payable returns (uint256) {
+        oracle.updateAndGetUnderlyingPrice{value: msg.value}(pToken);
+
         // Check caller is admin
         if (msg.sender != admin) {
             return fail(Error.UNAUTHORIZED, FailureInfo.SET_COLLATERAL_FACTOR_OWNER_CHECK);

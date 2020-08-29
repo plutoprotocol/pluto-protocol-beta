@@ -34,7 +34,7 @@ contract NestPriceOracle is PriceOracle {
         require(msg.value >= priceCost, "No enough balance to pay oracle price.");
 
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
-        (uint256 ethAmount, uint256 tokenAmount,) = _offerPrice.updateAndCheckPriceNow{value: priceCost}(underlyingToken);
+        (uint256 ethAmount, uint256 tokenAmount,) = _offerPrice.updateAndCheckPriceNow{value: msg.value}(underlyingToken);
         uint256 ethForToken = ethAmount.mul(1e18).div(tokenAmount);
         prices[underlyingToken] = ethForToken;
         lastUpdateBlocks[underlyingToken] = currentBlock;

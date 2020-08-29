@@ -262,15 +262,15 @@
     "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/RiskManagerStorage.sol",
     "exportedSymbols": {
       "RiskManagerStorage": [
-        2909
+        2919
       ]
     },
-    "id": 2910,
+    "id": 2920,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2844,
+        "id": 2854,
         "literals": [
           "solidity",
           "^",
@@ -283,10 +283,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
         "file": "../tokenization/PToken.sol",
-        "id": 2845,
+        "id": 2855,
         "nodeType": "ImportDirective",
-        "scope": 2910,
-        "sourceUnit": 8379,
+        "scope": 2920,
+        "sourceUnit": 8354,
         "src": "64:36:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -294,10 +294,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
         "file": "../oracle/PriceOracle.sol",
-        "id": 2846,
+        "id": 2856,
         "nodeType": "ImportDirective",
-        "scope": 2910,
-        "sourceUnit": 3260,
+        "scope": 2920,
+        "sourceUnit": 3271,
         "src": "101:35:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -309,9 +309,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2909,
+        "id": 2919,
         "linearizedBaseContracts": [
-          2909
+          2919
         ],
         "name": "RiskManagerStorage",
         "nodeType": "ContractDefinition",
@@ -319,18 +319,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2847,
+              "id": 2857,
               "nodeType": "StructuredDocumentation",
               "src": "173:56:5",
               "text": " @notice Administrator for this contract"
             },
             "functionSelector": "f851a440",
-            "id": 2849,
+            "id": 2859,
             "mutability": "mutable",
             "name": "admin",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "234:20:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -339,7 +339,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 2848,
+              "id": 2858,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "234:7:5",
@@ -355,18 +355,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2850,
+              "id": 2860,
               "nodeType": "StructuredDocumentation",
               "src": "261:64:5",
               "text": " @notice Pending administrator for this contract"
             },
             "functionSelector": "26782247",
-            "id": 2852,
+            "id": 2862,
             "mutability": "mutable",
             "name": "pendingAdmin",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "330:27:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -375,7 +375,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 2851,
+              "id": 2861,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "330:7:5",
@@ -391,34 +391,34 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2853,
+              "id": 2863,
               "nodeType": "StructuredDocumentation",
               "src": "364:74:5",
               "text": " @notice Oracle which gives the price of any given asset"
             },
             "functionSelector": "7dc0d1d0",
-            "id": 2855,
+            "id": 2865,
             "mutability": "mutable",
             "name": "oracle",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "443:25:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_PriceOracle_$3259",
+              "typeIdentifier": "t_contract$_PriceOracle_$3270",
               "typeString": "contract PriceOracle"
             },
             "typeName": {
               "contractScope": null,
-              "id": 2854,
+              "id": 2864,
               "name": "PriceOracle",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3259,
+              "referencedDeclaration": 3270,
               "src": "443:11:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PriceOracle_$3259",
+                "typeIdentifier": "t_contract$_PriceOracle_$3270",
                 "typeString": "contract PriceOracle"
               }
             },
@@ -428,18 +428,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2856,
+              "id": 2866,
               "nodeType": "StructuredDocumentation",
               "src": "475:105:5",
               "text": " @notice Multiplier used to calculate the maximum repayAmount when liquidating a borrow"
             },
             "functionSelector": "e8755446",
-            "id": 2858,
+            "id": 2868,
             "mutability": "mutable",
             "name": "closeFactorMantissa",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "585:31:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -448,7 +448,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2857,
+              "id": 2867,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "585:4:5",
@@ -463,18 +463,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2859,
+              "id": 2869,
               "nodeType": "StructuredDocumentation",
               "src": "623:104:5",
               "text": " @notice Multiplier representing the discount on collateral that a liquidator receives"
             },
             "functionSelector": "4ada90af",
-            "id": 2861,
+            "id": 2871,
             "mutability": "mutable",
             "name": "liquidationIncentiveMantissa",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "732:40:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -483,7 +483,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2860,
+              "id": 2870,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "732:4:5",
@@ -498,18 +498,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2862,
+              "id": 2872,
               "nodeType": "StructuredDocumentation",
               "src": "779:113:5",
               "text": " @notice Max number of assets a single account can participate in (borrow or use as collateral)"
             },
             "functionSelector": "94b2294b",
-            "id": 2865,
+            "id": 2875,
             "mutability": "mutable",
             "name": "maxAssets",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "897:26:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -518,7 +518,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2863,
+              "id": 2873,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "897:4:5",
@@ -530,7 +530,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3130",
-              "id": 2864,
+              "id": 2874,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -550,29 +550,29 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2866,
+              "id": 2876,
               "nodeType": "StructuredDocumentation",
               "src": "930:90:5",
               "text": " @notice Per-account mapping of \"assets you are in\", capped by maxAssets"
             },
             "functionSelector": "dce15449",
-            "id": 2871,
+            "id": 2881,
             "mutability": "mutable",
             "name": "accountAssets",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1025:49:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$8378_$dyn_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$8353_$dyn_storage_$",
               "typeString": "mapping(address => contract PToken[])"
             },
             "typeName": {
-              "id": 2870,
+              "id": 2880,
               "keyType": {
-                "id": 2867,
+                "id": 2877,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1033:7:5",
@@ -584,28 +584,28 @@
               "nodeType": "Mapping",
               "src": "1025:28:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$8378_$dyn_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$8353_$dyn_storage_$",
                 "typeString": "mapping(address => contract PToken[])"
               },
               "valueType": {
                 "baseType": {
                   "contractScope": null,
-                  "id": 2868,
+                  "id": 2878,
                   "name": "PToken",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 8378,
+                  "referencedDeclaration": 8353,
                   "src": "1044:6:5",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$8378",
+                    "typeIdentifier": "t_contract$_PToken_$8353",
                     "typeString": "contract PToken"
                   }
                 },
-                "id": 2869,
+                "id": 2879,
                 "length": null,
                 "nodeType": "ArrayTypeName",
                 "src": "1044:8:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_contract$_PToken_$8378_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_contract$_PToken_$8353_$dyn_storage_ptr",
                   "typeString": "contract PToken[]"
                 }
               }
@@ -615,16 +615,16 @@
           },
           {
             "canonicalName": "RiskManagerStorage.Market",
-            "id": 2880,
+            "id": 2890,
             "members": [
               {
                 "constant": false,
-                "id": 2873,
+                "id": 2883,
                 "mutability": "mutable",
                 "name": "isListed",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 2880,
+                "scope": 2890,
                 "src": "1106:13:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -633,7 +633,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 2872,
+                  "id": 2882,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "1106:4:5",
@@ -647,12 +647,12 @@
               },
               {
                 "constant": false,
-                "id": 2875,
+                "id": 2885,
                 "mutability": "mutable",
                 "name": "collateralFactorMantissa",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 2880,
+                "scope": 2890,
                 "src": "1130:29:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -661,7 +661,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 2874,
+                  "id": 2884,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "1130:4:5",
@@ -675,12 +675,12 @@
               },
               {
                 "constant": false,
-                "id": 2879,
+                "id": 2889,
                 "mutability": "mutable",
                 "name": "accountMembership",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 2880,
+                "scope": 2890,
                 "src": "1170:42:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -689,9 +689,9 @@
                   "typeString": "mapping(address => bool)"
                 },
                 "typeName": {
-                  "id": 2878,
+                  "id": 2888,
                   "keyType": {
-                    "id": 2876,
+                    "id": 2886,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1178:7:5",
@@ -707,7 +707,7 @@
                     "typeString": "mapping(address => bool)"
                   },
                   "valueType": {
-                    "id": 2877,
+                    "id": 2887,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1189:4:5",
@@ -723,36 +723,36 @@
             ],
             "name": "Market",
             "nodeType": "StructDefinition",
-            "scope": 2909,
+            "scope": 2919,
             "src": "1081:138:5",
             "visibility": "public"
           },
           {
             "constant": false,
             "documentation": {
-              "id": 2881,
+              "id": 2891,
               "nodeType": "StructuredDocumentation",
               "src": "1225:133:5",
               "text": " @notice Official mapping of PTokens -> Market metadata\n @dev Used e.g. to determine if a market is supported"
             },
             "functionSelector": "8e8f294b",
-            "id": 2885,
+            "id": 2895,
             "mutability": "mutable",
             "name": "markets",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1363:41:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2880_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2890_storage_$",
               "typeString": "mapping(address => struct RiskManagerStorage.Market)"
             },
             "typeName": {
-              "id": 2884,
+              "id": 2894,
               "keyType": {
-                "id": 2882,
+                "id": 2892,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1371:7:5",
@@ -764,18 +764,18 @@
               "nodeType": "Mapping",
               "src": "1363:26:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2880_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2890_storage_$",
                 "typeString": "mapping(address => struct RiskManagerStorage.Market)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 2883,
+                "id": 2893,
                 "name": "Market",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 2880,
+                "referencedDeclaration": 2890,
                 "src": "1382:6:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Market_$2880_storage_ptr",
+                  "typeIdentifier": "t_struct$_Market_$2890_storage_ptr",
                   "typeString": "struct RiskManagerStorage.Market"
                 }
               }
@@ -786,44 +786,44 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2886,
+              "id": 2896,
               "nodeType": "StructuredDocumentation",
               "src": "1411:33:5",
               "text": "@notice A list of all markets"
             },
             "functionSelector": "52d84d1e",
-            "id": 2889,
+            "id": 2899,
             "mutability": "mutable",
             "name": "allMarkets",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1449:26:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_contract$_PToken_$8378_$dyn_storage",
+              "typeIdentifier": "t_array$_t_contract$_PToken_$8353_$dyn_storage",
               "typeString": "contract PToken[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 2887,
+                "id": 2897,
                 "name": "PToken",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 8378,
+                "referencedDeclaration": 8353,
                 "src": "1449:6:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_PToken_$8378",
+                  "typeIdentifier": "t_contract$_PToken_$8353",
                   "typeString": "contract PToken"
                 }
               },
-              "id": 2888,
+              "id": 2898,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "1449:8:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_contract$_PToken_$8378_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_contract$_PToken_$8353_$dyn_storage_ptr",
                 "typeString": "contract PToken[]"
               }
             },
@@ -833,18 +833,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2890,
+              "id": 2900,
               "nodeType": "StructuredDocumentation",
               "src": "1482:258:5",
               "text": " @notice The Pause Guardian can pause certain actions as a safety mechanism.\n  Actions which allow users to remove their own assets cannot be paused.\n  Liquidation / seizing / transfer can only be paused globally, not by market."
             },
             "functionSelector": "24a3d622",
-            "id": 2892,
+            "id": 2902,
             "mutability": "mutable",
             "name": "pauseGuardian",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1745:28:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -853,7 +853,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 2891,
+              "id": 2901,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1745:7:5",
@@ -869,12 +869,12 @@
           {
             "constant": false,
             "functionSelector": "3c94786f",
-            "id": 2894,
+            "id": 2904,
             "mutability": "mutable",
             "name": "_mintGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1779:31:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -883,7 +883,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 2893,
+              "id": 2903,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "1779:4:5",
@@ -898,12 +898,12 @@
           {
             "constant": false,
             "functionSelector": "e6653f3d",
-            "id": 2896,
+            "id": 2906,
             "mutability": "mutable",
             "name": "_borrowGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1816:33:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -912,7 +912,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 2895,
+              "id": 2905,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "1816:4:5",
@@ -927,12 +927,12 @@
           {
             "constant": false,
             "functionSelector": "87f76303",
-            "id": 2898,
+            "id": 2908,
             "mutability": "mutable",
             "name": "transferGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1855:34:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -941,7 +941,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 2897,
+              "id": 2907,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "1855:4:5",
@@ -956,12 +956,12 @@
           {
             "constant": false,
             "functionSelector": "ac0b0bb7",
-            "id": 2900,
+            "id": 2910,
             "mutability": "mutable",
             "name": "seizeGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1895:31:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -970,7 +970,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 2899,
+              "id": 2909,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "1895:4:5",
@@ -985,12 +985,12 @@
           {
             "constant": false,
             "functionSelector": "731f0c2b",
-            "id": 2904,
+            "id": 2914,
             "mutability": "mutable",
             "name": "mintGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1932:50:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -999,9 +999,9 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 2903,
+              "id": 2913,
               "keyType": {
-                "id": 2901,
+                "id": 2911,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1940:7:5",
@@ -1017,7 +1017,7 @@
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 2902,
+                "id": 2912,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "1951:4:5",
@@ -1033,12 +1033,12 @@
           {
             "constant": false,
             "functionSelector": "6d154ea5",
-            "id": 2908,
+            "id": 2918,
             "mutability": "mutable",
             "name": "borrowGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1988:52:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1047,9 +1047,9 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 2907,
+              "id": 2917,
               "keyType": {
-                "id": 2905,
+                "id": 2915,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1996:7:5",
@@ -1065,7 +1065,7 @@
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 2906,
+                "id": 2916,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "2007:4:5",
@@ -1079,7 +1079,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 2910,
+        "scope": 2920,
         "src": "138:1905:5"
       }
     ],
@@ -1089,15 +1089,15 @@
     "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/RiskManagerStorage.sol",
     "exportedSymbols": {
       "RiskManagerStorage": [
-        2909
+        2919
       ]
     },
-    "id": 2910,
+    "id": 2920,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2844,
+        "id": 2854,
         "literals": [
           "solidity",
           "^",
@@ -1110,10 +1110,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
         "file": "../tokenization/PToken.sol",
-        "id": 2845,
+        "id": 2855,
         "nodeType": "ImportDirective",
-        "scope": 2910,
-        "sourceUnit": 8379,
+        "scope": 2920,
+        "sourceUnit": 8354,
         "src": "64:36:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1121,10 +1121,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
         "file": "../oracle/PriceOracle.sol",
-        "id": 2846,
+        "id": 2856,
         "nodeType": "ImportDirective",
-        "scope": 2910,
-        "sourceUnit": 3260,
+        "scope": 2920,
+        "sourceUnit": 3271,
         "src": "101:35:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1136,9 +1136,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2909,
+        "id": 2919,
         "linearizedBaseContracts": [
-          2909
+          2919
         ],
         "name": "RiskManagerStorage",
         "nodeType": "ContractDefinition",
@@ -1146,18 +1146,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2847,
+              "id": 2857,
               "nodeType": "StructuredDocumentation",
               "src": "173:56:5",
               "text": " @notice Administrator for this contract"
             },
             "functionSelector": "f851a440",
-            "id": 2849,
+            "id": 2859,
             "mutability": "mutable",
             "name": "admin",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "234:20:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1166,7 +1166,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 2848,
+              "id": 2858,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "234:7:5",
@@ -1182,18 +1182,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2850,
+              "id": 2860,
               "nodeType": "StructuredDocumentation",
               "src": "261:64:5",
               "text": " @notice Pending administrator for this contract"
             },
             "functionSelector": "26782247",
-            "id": 2852,
+            "id": 2862,
             "mutability": "mutable",
             "name": "pendingAdmin",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "330:27:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1202,7 +1202,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 2851,
+              "id": 2861,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "330:7:5",
@@ -1218,34 +1218,34 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2853,
+              "id": 2863,
               "nodeType": "StructuredDocumentation",
               "src": "364:74:5",
               "text": " @notice Oracle which gives the price of any given asset"
             },
             "functionSelector": "7dc0d1d0",
-            "id": 2855,
+            "id": 2865,
             "mutability": "mutable",
             "name": "oracle",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "443:25:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_PriceOracle_$3259",
+              "typeIdentifier": "t_contract$_PriceOracle_$3270",
               "typeString": "contract PriceOracle"
             },
             "typeName": {
               "contractScope": null,
-              "id": 2854,
+              "id": 2864,
               "name": "PriceOracle",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3259,
+              "referencedDeclaration": 3270,
               "src": "443:11:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PriceOracle_$3259",
+                "typeIdentifier": "t_contract$_PriceOracle_$3270",
                 "typeString": "contract PriceOracle"
               }
             },
@@ -1255,18 +1255,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2856,
+              "id": 2866,
               "nodeType": "StructuredDocumentation",
               "src": "475:105:5",
               "text": " @notice Multiplier used to calculate the maximum repayAmount when liquidating a borrow"
             },
             "functionSelector": "e8755446",
-            "id": 2858,
+            "id": 2868,
             "mutability": "mutable",
             "name": "closeFactorMantissa",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "585:31:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1275,7 +1275,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2857,
+              "id": 2867,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "585:4:5",
@@ -1290,18 +1290,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2859,
+              "id": 2869,
               "nodeType": "StructuredDocumentation",
               "src": "623:104:5",
               "text": " @notice Multiplier representing the discount on collateral that a liquidator receives"
             },
             "functionSelector": "4ada90af",
-            "id": 2861,
+            "id": 2871,
             "mutability": "mutable",
             "name": "liquidationIncentiveMantissa",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "732:40:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1310,7 +1310,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2860,
+              "id": 2870,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "732:4:5",
@@ -1325,18 +1325,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2862,
+              "id": 2872,
               "nodeType": "StructuredDocumentation",
               "src": "779:113:5",
               "text": " @notice Max number of assets a single account can participate in (borrow or use as collateral)"
             },
             "functionSelector": "94b2294b",
-            "id": 2865,
+            "id": 2875,
             "mutability": "mutable",
             "name": "maxAssets",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "897:26:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1345,7 +1345,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2863,
+              "id": 2873,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "897:4:5",
@@ -1357,7 +1357,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3130",
-              "id": 2864,
+              "id": 2874,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1377,29 +1377,29 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2866,
+              "id": 2876,
               "nodeType": "StructuredDocumentation",
               "src": "930:90:5",
               "text": " @notice Per-account mapping of \"assets you are in\", capped by maxAssets"
             },
             "functionSelector": "dce15449",
-            "id": 2871,
+            "id": 2881,
             "mutability": "mutable",
             "name": "accountAssets",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1025:49:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$8378_$dyn_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$8353_$dyn_storage_$",
               "typeString": "mapping(address => contract PToken[])"
             },
             "typeName": {
-              "id": 2870,
+              "id": 2880,
               "keyType": {
-                "id": 2867,
+                "id": 2877,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1033:7:5",
@@ -1411,28 +1411,28 @@
               "nodeType": "Mapping",
               "src": "1025:28:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$8378_$dyn_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_PToken_$8353_$dyn_storage_$",
                 "typeString": "mapping(address => contract PToken[])"
               },
               "valueType": {
                 "baseType": {
                   "contractScope": null,
-                  "id": 2868,
+                  "id": 2878,
                   "name": "PToken",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 8378,
+                  "referencedDeclaration": 8353,
                   "src": "1044:6:5",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$8378",
+                    "typeIdentifier": "t_contract$_PToken_$8353",
                     "typeString": "contract PToken"
                   }
                 },
-                "id": 2869,
+                "id": 2879,
                 "length": null,
                 "nodeType": "ArrayTypeName",
                 "src": "1044:8:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_contract$_PToken_$8378_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_contract$_PToken_$8353_$dyn_storage_ptr",
                   "typeString": "contract PToken[]"
                 }
               }
@@ -1442,16 +1442,16 @@
           },
           {
             "canonicalName": "RiskManagerStorage.Market",
-            "id": 2880,
+            "id": 2890,
             "members": [
               {
                 "constant": false,
-                "id": 2873,
+                "id": 2883,
                 "mutability": "mutable",
                 "name": "isListed",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 2880,
+                "scope": 2890,
                 "src": "1106:13:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1460,7 +1460,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 2872,
+                  "id": 2882,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "1106:4:5",
@@ -1474,12 +1474,12 @@
               },
               {
                 "constant": false,
-                "id": 2875,
+                "id": 2885,
                 "mutability": "mutable",
                 "name": "collateralFactorMantissa",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 2880,
+                "scope": 2890,
                 "src": "1130:29:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1488,7 +1488,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 2874,
+                  "id": 2884,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "1130:4:5",
@@ -1502,12 +1502,12 @@
               },
               {
                 "constant": false,
-                "id": 2879,
+                "id": 2889,
                 "mutability": "mutable",
                 "name": "accountMembership",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 2880,
+                "scope": 2890,
                 "src": "1170:42:5",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1516,9 +1516,9 @@
                   "typeString": "mapping(address => bool)"
                 },
                 "typeName": {
-                  "id": 2878,
+                  "id": 2888,
                   "keyType": {
-                    "id": 2876,
+                    "id": 2886,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1178:7:5",
@@ -1534,7 +1534,7 @@
                     "typeString": "mapping(address => bool)"
                   },
                   "valueType": {
-                    "id": 2877,
+                    "id": 2887,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1189:4:5",
@@ -1550,36 +1550,36 @@
             ],
             "name": "Market",
             "nodeType": "StructDefinition",
-            "scope": 2909,
+            "scope": 2919,
             "src": "1081:138:5",
             "visibility": "public"
           },
           {
             "constant": false,
             "documentation": {
-              "id": 2881,
+              "id": 2891,
               "nodeType": "StructuredDocumentation",
               "src": "1225:133:5",
               "text": " @notice Official mapping of PTokens -> Market metadata\n @dev Used e.g. to determine if a market is supported"
             },
             "functionSelector": "8e8f294b",
-            "id": 2885,
+            "id": 2895,
             "mutability": "mutable",
             "name": "markets",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1363:41:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2880_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2890_storage_$",
               "typeString": "mapping(address => struct RiskManagerStorage.Market)"
             },
             "typeName": {
-              "id": 2884,
+              "id": 2894,
               "keyType": {
-                "id": 2882,
+                "id": 2892,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1371:7:5",
@@ -1591,18 +1591,18 @@
               "nodeType": "Mapping",
               "src": "1363:26:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2880_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Market_$2890_storage_$",
                 "typeString": "mapping(address => struct RiskManagerStorage.Market)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 2883,
+                "id": 2893,
                 "name": "Market",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 2880,
+                "referencedDeclaration": 2890,
                 "src": "1382:6:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Market_$2880_storage_ptr",
+                  "typeIdentifier": "t_struct$_Market_$2890_storage_ptr",
                   "typeString": "struct RiskManagerStorage.Market"
                 }
               }
@@ -1613,44 +1613,44 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2886,
+              "id": 2896,
               "nodeType": "StructuredDocumentation",
               "src": "1411:33:5",
               "text": "@notice A list of all markets"
             },
             "functionSelector": "52d84d1e",
-            "id": 2889,
+            "id": 2899,
             "mutability": "mutable",
             "name": "allMarkets",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1449:26:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_contract$_PToken_$8378_$dyn_storage",
+              "typeIdentifier": "t_array$_t_contract$_PToken_$8353_$dyn_storage",
               "typeString": "contract PToken[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 2887,
+                "id": 2897,
                 "name": "PToken",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 8378,
+                "referencedDeclaration": 8353,
                 "src": "1449:6:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_PToken_$8378",
+                  "typeIdentifier": "t_contract$_PToken_$8353",
                   "typeString": "contract PToken"
                 }
               },
-              "id": 2888,
+              "id": 2898,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "1449:8:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_contract$_PToken_$8378_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_contract$_PToken_$8353_$dyn_storage_ptr",
                 "typeString": "contract PToken[]"
               }
             },
@@ -1660,18 +1660,18 @@
           {
             "constant": false,
             "documentation": {
-              "id": 2890,
+              "id": 2900,
               "nodeType": "StructuredDocumentation",
               "src": "1482:258:5",
               "text": " @notice The Pause Guardian can pause certain actions as a safety mechanism.\n  Actions which allow users to remove their own assets cannot be paused.\n  Liquidation / seizing / transfer can only be paused globally, not by market."
             },
             "functionSelector": "24a3d622",
-            "id": 2892,
+            "id": 2902,
             "mutability": "mutable",
             "name": "pauseGuardian",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1745:28:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1680,7 +1680,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 2891,
+              "id": 2901,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1745:7:5",
@@ -1696,12 +1696,12 @@
           {
             "constant": false,
             "functionSelector": "3c94786f",
-            "id": 2894,
+            "id": 2904,
             "mutability": "mutable",
             "name": "_mintGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1779:31:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1710,7 +1710,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 2893,
+              "id": 2903,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "1779:4:5",
@@ -1725,12 +1725,12 @@
           {
             "constant": false,
             "functionSelector": "e6653f3d",
-            "id": 2896,
+            "id": 2906,
             "mutability": "mutable",
             "name": "_borrowGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1816:33:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1739,7 +1739,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 2895,
+              "id": 2905,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "1816:4:5",
@@ -1754,12 +1754,12 @@
           {
             "constant": false,
             "functionSelector": "87f76303",
-            "id": 2898,
+            "id": 2908,
             "mutability": "mutable",
             "name": "transferGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1855:34:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1768,7 +1768,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 2897,
+              "id": 2907,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "1855:4:5",
@@ -1783,12 +1783,12 @@
           {
             "constant": false,
             "functionSelector": "ac0b0bb7",
-            "id": 2900,
+            "id": 2910,
             "mutability": "mutable",
             "name": "seizeGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1895:31:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1797,7 +1797,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 2899,
+              "id": 2909,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "1895:4:5",
@@ -1812,12 +1812,12 @@
           {
             "constant": false,
             "functionSelector": "731f0c2b",
-            "id": 2904,
+            "id": 2914,
             "mutability": "mutable",
             "name": "mintGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1932:50:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1826,9 +1826,9 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 2903,
+              "id": 2913,
               "keyType": {
-                "id": 2901,
+                "id": 2911,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1940:7:5",
@@ -1844,7 +1844,7 @@
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 2902,
+                "id": 2912,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "1951:4:5",
@@ -1860,12 +1860,12 @@
           {
             "constant": false,
             "functionSelector": "6d154ea5",
-            "id": 2908,
+            "id": 2918,
             "mutability": "mutable",
             "name": "borrowGuardianPaused",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 2909,
+            "scope": 2919,
             "src": "1988:52:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1874,9 +1874,9 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 2907,
+              "id": 2917,
               "keyType": {
-                "id": 2905,
+                "id": 2915,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1996:7:5",
@@ -1892,7 +1892,7 @@
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 2906,
+                "id": 2916,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "2007:4:5",
@@ -1906,7 +1906,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 2910,
+        "scope": 2920,
         "src": "138:1905:5"
       }
     ],
@@ -1918,7 +1918,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-08-27T07:37:24.842Z",
+  "updatedAt": "2020-08-29T03:36:16.647Z",
   "devdoc": {
     "methods": {},
     "stateVariables": {

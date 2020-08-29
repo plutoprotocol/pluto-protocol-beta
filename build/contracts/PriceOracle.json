@@ -89,15 +89,15 @@
     "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
     "exportedSymbols": {
       "PriceOracle": [
-        3259
+        3270
       ]
     },
-    "id": 3260,
+    "id": 3271,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3231,
+        "id": 3242,
         "literals": [
           "solidity",
           "^",
@@ -110,10 +110,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
         "file": "../tokenization/PToken.sol",
-        "id": 3232,
+        "id": 3243,
         "nodeType": "ImportDirective",
-        "scope": 3260,
-        "sourceUnit": 8379,
+        "scope": 3271,
+        "sourceUnit": 8354,
         "src": "64:36:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -125,9 +125,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3259,
+        "id": 3270,
         "linearizedBaseContracts": [
-          3259
+          3270
         ],
         "name": "PriceOracle",
         "nodeType": "ContractDefinition",
@@ -135,12 +135,12 @@
           {
             "constant": true,
             "functionSelector": "66331bba",
-            "id": 3235,
+            "id": 3246,
             "mutability": "constant",
             "name": "isPriceOracle",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 3259,
+            "scope": 3270,
             "src": "138:41:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -149,7 +149,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 3233,
+              "id": 3244,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "138:4:7",
@@ -161,7 +161,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "74727565",
-              "id": 3234,
+              "id": 3245,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -182,7 +182,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "fc57d4df",
-            "id": 3244,
+            "id": 3255,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -190,33 +190,33 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 3238,
+              "id": 3249,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3237,
+                  "id": 3248,
                   "mutability": "mutable",
                   "name": "pToken",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3244,
+                  "scope": 3255,
                   "src": "214:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$8378",
+                    "typeIdentifier": "t_contract$_PToken_$8353",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 3236,
+                    "id": 3247,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 8378,
+                    "referencedDeclaration": 8353,
                     "src": "214:6:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$8378",
+                      "typeIdentifier": "t_contract$_PToken_$8353",
                       "typeString": "contract PToken"
                     }
                   },
@@ -227,17 +227,17 @@
               "src": "213:15:7"
             },
             "returnParameters": {
-              "id": 3243,
+              "id": 3254,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3240,
+                  "id": 3251,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3244,
+                  "scope": 3255,
                   "src": "258:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -246,7 +246,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3239,
+                    "id": 3250,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "258:7:7",
@@ -260,12 +260,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3242,
+                  "id": 3253,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3244,
+                  "scope": 3255,
                   "src": "267:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -274,7 +274,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3241,
+                    "id": 3252,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "267:7:7",
@@ -289,7 +289,7 @@
               ],
               "src": "257:18:7"
             },
-            "scope": 3259,
+            "scope": 3270,
             "src": "186:90:7",
             "stateMutability": "view",
             "virtual": true,
@@ -299,7 +299,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "220302dc",
-            "id": 3251,
+            "id": 3262,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -307,33 +307,33 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 3247,
+              "id": 3258,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3246,
+                  "id": 3257,
                   "mutability": "mutable",
                   "name": "pToken",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3251,
+                  "scope": 3262,
                   "src": "319:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$8378",
+                    "typeIdentifier": "t_contract$_PToken_$8353",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 3245,
+                    "id": 3256,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 8378,
+                    "referencedDeclaration": 8353,
                     "src": "319:6:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$8378",
+                      "typeIdentifier": "t_contract$_PToken_$8353",
                       "typeString": "contract PToken"
                     }
                   },
@@ -344,17 +344,17 @@
               "src": "318:15:7"
             },
             "returnParameters": {
-              "id": 3250,
+              "id": 3261,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3249,
+                  "id": 3260,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3251,
+                  "scope": 3262,
                   "src": "368:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -363,7 +363,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3248,
+                    "id": 3259,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "368:7:7",
@@ -378,7 +378,7 @@
               ],
               "src": "367:9:7"
             },
-            "scope": 3259,
+            "scope": 3270,
             "src": "282:95:7",
             "stateMutability": "payable",
             "virtual": true,
@@ -388,7 +388,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "ea67db22",
-            "id": 3258,
+            "id": 3269,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -396,33 +396,33 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 3254,
+              "id": 3265,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3253,
+                  "id": 3264,
                   "mutability": "mutable",
                   "name": "pToken",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3258,
+                  "scope": 3269,
                   "src": "405:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$8378",
+                    "typeIdentifier": "t_contract$_PToken_$8353",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 3252,
+                    "id": 3263,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 8378,
+                    "referencedDeclaration": 8353,
                     "src": "405:6:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$8378",
+                      "typeIdentifier": "t_contract$_PToken_$8353",
                       "typeString": "contract PToken"
                     }
                   },
@@ -433,17 +433,17 @@
               "src": "404:15:7"
             },
             "returnParameters": {
-              "id": 3257,
+              "id": 3268,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3256,
+                  "id": 3267,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3258,
+                  "scope": 3269,
                   "src": "449:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -452,7 +452,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3255,
+                    "id": 3266,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "449:7:7",
@@ -467,14 +467,14 @@
               ],
               "src": "448:9:7"
             },
-            "scope": 3259,
+            "scope": 3270,
             "src": "383:75:7",
             "stateMutability": "view",
             "virtual": true,
             "visibility": "public"
           }
         ],
-        "scope": 3260,
+        "scope": 3271,
         "src": "102:358:7"
       }
     ],
@@ -484,15 +484,15 @@
     "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
     "exportedSymbols": {
       "PriceOracle": [
-        3259
+        3270
       ]
     },
-    "id": 3260,
+    "id": 3271,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3231,
+        "id": 3242,
         "literals": [
           "solidity",
           "^",
@@ -505,10 +505,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
         "file": "../tokenization/PToken.sol",
-        "id": 3232,
+        "id": 3243,
         "nodeType": "ImportDirective",
-        "scope": 3260,
-        "sourceUnit": 8379,
+        "scope": 3271,
+        "sourceUnit": 8354,
         "src": "64:36:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -520,9 +520,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3259,
+        "id": 3270,
         "linearizedBaseContracts": [
-          3259
+          3270
         ],
         "name": "PriceOracle",
         "nodeType": "ContractDefinition",
@@ -530,12 +530,12 @@
           {
             "constant": true,
             "functionSelector": "66331bba",
-            "id": 3235,
+            "id": 3246,
             "mutability": "constant",
             "name": "isPriceOracle",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 3259,
+            "scope": 3270,
             "src": "138:41:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -544,7 +544,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 3233,
+              "id": 3244,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "138:4:7",
@@ -556,7 +556,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "74727565",
-              "id": 3234,
+              "id": 3245,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -577,7 +577,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "fc57d4df",
-            "id": 3244,
+            "id": 3255,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -585,33 +585,33 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 3238,
+              "id": 3249,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3237,
+                  "id": 3248,
                   "mutability": "mutable",
                   "name": "pToken",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3244,
+                  "scope": 3255,
                   "src": "214:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$8378",
+                    "typeIdentifier": "t_contract$_PToken_$8353",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 3236,
+                    "id": 3247,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 8378,
+                    "referencedDeclaration": 8353,
                     "src": "214:6:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$8378",
+                      "typeIdentifier": "t_contract$_PToken_$8353",
                       "typeString": "contract PToken"
                     }
                   },
@@ -622,17 +622,17 @@
               "src": "213:15:7"
             },
             "returnParameters": {
-              "id": 3243,
+              "id": 3254,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3240,
+                  "id": 3251,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3244,
+                  "scope": 3255,
                   "src": "258:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -641,7 +641,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3239,
+                    "id": 3250,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "258:7:7",
@@ -655,12 +655,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 3242,
+                  "id": 3253,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3244,
+                  "scope": 3255,
                   "src": "267:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -669,7 +669,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3241,
+                    "id": 3252,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "267:7:7",
@@ -684,7 +684,7 @@
               ],
               "src": "257:18:7"
             },
-            "scope": 3259,
+            "scope": 3270,
             "src": "186:90:7",
             "stateMutability": "view",
             "virtual": true,
@@ -694,7 +694,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "220302dc",
-            "id": 3251,
+            "id": 3262,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -702,33 +702,33 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 3247,
+              "id": 3258,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3246,
+                  "id": 3257,
                   "mutability": "mutable",
                   "name": "pToken",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3251,
+                  "scope": 3262,
                   "src": "319:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$8378",
+                    "typeIdentifier": "t_contract$_PToken_$8353",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 3245,
+                    "id": 3256,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 8378,
+                    "referencedDeclaration": 8353,
                     "src": "319:6:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$8378",
+                      "typeIdentifier": "t_contract$_PToken_$8353",
                       "typeString": "contract PToken"
                     }
                   },
@@ -739,17 +739,17 @@
               "src": "318:15:7"
             },
             "returnParameters": {
-              "id": 3250,
+              "id": 3261,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3249,
+                  "id": 3260,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3251,
+                  "scope": 3262,
                   "src": "368:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -758,7 +758,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3248,
+                    "id": 3259,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "368:7:7",
@@ -773,7 +773,7 @@
               ],
               "src": "367:9:7"
             },
-            "scope": 3259,
+            "scope": 3270,
             "src": "282:95:7",
             "stateMutability": "payable",
             "virtual": true,
@@ -783,7 +783,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "ea67db22",
-            "id": 3258,
+            "id": 3269,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -791,33 +791,33 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 3254,
+              "id": 3265,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3253,
+                  "id": 3264,
                   "mutability": "mutable",
                   "name": "pToken",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3258,
+                  "scope": 3269,
                   "src": "405:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$8378",
+                    "typeIdentifier": "t_contract$_PToken_$8353",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 3252,
+                    "id": 3263,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 8378,
+                    "referencedDeclaration": 8353,
                     "src": "405:6:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$8378",
+                      "typeIdentifier": "t_contract$_PToken_$8353",
                       "typeString": "contract PToken"
                     }
                   },
@@ -828,17 +828,17 @@
               "src": "404:15:7"
             },
             "returnParameters": {
-              "id": 3257,
+              "id": 3268,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3256,
+                  "id": 3267,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3258,
+                  "scope": 3269,
                   "src": "449:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -847,7 +847,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3255,
+                    "id": 3266,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "449:7:7",
@@ -862,14 +862,14 @@
               ],
               "src": "448:9:7"
             },
-            "scope": 3259,
+            "scope": 3270,
             "src": "383:75:7",
             "stateMutability": "view",
             "virtual": true,
             "visibility": "public"
           }
         ],
-        "scope": 3260,
+        "scope": 3271,
         "src": "102:358:7"
       }
     ],
@@ -881,7 +881,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-08-27T07:37:24.873Z",
+  "updatedAt": "2020-08-29T03:36:16.679Z",
   "devdoc": {
     "methods": {}
   },
