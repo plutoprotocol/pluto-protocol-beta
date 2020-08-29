@@ -23,7 +23,7 @@ contract NestPriceOracle is PriceOracle {
     function updateAndGetUnderlyingPrice(PToken pToken) external payable override returns (uint256) {
         (uint256 tokenPrice, uint256 priceUpdateBlock) = getUnderlyingPrice(pToken);
         uint256 currentBlock = block.number;
-        if (tokenPrice == 1e18 || currentBlock == priceUpdateBlock) {
+        if (pToken.isForETH() || currentBlock == priceUpdateBlock) {
             tx.origin.transfer(msg.value);
             return tokenPrice;
         }
@@ -56,7 +56,6 @@ contract NestPriceOracle is PriceOracle {
         address underlyingToken = address(PErc20(address(pToken)).underlying());
         return (prices[underlyingToken], lastUpdateBlocks[underlyingToken]);
     }
-
 
     function activation(address nestAddress, uint256 nestAmount) public {
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
