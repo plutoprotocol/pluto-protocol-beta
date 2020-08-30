@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.6.9;
 
-import "../NestPriceOracle.sol";
-import "../PriceOracle.sol";
+import "../oracle/NestPriceOracle.sol";
+import "../oracle/PriceOracle.sol";
 import "./MockNest3OfferPrice.sol";
 
 contract MockNest3VoteFactory is Nest3VoteFactory {
