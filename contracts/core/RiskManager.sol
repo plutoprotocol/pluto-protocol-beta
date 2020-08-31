@@ -9,90 +9,90 @@ import "./IRiskManager.sol";
 import "./RiskManagerStorage.sol";
 
 /**
- * @title 风险管理合约
+ * @title Contracts for administration and risk control
  */
 contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReporter, Exponential {
     /**
-     * @notice 支持新的 pToken 时触发
+     * @notice Emitted when an admin supports a market
      */
     event MarketListed(PToken pToken);
 
     /**
-     * @notice 当一个账户进入市场时触发
+     * @notice Emitted when an account enters a market
      */
     event MarketEntered(PToken pToken, address account);
 
     /**
-     * @notice 账户退出市场时触发
+     * @notice Emitted when an account exits a market
      */
     event MarketExited(PToken pToken, address account);
 
     /**
-     * @notice 单次清算比例被 admin 账户更改时触发
+     * @notice Emitted when close factor is changed by admin
      */
     event NewCloseFactor(uint oldCloseFactorMantissa, uint newCloseFactorMantissa);
 
     /**
-     * @notice 指定 pToken 市场资金抵押率被 admin 账户更改时触发
+     * @notice Emitted when a collateral factor is changed by admin
      */
     event NewCollateralFactor(PToken pToken, uint oldCollateralFactorMantissa, uint newCollateralFactorMantissa);
 
     /**
-     * @notice 清算折扣率被 admin 账户更改时触发
+     * @notice Emitted when liquidation incentive is changed by admin
      */
     event NewLiquidationIncentive(uint oldLiquidationIncentiveMantissa, uint newLiquidationIncentiveMantissa);
 
     /**
-     * @notice 单个用户最大资产种类被 admin 更改时触发
+     * @notice Emitted when maxAssets is changed by admin
      */
     event NewMaxAssets(uint oldMaxAssets, uint newMaxAssets);
 
     /**
-     * @notice 更改价格预言机时触发
+     * @notice Emitted when price oracle is changed
      */
     event NewPriceOracle(PriceOracle oldPriceOracle, PriceOracle newPriceOracle);
 
     /**
-     * @notice 协议守护者地址更改时触发
+     * @notice Emitted when pause guardian is changed
      */
     event NewPauseGuardian(address oldPauseGuardian, address newPauseGuardian);
 
     /**
-     * @notice 某个操作被全局暂停时触发
+     * @notice Emitted when an action is paused globally
      */
     event ActionPaused(string action, bool pauseState);
 
     /**
-     * @notice 某个操作在单个市场上暂停时触发
+     * @notice Emitted when an action is paused on a market
      */
     event ActionPaused(PToken pToken, string action, bool pauseState);
 
-    // 单次清算比例最小值
+    // closeFactorMantissa must be strictly greater than this value
     uint internal constant closeFactorMinMantissa = 0.05e18; // 0.05
 
-    // 单次清算比例最大值
+    // closeFactorMantissa must not exceed this value
     uint internal constant closeFactorMaxMantissa = 0.9e18; // 0.9
 
-    // 抵押率最大值
+    // No collateralFactorMantissa may exceed this value
     uint internal constant collateralFactorMaxMantissa = 0.9e18; // 0.9
 
-    // 清算折扣率最小值
+    // liquidationIncentiveMantissa must be no less than this value
     uint internal constant liquidationIncentiveMinMantissa = 1.0e18; // 1.0
 
-    // 清算折扣率最大值
+    // liquidationIncentiveMantissa must be no greater than this value
     uint internal constant liquidationIncentiveMaxMantissa = 1.5e18; // 1.5
 
     constructor() public {
         admin = msg.sender;
     }
 
-    /*** 用户资产相关 ***/
+    /*** Assets You Are In ***/
 
     /**
-     * @notice 获取用户所进入的市场
-     * @param account 指定账户
-     * @return 指定账户所进入的市场列表
-     */
+      * @notice Returns the assets an account has entered
+      * @param account The address of the account to pull assets for
+      * @return A dynamic list with the assets the account has entered
+      */
     function getAssetsIn(address account) external view returns (PToken[] memory) {
         PToken[] memory assetsIn = accountAssets[account];
 
@@ -100,19 +100,19 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
     }
 
     /**
-     * @notice 确认指定账户是否进入某个市场
-     * @param account 指定账户
-     * @param pToken pToken 市场
-     * @return 如果账户在指定市场返回 true，否则返回 false。
-     */
+      * @notice Returns whether the given account is entered in the given asset
+      * @param account The address of the account to check
+      * @param pToken The pToken to check
+      * @return True if the account is in the asset, otherwise false.
+      */
     function checkMembership(address account, PToken pToken) external view returns (bool) {
         return markets[address(pToken)].accountMembership[account];
     }
 
     /**
-     * @notice 添加流动性资产池
-     * @param pTokens 要开启的 pToken 市场列表
-     * @return 添加结果
+     * @notice Add assets to be included in account liquidity calculation
+     * @param pTokens The list of addresses of the pToken markets to be enabled
+     * @return Success indicator for whether each corresponding market was entered
      */
     function enterMarkets(address[] memory pTokens) public override returns (uint[] memory) {
         uint len = pTokens.length;
@@ -128,26 +128,26 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
     }
 
     /**
-     * @notice 为指定账户开通市场
-     * @param pToken 要开通的市场
-     * @param borrower 指定账户
-     * @return 开通结果，0 为成功，其它数字为对应的错误类型
+     * @notice Add the market to the borrower's "assets in" for liquidity calculations
+     * @param pToken The market to enter
+     * @param borrower The address of the account to modify
+     * @return Success indicator for whether the market was entered
      */
     function addToMarketInternal(PToken pToken, address borrower) internal returns (Error) {
         Market storage marketToJoin = markets[address(pToken)];
 
         if (!marketToJoin.isListed) {
-            // 不存在的市场，不能加入
+            // market is not listed, cannot join
             return Error.MARKET_NOT_LISTED;
         }
 
         if (marketToJoin.accountMembership[borrower] == true) {
-            // 已经加入的市场，直接返回
+            // already joined
             return Error.NO_ERROR;
         }
 
         if (accountAssets[borrower].length >= maxAssets)  {
-            // 已经加入太多的市场了
+            // no space, cannot join
             return Error.TOO_MANY_ASSETS;
         }
 
@@ -160,22 +160,24 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
     }
 
     /**
-     * @notice 退出 pToken 市场
-     * @param pTokenAddress 要退出的 pToken 市场地址
-     * @return 是否成功退出
-     */
+    * @notice Removes asset from sender's account liquidity calculation
+    * @dev Sender must not have an outstanding borrow balance in the asset,
+    *  or be providing necessary collateral for an outstanding borrow.
+    * @param pTokenAddress The address of the asset to be removed
+    * @return Whether or not the account successfully exited the market
+    */
     function exitMarket(address pTokenAddress) external override returns (uint) {
         PToken pToken = PToken(pTokenAddress);
         /* Get sender tokensHeld and amountOwed underlying from the pToken */
         (uint oErr, uint tokensHeld, uint amountOwed, ) = pToken.getAccountSnapshot(msg.sender);
         require(oErr == 0, "exitMarket: getAccountSnapshot failed"); // semi-opaque error code
 
-        /* 在该市场有借款时不能退出 */
+        /* Fail if the sender has a borrow balance */
         if (amountOwed != 0) {
             return fail(Error.NONZERO_BORROW_BALANCE, FailureInfo.EXIT_MARKET_BALANCE_OWED);
         }
 
-        /* 如果退出市场后，账户的抵押额度小于借款金融，不许退出 */
+        /* Fail if the sender is not permitted to redeem all of their tokens */
         uint allowed = redeemAllowedInternal(pTokenAddress, msg.sender, tokensHeld);
         if (allowed != 0) {
             return failOpaque(Error.REJECTION, FailureInfo.EXIT_MARKET_REJECTION, allowed);
@@ -242,10 +244,10 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
     }
 
     /**
-     * @notice 判断是否允许用户都某个市场取出资产，当取出资产后账户仍然有足够流动性时允许取出
-     * @param pToken pToken 市场
-     * @param redeemer 要取出资产的账户
-     * @param redeemTokens 要取出的资产的 pToken 数量
+     * @notice Checks if the account should be allowed to redeem tokens in the given market
+     * @param pToken The market to verify the redeem against
+     * @param redeemer The account which would redeem the tokens
+     * @param redeemTokens The number of pTokens to exchange for the underlying asset in the market
      * @return 0 if the redeem is allowed, otherwise a semi-opaque error code (See ErrorReporter.sol)
      */
     function redeemAllowed(address pToken, address redeemer, uint redeemTokens) external override returns (uint) {
