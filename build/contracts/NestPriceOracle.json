@@ -8735,12 +8735,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xE99751eced54667323e6dBE1E25aae2ed280f4D5",
-      "transactionHash": "0xae4f8cd4b3040e675e191c9f85428ee181dfd3a9e881fe80a03cea7f49b6da33"
+      "address": "0xd874cFF31e2aa29db96fFCBE4581E65160d699Fe",
+      "transactionHash": "0x93684bbea59a83389273bb079a6a8f0ddcab74b0bf9da8aeb60740f2334ac4ec"
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-08-30T02:45:30.499Z",
+  "updatedAt": "2020-09-02T02:21:33.800Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

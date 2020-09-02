@@ -17,7 +17,7 @@ module.exports = async function(deployer, network, accounts) {
         });
         await deployer.deploy(InterestModel, "20000000000000000", "200000000000000000");
         await deployer.deploy(pETH, RiskManager.address, InterestModel.address, "1000000000000000000", "PoolX ETH", "pETH", 18, accounts[0])
-        await deployer.deploy(pUSDT, TetherToken.address, RiskManager.address, InterestModel.address, "1000000000000000000", "PoolX ETH", "pETH", 18, accounts[0])
+        await deployer.deploy(pUSDT, TetherToken.address, RiskManager.address, InterestModel.address, "1000000", "PoolX USDT", "pUSDT", 18, accounts[0])
 
         let riskManagerInstance = await RiskManager.deployed();
         await riskManagerInstance._supportMarket(pETH.address);
