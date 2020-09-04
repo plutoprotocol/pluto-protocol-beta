@@ -49,4 +49,5 @@ abstract contract IRiskManager {
 
     function updateAndGetTokenPrice(address pToken) external virtual payable returns (uint256);
     function getPriceCost(address pToken) external view virtual returns (uint256);
+    function getAllMarkets() external view virtual returns (address[] memory);
 }

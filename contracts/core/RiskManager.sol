@@ -853,10 +853,13 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
     /**
      * @notice Return all of the markets
      * @dev The automatic getter may be used to access an individual market.
-     * @return The list of market addresses
+     * @return _allMarkets The list of market addresses
      */
-    function getAllMarkets() public view returns (PToken[] memory) {
-        return allMarkets;
+    function getAllMarkets() external view override returns (address[] memory _allMarkets) {
+        _allMarkets = new address[](allMarkets.length);
+        for (uint i = 0; i < allMarkets.length; i++) {
+            _allMarkets[i] = address(allMarkets[i]);
+        }
     }
 
     /**

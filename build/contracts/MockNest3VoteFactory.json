@@ -41,9 +41,9 @@
       "constant": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"checkAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"contractAddress\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"priceOracle\",\"outputs\":[{\"internalType\":\"contract Nest3OfferPrice\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/mock/MockNest3VoteFactory.sol\":\"MockNest3VoteFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/IRiskManager.sol\":{\"keccak256\":\"0x5eb71d93860fe7d3ef06e05a7bf5aa7445071fa1ae7d0c078878646f6723b602\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8d995f75e767ad59b1179cb2f0f09bda4ef375a68eec62487c0e6b87e2df9436\",\"dweb:/ipfs/QmWDvV4HU4vJ9YexFsJs7wEDZzhsCFfdx55wfPF7K9Po73\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0x2a404ade7ce788c43f4acafd57e626b342fb1644ba176b1ab451be4c4a9d64e5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://aa229ef7cf18ea3363669dee097b5c01c4b830c14e4d59e922a1bb01a4d46deb\",\"dweb:/ipfs/QmWL94Q3yjHRugPqLbLBTyiM7uD8FYUbWcgnfSakCAfKr2\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/mock/MockNest3OfferPrice.sol\":{\"keccak256\":\"0xba59ab06f5a510bdcc3297b6173e5ba747f9235becb2b44e069edbf842517c79\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://cb5b13a03233afd9012284baabede0bb8cc6d1907b6a318a392615e3050c3831\",\"dweb:/ipfs/QmQn4thtowbQ2jaSQ8BGTUfJGawyqJvQ8ijwV79vi8nVSZ\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/mock/MockNest3VoteFactory.sol\":{\"keccak256\":\"0x46e1f691d48e3788706e7ad79d5598b846f265624af16027c612fa0578411888\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://855d4481256d935fe5e42e010a62df6f6fdee56cd74bb2a5f1f382a6d1b10472\",\"dweb:/ipfs/QmSanA1aFDbGHt3hzfK99ZSLA89AS8amcgUiFucYGUM54T\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/NestPriceOracle.sol\":{\"keccak256\":\"0x96a00177c304481adbdb41ff04c8d656d7810e9026a6f79259d547e9ff26c00b\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://b0b0fad9d1ff6ed9427db00d7aefc7b6d38bc82c257b934fb45d4ce765b778ca\",\"dweb:/ipfs/QmY11xHBQbQnYagNDmXZg3odxrFtw6mmRAcVGrm9PRYnpb\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol\":{\"keccak256\":\"0xf2755cce78bf0ad4fc441368938f7153ea9fbe807a1f2ba1ca477ce7d216c745\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://148c396c9ebc29d37a151b67b839f609193337e13eddb946ad56eab16b0df1f4\",\"dweb:/ipfs/QmdehgdfoynZbXZuETQQzc72cXtCgwzsWpVaDebK8ayCTN\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/IPToken.sol\":{\"keccak256\":\"0x04af6f903236d8f7f3363897e2b971fc7dff339855b9ff511b153e94cc47b138\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://d2fdc53242f4accb2e60b8ba005b71e8ddc71ba13f0d7d9d359831be14f0bd22\",\"dweb:/ipfs/QmdCXRC7x7xwSXWbPCBtvA5eePidgNEksok2DkDeAWq2kU\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PErc20.sol\":{\"keccak256\":\"0x1c7701d04afac68b5ee7bb5b366a56eba5416b04847b52fade3c89cf14a5c566\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://0c149888186582a146029594d528e925874ec0eb696ad74594616e35ceca344f\",\"dweb:/ipfs/QmTo7wtNepBGv3BB1hoz3VVy1ah4vg2PZUM9iJ3aCetKkh\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol\":{\"keccak256\":\"0xbfb0eef522b73feb7f8068650059a30ab4fec32afca3d349a7e712b9ef1007a5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://4ae998cbaac492bd07507901f3332be1a78361b1067b98669773d59b192ab2c1\",\"dweb:/ipfs/QmVyWqYXJjaeMEz67RoXPtKnHQAbUK5zUatfqq8P4Mrcno\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/CarefulMath.sol\":{\"keccak256\":\"0xd6059e7c284e10c49391ebbe7cc3bf7cae051ba61d3133707939f3f6a7bf6228\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8252ab2c06a25f9021b10326d8849e4089059af5c4f1c3c1917328cb7f59d453\",\"dweb:/ipfs/QmdSUk2pPXhW9VXG51pdA8XUrKm9P6WB2LPxwh1Pfj9emo\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/ErrorReporter.sol\":{\"keccak256\":\"0x668e1f090e060bd2446b02b218c4dd8897a356f319cc3b21bc6eaef0d338fcc8\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://dc3eec3120d4ab26ae71775bf29305d7024abecdd6deb8a5d9cfbefef3aa5fc2\",\"dweb:/ipfs/QmfRny1rvUoLF9bhdyFbzqxKTvRpw4bLhAZuCL6MoUtosF\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/Exponential.sol\":{\"keccak256\":\"0x1264cbbdcec3f64b790c9145f6911a962e6681f42e5ce16c5b1211584cf6e1d4\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2fa666faf022d092e67a9ea98173224d92e1f50149e72c7fb3bed7ac039bc4ac\",\"dweb:/ipfs/QmXfHb2detnH1q8C9qSoiWgRPq8e35EdipeNJxuCjCKkpe\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xaa0e11a791bc975d581a4f5b7a8d9c16a880a354c89312318ae072ae3e740409\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://982d8b344f76193834260436d74c81e5a8f9e89106bb4cd72bbaabda4f3f59c2\",\"dweb:/ipfs/QmSrvP5TkQRhKDVCTpsV3uaKLBhkt7PjUY89vdtM9o5ybK\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0x5e4728275b5a93bd2afcf2eb8643c3ed5a6dec046151de12de2c10c490fb2f91\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e29288f76f9e8c63ce6484963947246ef0c385221594c6aa64927c867164ccf5\",\"dweb:/ipfs/QmPPinTHEBKhkpK2FWXQSjwenDVswiuLEU9P7nHpcizt22\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x934dbc549a8df514456047ad1c6ab257127a03f4109272834c30e596bbe10d1d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://33cf247ade00a28c632dfe2c2521e1952f467c6081b89375c34b1eb297441d9b\",\"dweb:/ipfs/QmYGNAHCtN1m3QDynteTeVCfwFZBZRpGJNMjxwVBUifnfB\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060405161001d9061005f565b604051809103906000f080158015610039573d6000803e3d6000fd5b50600080546001600160a01b0319166001600160a01b039290921691909117905561006c565b6101a68061019483390190565b6101198061007b6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80632630c12f1460375780638fe77e86146059575b600080fd5b603d60c3565b604080516001600160a01b039092168252519081900360200190f35b603d60048036036020811015606d57600080fd5b810190602081018135640100000000811115608757600080fd5b820183602082011115609857600080fd5b8035906020019184600183028401116401000000008311171560b957600080fd5b50909250905060d2565b6000546001600160a01b031681565b50506000546001600160a01b03169056fea2646970667358221220d64534cd80d98d72185622f59f42745bf4616f04915abe1c925c7ae219dd815964736f6c6343000609003360806040526000805460ff1916905534801561001a57600080fd5b5061017c8061002a6000396000f3fe60806040526004361061003f5760003560e01c8063186601ca146100445780633629c8de1461006d5780635714e83e14610084578063a834d32e146100c9575b600080fd5b34801561005057600080fd5b5061005961010d565b604080519115158252519081900360200190f35b34801561007957600080fd5b50610082610116565b005b34801561009057600080fd5b506100b7600480360360208110156100a757600080fd5b50356001600160a01b0316610125565b60408051918252519081900360200190f35b6100ef600480360360208110156100df57600080fd5b50356001600160a01b0316610131565b60408051938452602084019290925282820152519081900360600190f35b60005460ff1681565b6000805460ff19166001179055565b50662386f26fc1000090565b50678ac7230489e800009063ee6b280090439056fea2646970667358221220e1c0b1e2ba147be911145d8ad497fba5d08eacab849530f34281987e356c863664736f6c63430006090033",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80632630c12f1460375780638fe77e86146059575b600080fd5b603d60c3565b604080516001600160a01b039092168252519081900360200190f35b603d60048036036020811015606d57600080fd5b810190602081018135640100000000811115608757600080fd5b820183602082011115609857600080fd5b8035906020019184600183028401116401000000008311171560b957600080fd5b50909250905060d2565b6000546001600160a01b031681565b50506000546001600160a01b03169056fea2646970667358221220d64534cd80d98d72185622f59f42745bf4616f04915abe1c925c7ae219dd815964736f6c63430006090033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"checkAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"contractAddress\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"priceOracle\",\"outputs\":[{\"internalType\":\"contract Nest3OfferPrice\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/mock/MockNest3VoteFactory.sol\":\"MockNest3VoteFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/IRiskManager.sol\":{\"keccak256\":\"0x5071480ef776a254f59e1bea281442105f32e14e84a416580380f3a45e06d24e\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://cbdc4faae535eefc4eb54afd3810279bb55d884ecf481c9a2dbfb2f570e9d4e3\",\"dweb:/ipfs/QmXHLxKvDwQE4rE4gj145z47LbnUU7fkNpkXDBBCMLr3y1\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0x2a404ade7ce788c43f4acafd57e626b342fb1644ba176b1ab451be4c4a9d64e5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://aa229ef7cf18ea3363669dee097b5c01c4b830c14e4d59e922a1bb01a4d46deb\",\"dweb:/ipfs/QmWL94Q3yjHRugPqLbLBTyiM7uD8FYUbWcgnfSakCAfKr2\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/mock/MockNest3OfferPrice.sol\":{\"keccak256\":\"0xba59ab06f5a510bdcc3297b6173e5ba747f9235becb2b44e069edbf842517c79\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://cb5b13a03233afd9012284baabede0bb8cc6d1907b6a318a392615e3050c3831\",\"dweb:/ipfs/QmQn4thtowbQ2jaSQ8BGTUfJGawyqJvQ8ijwV79vi8nVSZ\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/mock/MockNest3VoteFactory.sol\":{\"keccak256\":\"0x46e1f691d48e3788706e7ad79d5598b846f265624af16027c612fa0578411888\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://855d4481256d935fe5e42e010a62df6f6fdee56cd74bb2a5f1f382a6d1b10472\",\"dweb:/ipfs/QmSanA1aFDbGHt3hzfK99ZSLA89AS8amcgUiFucYGUM54T\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/NestPriceOracle.sol\":{\"keccak256\":\"0x96a00177c304481adbdb41ff04c8d656d7810e9026a6f79259d547e9ff26c00b\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://b0b0fad9d1ff6ed9427db00d7aefc7b6d38bc82c257b934fb45d4ce765b778ca\",\"dweb:/ipfs/QmY11xHBQbQnYagNDmXZg3odxrFtw6mmRAcVGrm9PRYnpb\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol\":{\"keccak256\":\"0xf2755cce78bf0ad4fc441368938f7153ea9fbe807a1f2ba1ca477ce7d216c745\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://148c396c9ebc29d37a151b67b839f609193337e13eddb946ad56eab16b0df1f4\",\"dweb:/ipfs/QmdehgdfoynZbXZuETQQzc72cXtCgwzsWpVaDebK8ayCTN\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/IPToken.sol\":{\"keccak256\":\"0x04af6f903236d8f7f3363897e2b971fc7dff339855b9ff511b153e94cc47b138\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://d2fdc53242f4accb2e60b8ba005b71e8ddc71ba13f0d7d9d359831be14f0bd22\",\"dweb:/ipfs/QmdCXRC7x7xwSXWbPCBtvA5eePidgNEksok2DkDeAWq2kU\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PErc20.sol\":{\"keccak256\":\"0x1c7701d04afac68b5ee7bb5b366a56eba5416b04847b52fade3c89cf14a5c566\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://0c149888186582a146029594d528e925874ec0eb696ad74594616e35ceca344f\",\"dweb:/ipfs/QmTo7wtNepBGv3BB1hoz3VVy1ah4vg2PZUM9iJ3aCetKkh\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol\":{\"keccak256\":\"0xbfb0eef522b73feb7f8068650059a30ab4fec32afca3d349a7e712b9ef1007a5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://4ae998cbaac492bd07507901f3332be1a78361b1067b98669773d59b192ab2c1\",\"dweb:/ipfs/QmVyWqYXJjaeMEz67RoXPtKnHQAbUK5zUatfqq8P4Mrcno\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/CarefulMath.sol\":{\"keccak256\":\"0xd6059e7c284e10c49391ebbe7cc3bf7cae051ba61d3133707939f3f6a7bf6228\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8252ab2c06a25f9021b10326d8849e4089059af5c4f1c3c1917328cb7f59d453\",\"dweb:/ipfs/QmdSUk2pPXhW9VXG51pdA8XUrKm9P6WB2LPxwh1Pfj9emo\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/ErrorReporter.sol\":{\"keccak256\":\"0x668e1f090e060bd2446b02b218c4dd8897a356f319cc3b21bc6eaef0d338fcc8\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://dc3eec3120d4ab26ae71775bf29305d7024abecdd6deb8a5d9cfbefef3aa5fc2\",\"dweb:/ipfs/QmfRny1rvUoLF9bhdyFbzqxKTvRpw4bLhAZuCL6MoUtosF\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/Exponential.sol\":{\"keccak256\":\"0x1264cbbdcec3f64b790c9145f6911a962e6681f42e5ce16c5b1211584cf6e1d4\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2fa666faf022d092e67a9ea98173224d92e1f50149e72c7fb3bed7ac039bc4ac\",\"dweb:/ipfs/QmXfHb2detnH1q8C9qSoiWgRPq8e35EdipeNJxuCjCKkpe\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xaa0e11a791bc975d581a4f5b7a8d9c16a880a354c89312318ae072ae3e740409\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://982d8b344f76193834260436d74c81e5a8f9e89106bb4cd72bbaabda4f3f59c2\",\"dweb:/ipfs/QmSrvP5TkQRhKDVCTpsV3uaKLBhkt7PjUY89vdtM9o5ybK\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0x5e4728275b5a93bd2afcf2eb8643c3ed5a6dec046151de12de2c10c490fb2f91\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e29288f76f9e8c63ce6484963947246ef0c385221594c6aa64927c867164ccf5\",\"dweb:/ipfs/QmPPinTHEBKhkpK2FWXQSjwenDVswiuLEU9P7nHpcizt22\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x934dbc549a8df514456047ad1c6ab257127a03f4109272834c30e596bbe10d1d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://33cf247ade00a28c632dfe2c2521e1952f467c6081b89375c34b1eb297441d9b\",\"dweb:/ipfs/QmYGNAHCtN1m3QDynteTeVCfwFZBZRpGJNMjxwVBUifnfB\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161001d9061005f565b604051809103906000f080158015610039573d6000803e3d6000fd5b50600080546001600160a01b0319166001600160a01b039290921691909117905561006c565b6101a68061019483390190565b6101198061007b6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80632630c12f1460375780638fe77e86146059575b600080fd5b603d60c3565b604080516001600160a01b039092168252519081900360200190f35b603d60048036036020811015606d57600080fd5b810190602081018135640100000000811115608757600080fd5b820183602082011115609857600080fd5b8035906020019184600183028401116401000000008311171560b957600080fd5b50909250905060d2565b6000546001600160a01b031681565b50506000546001600160a01b03169056fea264697066735822122036e2244beffc27b71b62aaf022e5652e3fb5f23b9cf80021c73f7a12fba6d46764736f6c6343000609003360806040526000805460ff1916905534801561001a57600080fd5b5061017c8061002a6000396000f3fe60806040526004361061003f5760003560e01c8063186601ca146100445780633629c8de1461006d5780635714e83e14610084578063a834d32e146100c9575b600080fd5b34801561005057600080fd5b5061005961010d565b604080519115158252519081900360200190f35b34801561007957600080fd5b50610082610116565b005b34801561009057600080fd5b506100b7600480360360208110156100a757600080fd5b50356001600160a01b0316610125565b60408051918252519081900360200190f35b6100ef600480360360208110156100df57600080fd5b50356001600160a01b0316610131565b60408051938452602084019290925282820152519081900360600190f35b60005460ff1681565b6000805460ff19166001179055565b50662386f26fc1000090565b50678ac7230489e800009063ee6b280090439056fea26469706673582212203f2cbd7b11ee8ba8f43cc86c71adc4a0480e57b1c191d892f7202e0d7c7ef84964736f6c63430006090033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80632630c12f1460375780638fe77e86146059575b600080fd5b603d60c3565b604080516001600160a01b039092168252519081900360200190f35b603d60048036036020811015606d57600080fd5b810190602081018135640100000000811115608757600080fd5b820183602082011115609857600080fd5b8035906020019184600183028401116401000000008311171560b957600080fd5b50909250905060d2565b6000546001600160a01b031681565b50506000546001600160a01b03169056fea264697066735822122036e2244beffc27b71b62aaf022e5652e3fb5f23b9cf80021c73f7a12fba6d46764736f6c63430006090033",
   "immutableReferences": {},
   "sourceMap": "177:341:7:-:0;;;274:77;;;;;;;;;;319:25;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;305:11:7;:39;;-1:-1:-1;;;;;;305:39:7;-1:-1:-1;;;;;305:39:7;;;;;;;;;;177:341;;;;;;;;;;:::o;:::-;;;;;;;",
   "deployedSourceMap": "177:341:7:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;233:34;;;:::i;:::-;;;;-1:-1:-1;;;;;233:34:7;;;;;;;;;;;;;;357:159;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;357:159:7;;-1:-1:-1;357:159:7;-1:-1:-1;357:159:7;:::i;233:34::-;;;-1:-1:-1;;;;;233:34:7;;:::o;357:159::-;-1:-1:-1;;433:23:7;497:11;-1:-1:-1;;;;;497:11:7;;357:159::o",
@@ -53,15 +53,15 @@
     "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/mock/MockNest3VoteFactory.sol",
     "exportedSymbols": {
       "MockNest3VoteFactory": [
-        3013
+        3042
       ]
     },
-    "id": 3014,
+    "id": 3043,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2979,
+        "id": 3008,
         "literals": [
           "solidity",
           "^",
@@ -74,10 +74,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/NestPriceOracle.sol",
         "file": "../oracle/NestPriceOracle.sol",
-        "id": 2980,
+        "id": 3009,
         "nodeType": "ImportDirective",
-        "scope": 3014,
-        "sourceUnit": 4512,
+        "scope": 3043,
+        "sourceUnit": 4541,
         "src": "64:39:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -85,10 +85,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
         "file": "../oracle/PriceOracle.sol",
-        "id": 2981,
+        "id": 3010,
         "nodeType": "ImportDirective",
-        "scope": 3014,
-        "sourceUnit": 4542,
+        "scope": 3043,
+        "sourceUnit": 4571,
         "src": "104:35:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -96,10 +96,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/mock/MockNest3OfferPrice.sol",
         "file": "./MockNest3OfferPrice.sol",
-        "id": 2982,
+        "id": 3011,
         "nodeType": "ImportDirective",
-        "scope": 3014,
-        "sourceUnit": 2978,
+        "scope": 3043,
+        "sourceUnit": 3007,
         "src": "140:35:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -111,32 +111,32 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2983,
+              "id": 3012,
               "name": "Nest3VoteFactory",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4489,
+              "referencedDeclaration": 4518,
               "src": "210:16:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Nest3VoteFactory_$4489",
+                "typeIdentifier": "t_contract$_Nest3VoteFactory_$4518",
                 "typeString": "contract Nest3VoteFactory"
               }
             },
-            "id": 2984,
+            "id": 3013,
             "nodeType": "InheritanceSpecifier",
             "src": "210:16:7"
           }
         ],
         "contractDependencies": [
-          2977,
-          4489
+          3006,
+          4518
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3013,
+        "id": 3042,
         "linearizedBaseContracts": [
-          3013,
-          4489
+          3042,
+          4518
         ],
         "name": "MockNest3VoteFactory",
         "nodeType": "ContractDefinition",
@@ -144,28 +144,28 @@
           {
             "constant": false,
             "functionSelector": "2630c12f",
-            "id": 2986,
+            "id": 3015,
             "mutability": "mutable",
             "name": "priceOracle",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 3013,
+            "scope": 3042,
             "src": "233:34:7",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+              "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
               "typeString": "contract Nest3OfferPrice"
             },
             "typeName": {
               "contractScope": null,
-              "id": 2985,
+              "id": 3014,
               "name": "Nest3OfferPrice",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4511,
+              "referencedDeclaration": 4540,
               "src": "233:15:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+                "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
                 "typeString": "contract Nest3OfferPrice"
               }
             },
@@ -174,28 +174,28 @@
           },
           {
             "body": {
-              "id": 2995,
+              "id": 3024,
               "nodeType": "Block",
               "src": "295:56:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2993,
+                    "id": 3022,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2989,
+                      "id": 3018,
                       "name": "priceOracle",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2986,
+                      "referencedDeclaration": 3015,
                       "src": "305:11:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+                        "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
                         "typeString": "contract Nest3OfferPrice"
                       }
                     },
@@ -206,7 +206,7 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 2991,
+                        "id": 3020,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -214,23 +214,23 @@
                         "nodeType": "NewExpression",
                         "src": "319:23:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_MockNest3OfferPrice_$2977_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_MockNest3OfferPrice_$3006_$",
                           "typeString": "function () returns (contract MockNest3OfferPrice)"
                         },
                         "typeName": {
                           "contractScope": null,
-                          "id": 2990,
+                          "id": 3019,
                           "name": "MockNest3OfferPrice",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2977,
+                          "referencedDeclaration": 3006,
                           "src": "323:19:7",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_MockNest3OfferPrice_$2977",
+                            "typeIdentifier": "t_contract$_MockNest3OfferPrice_$3006",
                             "typeString": "contract MockNest3OfferPrice"
                           }
                         }
                       },
-                      "id": 2992,
+                      "id": 3021,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -241,24 +241,24 @@
                       "src": "319:25:7",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_MockNest3OfferPrice_$2977",
+                        "typeIdentifier": "t_contract$_MockNest3OfferPrice_$3006",
                         "typeString": "contract MockNest3OfferPrice"
                       }
                     },
                     "src": "305:39:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+                      "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
                       "typeString": "contract Nest3OfferPrice"
                     }
                   },
-                  "id": 2994,
+                  "id": 3023,
                   "nodeType": "ExpressionStatement",
                   "src": "305:39:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 2996,
+            "id": 3025,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -266,18 +266,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2987,
+              "id": 3016,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "285:2:7"
             },
             "returnParameters": {
-              "id": 2988,
+              "id": 3017,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "295:0:7"
             },
-            "scope": 3013,
+            "scope": 3042,
             "src": "274:77:7",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -285,28 +285,28 @@
           },
           {
             "baseFunctions": [
-              4488
+              4517
             ],
             "body": {
-              "id": 3011,
+              "id": 3040,
               "nodeType": "Block",
               "src": "458:58:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3004,
+                    "id": 3033,
                     "name": "name",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2998,
+                    "referencedDeclaration": 3027,
                     "src": "468:4:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_calldata_ptr",
                       "typeString": "string calldata"
                     }
                   },
-                  "id": 3005,
+                  "id": 3034,
                   "nodeType": "ExpressionStatement",
                   "src": "468:4:7"
                 },
@@ -316,14 +316,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 3008,
+                        "id": 3037,
                         "name": "priceOracle",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2986,
+                        "referencedDeclaration": 3015,
                         "src": "497:11:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+                          "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
                           "typeString": "contract Nest3OfferPrice"
                         }
                       }
@@ -331,11 +331,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+                          "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
                           "typeString": "contract Nest3OfferPrice"
                         }
                       ],
-                      "id": 3007,
+                      "id": 3036,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -347,7 +347,7 @@
                         "typeString": "type(address)"
                       },
                       "typeName": {
-                        "id": 3006,
+                        "id": 3035,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
                         "src": "489:7:7",
@@ -357,7 +357,7 @@
                         }
                       }
                     },
-                    "id": 3009,
+                    "id": 3038,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -372,8 +372,8 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 3003,
-                  "id": 3010,
+                  "functionReturnParameters": 3032,
+                  "id": 3039,
                   "nodeType": "Return",
                   "src": "482:27:7"
                 }
@@ -381,30 +381,30 @@
             },
             "documentation": null,
             "functionSelector": "8fe77e86",
-            "id": 3012,
+            "id": 3041,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "checkAddress",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 3000,
+              "id": 3029,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "415:8:7"
             },
             "parameters": {
-              "id": 2999,
+              "id": 3028,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2998,
+                  "id": 3027,
                   "mutability": "mutable",
                   "name": "name",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3012,
+                  "scope": 3041,
                   "src": "379:20:7",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -413,7 +413,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2997,
+                    "id": 3026,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "379:6:7",
@@ -429,17 +429,17 @@
               "src": "378:22:7"
             },
             "returnParameters": {
-              "id": 3003,
+              "id": 3032,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3002,
+                  "id": 3031,
                   "mutability": "mutable",
                   "name": "contractAddress",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3012,
+                  "scope": 3041,
                   "src": "433:23:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -448,7 +448,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3001,
+                    "id": 3030,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "433:7:7",
@@ -464,14 +464,14 @@
               ],
               "src": "432:25:7"
             },
-            "scope": 3013,
+            "scope": 3042,
             "src": "357:159:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 3014,
+        "scope": 3043,
         "src": "177:341:7"
       }
     ],
@@ -481,15 +481,15 @@
     "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/mock/MockNest3VoteFactory.sol",
     "exportedSymbols": {
       "MockNest3VoteFactory": [
-        3013
+        3042
       ]
     },
-    "id": 3014,
+    "id": 3043,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2979,
+        "id": 3008,
         "literals": [
           "solidity",
           "^",
@@ -502,10 +502,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/NestPriceOracle.sol",
         "file": "../oracle/NestPriceOracle.sol",
-        "id": 2980,
+        "id": 3009,
         "nodeType": "ImportDirective",
-        "scope": 3014,
-        "sourceUnit": 4512,
+        "scope": 3043,
+        "sourceUnit": 4541,
         "src": "64:39:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -513,10 +513,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
         "file": "../oracle/PriceOracle.sol",
-        "id": 2981,
+        "id": 3010,
         "nodeType": "ImportDirective",
-        "scope": 3014,
-        "sourceUnit": 4542,
+        "scope": 3043,
+        "sourceUnit": 4571,
         "src": "104:35:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -524,10 +524,10 @@
       {
         "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/mock/MockNest3OfferPrice.sol",
         "file": "./MockNest3OfferPrice.sol",
-        "id": 2982,
+        "id": 3011,
         "nodeType": "ImportDirective",
-        "scope": 3014,
-        "sourceUnit": 2978,
+        "scope": 3043,
+        "sourceUnit": 3007,
         "src": "140:35:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -539,32 +539,32 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2983,
+              "id": 3012,
               "name": "Nest3VoteFactory",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4489,
+              "referencedDeclaration": 4518,
               "src": "210:16:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Nest3VoteFactory_$4489",
+                "typeIdentifier": "t_contract$_Nest3VoteFactory_$4518",
                 "typeString": "contract Nest3VoteFactory"
               }
             },
-            "id": 2984,
+            "id": 3013,
             "nodeType": "InheritanceSpecifier",
             "src": "210:16:7"
           }
         ],
         "contractDependencies": [
-          2977,
-          4489
+          3006,
+          4518
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3013,
+        "id": 3042,
         "linearizedBaseContracts": [
-          3013,
-          4489
+          3042,
+          4518
         ],
         "name": "MockNest3VoteFactory",
         "nodeType": "ContractDefinition",
@@ -572,28 +572,28 @@
           {
             "constant": false,
             "functionSelector": "2630c12f",
-            "id": 2986,
+            "id": 3015,
             "mutability": "mutable",
             "name": "priceOracle",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 3013,
+            "scope": 3042,
             "src": "233:34:7",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+              "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
               "typeString": "contract Nest3OfferPrice"
             },
             "typeName": {
               "contractScope": null,
-              "id": 2985,
+              "id": 3014,
               "name": "Nest3OfferPrice",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4511,
+              "referencedDeclaration": 4540,
               "src": "233:15:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+                "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
                 "typeString": "contract Nest3OfferPrice"
               }
             },
@@ -602,28 +602,28 @@
           },
           {
             "body": {
-              "id": 2995,
+              "id": 3024,
               "nodeType": "Block",
               "src": "295:56:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2993,
+                    "id": 3022,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2989,
+                      "id": 3018,
                       "name": "priceOracle",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2986,
+                      "referencedDeclaration": 3015,
                       "src": "305:11:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+                        "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
                         "typeString": "contract Nest3OfferPrice"
                       }
                     },
@@ -634,7 +634,7 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 2991,
+                        "id": 3020,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -642,23 +642,23 @@
                         "nodeType": "NewExpression",
                         "src": "319:23:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_MockNest3OfferPrice_$2977_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_MockNest3OfferPrice_$3006_$",
                           "typeString": "function () returns (contract MockNest3OfferPrice)"
                         },
                         "typeName": {
                           "contractScope": null,
-                          "id": 2990,
+                          "id": 3019,
                           "name": "MockNest3OfferPrice",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2977,
+                          "referencedDeclaration": 3006,
                           "src": "323:19:7",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_MockNest3OfferPrice_$2977",
+                            "typeIdentifier": "t_contract$_MockNest3OfferPrice_$3006",
                             "typeString": "contract MockNest3OfferPrice"
                           }
                         }
                       },
-                      "id": 2992,
+                      "id": 3021,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -669,24 +669,24 @@
                       "src": "319:25:7",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_MockNest3OfferPrice_$2977",
+                        "typeIdentifier": "t_contract$_MockNest3OfferPrice_$3006",
                         "typeString": "contract MockNest3OfferPrice"
                       }
                     },
                     "src": "305:39:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+                      "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
                       "typeString": "contract Nest3OfferPrice"
                     }
                   },
-                  "id": 2994,
+                  "id": 3023,
                   "nodeType": "ExpressionStatement",
                   "src": "305:39:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 2996,
+            "id": 3025,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -694,18 +694,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2987,
+              "id": 3016,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "285:2:7"
             },
             "returnParameters": {
-              "id": 2988,
+              "id": 3017,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "295:0:7"
             },
-            "scope": 3013,
+            "scope": 3042,
             "src": "274:77:7",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -713,28 +713,28 @@
           },
           {
             "baseFunctions": [
-              4488
+              4517
             ],
             "body": {
-              "id": 3011,
+              "id": 3040,
               "nodeType": "Block",
               "src": "458:58:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3004,
+                    "id": 3033,
                     "name": "name",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2998,
+                    "referencedDeclaration": 3027,
                     "src": "468:4:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_calldata_ptr",
                       "typeString": "string calldata"
                     }
                   },
-                  "id": 3005,
+                  "id": 3034,
                   "nodeType": "ExpressionStatement",
                   "src": "468:4:7"
                 },
@@ -744,14 +744,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 3008,
+                        "id": 3037,
                         "name": "priceOracle",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2986,
+                        "referencedDeclaration": 3015,
                         "src": "497:11:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+                          "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
                           "typeString": "contract Nest3OfferPrice"
                         }
                       }
@@ -759,11 +759,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_Nest3OfferPrice_$4511",
+                          "typeIdentifier": "t_contract$_Nest3OfferPrice_$4540",
                           "typeString": "contract Nest3OfferPrice"
                         }
                       ],
-                      "id": 3007,
+                      "id": 3036,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -775,7 +775,7 @@
                         "typeString": "type(address)"
                       },
                       "typeName": {
-                        "id": 3006,
+                        "id": 3035,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
                         "src": "489:7:7",
@@ -785,7 +785,7 @@
                         }
                       }
                     },
-                    "id": 3009,
+                    "id": 3038,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -800,8 +800,8 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 3003,
-                  "id": 3010,
+                  "functionReturnParameters": 3032,
+                  "id": 3039,
                   "nodeType": "Return",
                   "src": "482:27:7"
                 }
@@ -809,30 +809,30 @@
             },
             "documentation": null,
             "functionSelector": "8fe77e86",
-            "id": 3012,
+            "id": 3041,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "checkAddress",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 3000,
+              "id": 3029,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "415:8:7"
             },
             "parameters": {
-              "id": 2999,
+              "id": 3028,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2998,
+                  "id": 3027,
                   "mutability": "mutable",
                   "name": "name",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3012,
+                  "scope": 3041,
                   "src": "379:20:7",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -841,7 +841,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2997,
+                    "id": 3026,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "379:6:7",
@@ -857,17 +857,17 @@
               "src": "378:22:7"
             },
             "returnParameters": {
-              "id": 3003,
+              "id": 3032,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3002,
+                  "id": 3031,
                   "mutability": "mutable",
                   "name": "contractAddress",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3012,
+                  "scope": 3041,
                   "src": "433:23:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -876,7 +876,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3001,
+                    "id": 3030,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "433:7:7",
@@ -892,14 +892,14 @@
               ],
               "src": "432:25:7"
             },
-            "scope": 3013,
+            "scope": 3042,
             "src": "357:159:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 3014,
+        "scope": 3043,
         "src": "177:341:7"
       }
     ],
@@ -913,12 +913,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x7Ddee129314778cc728AD0194554F61caDE3c38E",
-      "transactionHash": "0x3f0f629df4756868adacf5a8fce25470b280ad2cf5b0ef25f5d4c6144ab70cd9"
+      "address": "0x85d8F6E8fda4B4C367F14d99955b28156182433d",
+      "transactionHash": "0x0fc739e941e37424bc8ab5412058a01bbe6f3dd50f45a1bc895609e39073c397"
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-09-02T02:21:33.581Z",
+  "updatedAt": "2020-09-04T05:37:17.594Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
