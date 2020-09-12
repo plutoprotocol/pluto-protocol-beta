@@ -5103,6 +5103,32 @@
     "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {
+        "0xf35fa19c15e9ba782633a5df62a98b20217151addc68e3ff2cd623a48d37ec27": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "baseRatePerBlock",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "multiplierPerBlock",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewInterestParams",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xfF2d4be5eA9B3C041f988889A09421A239a6B1f2",
+      "transactionHash": "0xd0036fd0538c8bc7056f3e254eb318c197205089b28584e1bf46b9327e87d031"
+    },
     "5777": {
       "events": {
         "0xf35fa19c15e9ba782633a5df62a98b20217151addc68e3ff2cd623a48d37ec27": {
@@ -5126,12 +5152,12 @@
         }
       },
       "links": {},
-      "address": "0x22134eFfAD7d800483F8A62aaBD6b91B86D61EaE",
-      "transactionHash": "0x9c77df8d5595b0d4e3497dcb5812e50587bdca4326b51b50621e21dd77adf820"
+      "address": "0x2C0F85C7F9E25d73fdc918b328797AD66aF73bAF",
+      "transactionHash": "0x569987ae5b4c1e504b007cc38a20b96c752f99fb91ad3d8097eb5d710c7f401a"
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-09-04T05:37:17.621Z",
+  "updatedAt": "2020-09-12T10:52:22.170Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {
