@@ -39,7 +39,7 @@ contract PlutoLens {
         address underlyingAssetAddress;
         uint underlyingDecimals;
 
-        if (compareStrings(pToken.symbol(), "cETH")) {
+        if (compareStrings(pToken.symbol(), "pETH")) {
             underlyingAssetAddress = address(0);
             underlyingDecimals = 18;
         } else {
@@ -91,7 +91,7 @@ contract PlutoLens {
         uint tokenBalance;
         uint tokenAllowance;
 
-        if (compareStrings(pToken.symbol(), "cETH")) {
+        if (compareStrings(pToken.symbol(), "pETH")) {
             tokenBalance = account.balance;
             tokenAllowance = account.balance;
         } else {
