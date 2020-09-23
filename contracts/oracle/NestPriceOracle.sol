@@ -31,7 +31,7 @@ contract NestPriceOracle is PriceOracle {
         address underlyingToken = address(PErc20(address(pToken)).underlying());
         uint256 priceCost = getPriceCost(pToken);
 
-        require(msg.value >= priceCost, "No enough balance to pay oracle price.");
+        require(msg.value == priceCost, "No enough balance to pay oracle price.");
 
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
         (uint256 ethAmount, uint256 tokenAmount,) = _offerPrice.updateAndCheckPriceNow{value: msg.value}(underlyingToken);
@@ -66,7 +66,6 @@ contract NestPriceOracle is PriceOracle {
     }
 
     receive() external payable {
-        tx.origin.transfer(msg.value);
     }
 
     function getNestOfferPrice() internal view returns (Nest3OfferPrice) {
