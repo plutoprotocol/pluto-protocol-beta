@@ -2,28 +2,43 @@
 pragma solidity ^0.6.9;
 
 import "../oracle/NestPriceOracle.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
 contract MockNest3OfferPrice is Nest3OfferPrice {
-    bool public activated = false;
+    using SafeMath for uint256;
+
+    uint256 effectTime = 0 days;
+    mapping(address => uint256) _addressEffect;
 
     constructor() public {
     }
 
-    // 激活使用价格合约
+    // Activate the price checking function
     function activation() external override {
-        activated = true;
+        _addressEffect[address(msg.sender)] = now.add(effectTime);
     }
-    // 更新并查看最新价格
+
+    // Update and check the latest price
     function updateAndCheckPriceNow(address tokenAddress) external payable override returns(uint256 ethAmount, uint256 erc20Amount, uint256 blockNum) {
         tokenAddress;
+        require(checkUseNestPrice(address(msg.sender)), "Activation required.");
         // 10 ETH ~ 4000 USDT
         return (10e18, 4000 * 1e6, block.number);
     }
 
-    // 查看价格eth单条数据费用
-    function checkPriceCostSingle(address tokenAddress) external view override returns(uint256) {
+    // Check call price fee
+    function checkPriceCost(address tokenAddress) external view override returns(uint256) {
         tokenAddress;
         // 0.01 ETH
         return 1e16;
+    }
+
+    // Check whether the price-checking functions can be called
+    function checkUseNestPrice(address target) public view override returns (bool) {
+        if (_addressEffect[target] < now && _addressEffect[target] != 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -14,10 +14,14 @@ contract NestPriceOracle is PriceOracle {
 
     mapping(address => uint256) prices;
     mapping(address => uint256) lastUpdateBlocks;
-    Nest3VoteFactory _voteFactory;
+    Nest3VoteFactory public immutable voteFactory;
+    address public immutable nestToken;
+    uint256 public DESTRUCTION_AMOUNT = 0 ether; // from nest oracle
 
-    constructor (address voteFactory) public {
-        _voteFactory = Nest3VoteFactory(address(voteFactory));
+
+    constructor (address _voteFactory, address _nestToken) public {
+        voteFactory = Nest3VoteFactory(address(_voteFactory));
+        nestToken = _nestToken;
     }
 
     function updateAndGetUnderlyingPrice(PToken pToken) external payable override returns (uint256) {
@@ -45,7 +49,7 @@ contract NestPriceOracle is PriceOracle {
     function getPriceCost(PToken pToken) public view override returns (uint256) {
         address underlyingToken = address(PErc20(address(pToken)).underlying());
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
-        uint256 priceCost = _offerPrice.checkPriceCostSingle(underlyingToken);
+        uint256 priceCost = _offerPrice.checkPriceCost(underlyingToken);
         return priceCost;
     }
 
@@ -57,34 +61,33 @@ contract NestPriceOracle is PriceOracle {
         return (prices[underlyingToken], lastUpdateBlocks[underlyingToken]);
     }
 
-    function activation(address nestAddress, uint256 nestAmount) public {
+    function activation() public {
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
-        // 向价格合约授权 Nest，暂定数量为10万
-        IERC20(nestAddress).safeApprove(address(_offerPrice), nestAmount);
-        // 激活
+        require(!_offerPrice.checkUseNestPrice(address(this)), "Already activated.");
+        IERC20(nestToken).safeTransferFrom(msg.sender, address(this), DESTRUCTION_AMOUNT);
+        IERC20(nestToken).safeApprove(address(_offerPrice), DESTRUCTION_AMOUNT);
         _offerPrice.activation();
-    }
-
-    receive() external payable {
+        IERC20(nestToken).safeApprove(address(_offerPrice), 0);
     }
 
     function getNestOfferPrice() internal view returns (Nest3OfferPrice) {
-        return Nest3OfferPrice(address(_voteFactory.checkAddress("nest.v3.offerPrice")));
+        return Nest3OfferPrice(address(voteFactory.checkAddress("nest.v3.offerPrice")));
     }
 }
 
 
 interface Nest3VoteFactory {
-    // 查询地址
     function checkAddress(string calldata name) external view returns (address contractAddress);
 }
 
-// 价格合约
+// Price contract
 interface Nest3OfferPrice {
-    // 激活使用价格合约
+    // Activate the price checking function
     function activation() external;
-    // 更新并查看最新价格
+    // Update and check the latest price
     function updateAndCheckPriceNow(address tokenAddress) external payable returns(uint256 ethAmount, uint256 erc20Amount, uint256 blockNum);
-    // 查看价格eth单条数据费用
-    function checkPriceCostSingle(address tokenAddress) external view returns(uint256);
+    // Check call price fee
+    function checkPriceCost(address tokenAddress) external view returns(uint256);
+    // Check whether the price-checking functions can be called
+    function checkUseNestPrice(address target) external view returns (bool);
 }

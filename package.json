@@ -8,13 +8,15 @@
   },
   "scripts": {
     "dev": "lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "genabi": "rm -rf build ABI && truffle compile --all && truffle-abi -d build/contracts/ -o abi"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^3.0.1",
-    "@truffle/hdwallet-provider": "^1.0.44"
+    "@truffle/hdwallet-provider": "^1.0.44",
+    "truffle-abi": "^1.0.3"
   },
   "devDependencies": {
     "lite-server": "^2.5.4"

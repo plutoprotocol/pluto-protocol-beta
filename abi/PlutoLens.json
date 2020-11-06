@@ -1,0 +1,399 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "contract PToken",
+        "name": "pToken",
+        "type": "address"
+      }
+    ],
+    "name": "pTokenMetadata",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "pToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "exchangeRateCurrent",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "supplyRatePerBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "borrowRatePerBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reserveFactorMantissa",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalBorrows",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalReserves",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalSupply",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalCash",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isListed",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralFactorMantissa",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "underlyingAssetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "underlyingDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct PlutoLens.PTokenMetadata",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract PToken[]",
+        "name": "pTokens",
+        "type": "address[]"
+      }
+    ],
+    "name": "pTokenMetadataAll",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "pToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "exchangeRateCurrent",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "supplyRatePerBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "borrowRatePerBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "reserveFactorMantissa",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalBorrows",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalReserves",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalSupply",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalCash",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isListed",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralFactorMantissa",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "underlyingAssetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "underlyingDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct PlutoLens.PTokenMetadata[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract PToken",
+        "name": "pToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address payable",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "pTokenBalances",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "pToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "balanceOf",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "borrowBalanceCurrent",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "balanceOfUnderlying",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenAllowance",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct PlutoLens.PTokenBalances",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract PToken[]",
+        "name": "pTokens",
+        "type": "address[]"
+      },
+      {
+        "internalType": "address payable",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "pTokenBalancesAll",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "pToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "balanceOf",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "borrowBalanceCurrent",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "balanceOfUnderlying",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenAllowance",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct PlutoLens.PTokenBalances[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract PToken",
+        "name": "pToken",
+        "type": "address"
+      }
+    ],
+    "name": "pTokenUnderlyingPrice",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "pToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "underlyingPrice",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct PlutoLens.PTokenUnderlyingPrice",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract PToken[]",
+        "name": "pTokens",
+        "type": "address[]"
+      }
+    ],
+    "name": "pTokenUnderlyingPriceAll",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "pToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "underlyingPrice",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct PlutoLens.PTokenUnderlyingPrice[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract PlutoLensInterface",
+        "name": "plutoLens",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "getAccountLimits",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "contract PToken[]",
+            "name": "markets",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "liquidity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "shortfall",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct PlutoLens.AccountLimits",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

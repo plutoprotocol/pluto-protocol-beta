@@ -24,12 +24,12 @@ contract RiskManagerStorage {
     /**
      * @notice Multiplier used to calculate the maximum repayAmount when liquidating a borrow
      */
-    uint public closeFactorMantissa;
+    uint public closeFactorMantissa = 0.5e18;
 
     /**
      * @notice Multiplier representing the discount on collateral that a liquidator receives
      */
-    uint public liquidationIncentiveMantissa;
+    uint public liquidationIncentiveMantissa = 1.05e18;
 
     /**
      * @notice Max number of assets a single account can participate in (borrow or use as collateral)

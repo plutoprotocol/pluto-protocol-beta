@@ -916,18 +916,18 @@
     "3": {
       "events": {},
       "links": {},
-      "address": "0xcb104bFcc8CeF899dDc368D61D148E174e99AA4c",
-      "transactionHash": "0x1c9b42258728cdd25c861546a4000000997cd4891c4dcabf92ca9297a0f03e3b"
+      "address": "0x60bf04c694b94c12450641B83AE1E9b80ea72544",
+      "transactionHash": "0x81cafa28ede158d98c84cc83a9af64fd251eab5d56c22bc6cfb8931484eff4c4"
     },
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xFE161Bdd0CE9D1A0dbdC0B140A8f1B2E14ac6066",
-      "transactionHash": "0x0afe9fabc7954b0ce60333b9df79e09b52bfac8f75f95c4fe5042a9b1e1cf15f"
+      "address": "0x023109a53d3134659BDAD4B12126ba6def7C4E9d",
+      "transactionHash": "0x9aaa1a044c1aed0cd6a7c6d662d44be14619fcc3e714ef76f13d50e05a83651f"
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-09-16T09:50:55.369Z",
+  "updatedAt": "2020-11-06T10:33:54.036Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

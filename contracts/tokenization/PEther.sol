@@ -68,6 +68,7 @@ contract PEther is PToken {
       * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
       */
     function borrow(uint borrowAmount) external payable returns (uint) {
+        riskManager.updateAndGetTokenPrice{value: msg.value}(address(this));
         return borrowInternal(borrowAmount);
     }
 
@@ -98,7 +99,14 @@ contract PEther is PToken {
      * @param pTokenCollateral The market in which to seize collateral from the borrower
      */
     function liquidateBorrow(address borrower, PToken pTokenCollateral) external payable {
-        (uint err,) = liquidateBorrowInternal(borrower, msg.value, pTokenCollateral);
+        uint256 priceCost = riskManager.getPriceCost(address(pTokenCollateral));
+
+        require(msg.value >= priceCost, "No enough value to pay price oracle.");
+
+        (MathError mathErr, uint256 repayAmount) = subUInt(msg.value, priceCost);
+        require(mathErr == MathError.NO_ERROR, "liquidateBorrow failed to subtract price cost.");
+        riskManager.updateAndGetTokenPrice{value: priceCost}(address(this));
+        (uint err,) = liquidateBorrowInternal(borrower, repayAmount, pTokenCollateral);
         requireNoError(err, "liquidateBorrow failed");
     }
 
@@ -140,7 +148,7 @@ contract PEther is PToken {
     function doTransferIn(address from, uint amount) internal override returns (uint) {
         // Sanity checks
         require(msg.sender == from, "sender mismatch");
-        require(msg.value == amount, "value mismatch");
+        require(msg.value >= amount, "value mismatch");
         return amount;
     }
 

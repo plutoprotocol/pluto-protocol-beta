@@ -67,6 +67,17 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
      */
     event ActionPaused(PToken pToken, string action, bool pauseState);
 
+    /**
+     * @notice Emitted when pendingAdmin is changed
+     */
+    event NewPendingAdmin(address oldPendingAdmin, address newPendingAdmin);
+
+    /**
+     * @notice Emitted when pendingAdmin is accepted, which means admin is updated
+     */
+    event NewAdmin(address oldAdmin, address newAdmin);
+
+
     // closeFactorMantissa must be strictly greater than this value
     uint internal constant closeFactorMinMantissa = 0.05e18; // 0.05
 
@@ -511,7 +522,7 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
         return oracle.getPriceCost(PToken(asset));
     }
 
-    function getTokenPrice(address asset) private view returns (uint256) {
+    function getTokenPrice(address asset) public view returns (uint256) {
         (uint256 oraclePriceMantissa,) = oracle.getUnderlyingPrice(PToken(asset));
         return oraclePriceMantissa;
     }
@@ -521,23 +532,23 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
         if (oraclePriceMantissa != 0 && blockNum == block.number) return oraclePriceMantissa;
 
         uint256 priceCost = oracle.getPriceCost(PToken(asset));
-        require(msg.value >= priceCost, "No enough balance.");
+        require(msg.value == priceCost, "No enough balance.");
         oraclePriceMantissa = oracle.updateAndGetUnderlyingPrice{value: msg.value}(PToken(asset));
         return oraclePriceMantissa;
     }
 
-    /**
-     * @notice 判断当有资产被取出或借出时账户是否有足够的流动性
-     * @param pTokenModify 要操作的 pToken 资金市场
-     * @param account The account to determine liquidity for
-     * @param redeemTokens The number of tokens to hypothetically redeem
-     * @param borrowAmount The amount of underlying to hypothetically borrow
-     * @dev Note that we calculate the exchangeRateStored for each collateral pToken using stored data,
-     *  without calculating accumulated interest.
-     * @return (possible error code,
-                hypothetical account liquidity in excess of collateral requirements,
-     *          hypothetical account shortfall below collateral requirements)
-     */
+     /**
+      * @notice Determine what the account liquidity would be if the given amounts were redeemed/borrowed
+      * @param pTokenModify The market to hypothetically redeem/borrow in
+      * @param account The account to determine liquidity for
+      * @param redeemTokens The number of tokens to hypothetically redeem
+      * @param borrowAmount The amount of underlying to hypothetically borrow
+      * @dev Note that we calculate the exchangeRateStored for each collateral pToken using stored data,
+      *  without calculating accumulated interest.
+      * @return (possible error code,
+                 hypothetical account liquidity in excess of collateral requirements,
+      *          hypothetical account shortfall below collateral requirements)
+      */
     function getHypotheticalAccountLiquidityInternal(
         address account,
         PToken pTokenModify,
@@ -920,5 +931,56 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
         seizeGuardianPaused = state;
         emit ActionPaused("Seize", state);
         return state;
+    }
+
+    /**
+      * @notice Begins transfer of admin rights. The newPendingAdmin must call `_acceptAdmin` to finalize the transfer.
+      * @dev Admin function to begin change of admin. The newPendingAdmin must call `_acceptAdmin` to finalize the transfer.
+      * @param newPendingAdmin New pending admin.
+      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
+      */
+    function _setPendingAdmin(address newPendingAdmin) public returns (uint) {
+        // Check caller = admin
+        if (msg.sender != admin) {
+            return fail(Error.UNAUTHORIZED, FailureInfo.SET_PENDING_ADMIN_OWNER_CHECK);
+        }
+
+        // Save current value, if any, for inclusion in log
+        address oldPendingAdmin = pendingAdmin;
+
+        // Store pendingAdmin with value newPendingAdmin
+        pendingAdmin = newPendingAdmin;
+
+        // Emit NewPendingAdmin(oldPendingAdmin, newPendingAdmin)
+        emit NewPendingAdmin(oldPendingAdmin, newPendingAdmin);
+
+        return uint(Error.NO_ERROR);
+    }
+
+    /**
+      * @notice Accepts transfer of admin rights. msg.sender must be pendingAdmin
+      * @dev Admin function for pending admin to accept role and update admin
+      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
+      */
+    function _acceptAdmin() public returns (uint) {
+        // Check caller is pendingAdmin and pendingAdmin ≠ address(0)
+        if (msg.sender != pendingAdmin || msg.sender == address(0)) {
+            return fail(Error.UNAUTHORIZED, FailureInfo.ACCEPT_ADMIN_PENDING_ADMIN_CHECK);
+        }
+
+        // Save current values for inclusion in log
+        address oldAdmin = admin;
+        address oldPendingAdmin = pendingAdmin;
+
+        // Store admin with value pendingAdmin
+        admin = pendingAdmin;
+
+        // Clear the pending value
+        pendingAdmin = address(0);
+
+        emit NewAdmin(oldAdmin, admin);
+        emit NewPendingAdmin(oldPendingAdmin, pendingAdmin);
+
+        return uint(Error.NO_ERROR);
     }
 }

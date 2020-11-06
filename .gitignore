@@ -4,3 +4,5 @@ node_modules/
 *.pem
 .idea/
 .secret
+build
+.DS_Store
