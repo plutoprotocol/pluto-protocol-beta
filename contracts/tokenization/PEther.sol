@@ -48,7 +48,8 @@ contract PEther is PToken {
      * @param redeemTokens The number of PTokens to redeem into underlying
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
-    function redeem(uint redeemTokens) external returns (uint) {
+    function redeem(uint redeemTokens) external payable returns (uint) {
+        updateTokenPrice();
         return redeemInternal(redeemTokens);
     }
 
@@ -58,7 +59,8 @@ contract PEther is PToken {
      * @param redeemAmount The amount of underlying to redeem
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
-    function redeemUnderlying(uint redeemAmount) external returns (uint) {
+    function redeemUnderlying(uint redeemAmount) external payable returns (uint) {
+        updateTokenPrice();
         return redeemUnderlyingInternal(redeemAmount);
     }
 
@@ -68,7 +70,7 @@ contract PEther is PToken {
       * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
       */
     function borrow(uint borrowAmount) external payable returns (uint) {
-        riskManager.updateAndGetTokenPrice{value: msg.value}(address(this));
+        updateTokenPrice();
         return borrowInternal(borrowAmount);
     }
 
@@ -99,13 +101,11 @@ contract PEther is PToken {
      * @param pTokenCollateral The market in which to seize collateral from the borrower
      */
     function liquidateBorrow(address borrower, PToken pTokenCollateral) external payable {
-        uint256 priceCost = riskManager.getPriceCost(address(pTokenCollateral));
-
+        uint256 priceCost = riskManager.getPriceCost(msg.sender);
         require(msg.value >= priceCost, "No enough value to pay price oracle.");
-
         (MathError mathErr, uint256 repayAmount) = subUInt(msg.value, priceCost);
         require(mathErr == MathError.NO_ERROR, "liquidateBorrow failed to subtract price cost.");
-        riskManager.updateAndGetTokenPrice{value: priceCost}(address(this));
+        riskManager.updateTokenPrice{value: priceCost}(msg.sender);
         (uint err,) = liquidateBorrowInternal(borrower, repayAmount, pTokenCollateral);
         requireNoError(err, "liquidateBorrow failed");
     }
@@ -176,5 +176,11 @@ contract PEther is PToken {
         fullMessage[i+4] = byte(uint8(41));
 
         require(errCode == uint(Error.NO_ERROR), string(fullMessage));
+    }
+
+    function updateTokenPrice() internal {
+        uint priceCost = riskManager.getPriceCost(msg.sender);
+        require(msg.value >= priceCost, "No enough value to pay price oracle.");
+        riskManager.updateTokenPrice{value: priceCost}(msg.sender);
     }
 }

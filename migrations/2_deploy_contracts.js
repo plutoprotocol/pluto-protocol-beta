@@ -30,9 +30,10 @@ module.exports = async function(deployer, network, accounts) {
 
         let nestPriceOracleInstance = await NestPriceOracle.deployed();
         await nestPriceOracleInstance.activation();
-
-        await riskManagerInstance._setCollateralFactor(pETH.address, 0.75e18.toString(), {value: 0.01e18.toString()});
-        await riskManagerInstance._setCollateralFactor(pUSDT.address, 0.75e18.toString(), {value: 0.01e18.toString()});
+        let priceCost = await nestPriceOracleInstance.getPriceCost(pETH.address);
+        await riskManagerInstance._setCollateralFactor(pETH.address, 0.75e18.toString(), {value: priceCost});
+        priceCost = await nestPriceOracleInstance.getPriceCost(pUSDT.address);
+        await riskManagerInstance._setCollateralFactor(pUSDT.address, 0.75e18.toString(), {value: priceCost});
         let allSupportedMarkets = await riskManagerInstance.getAllMarkets();
         console.log(allSupportedMarkets);
     }

@@ -259,11 +259,11 @@ abstract contract IPErc20 is PErc20Storage {
     /*** User Interface ***/
 
     function mint(uint mintAmount) external virtual returns (uint);
-    function redeem(uint redeemTokens) external virtual returns (uint);
-    function redeemUnderlying(uint redeemAmount) external virtual returns (uint);
+    function redeem(uint redeemTokens) external virtual payable returns (uint);
+    function redeemUnderlying(uint redeemAmount) external virtual payable returns (uint);
     function borrow(uint borrowAmount) external payable virtual returns (uint);
-    function repayBorrow(uint repayAmount) external payable virtual returns (uint);
-    function repayBorrowBehalf(address borrower, uint repayAmount) payable external virtual returns (uint);
+    function repayBorrow(uint repayAmount) external virtual returns (uint);
+    function repayBorrowBehalf(address borrower, uint repayAmount) external virtual returns (uint);
     function liquidateBorrow(address borrower, uint repayAmount, IPToken pTokenCollateral) payable external virtual returns (uint);
 
 

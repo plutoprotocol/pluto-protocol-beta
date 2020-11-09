@@ -25,20 +25,22 @@ contract NestPriceOracle is PriceOracle {
     }
 
     function updateAndGetUnderlyingPrice(PToken pToken) external payable override returns (uint256) {
-        (uint256 tokenPrice, uint256 priceUpdateBlock) = getUnderlyingPrice(pToken);
-        uint256 currentBlock = block.number;
-        if (pToken.isForETH() || currentBlock == priceUpdateBlock) {
-            tx.origin.transfer(msg.value);
-            return tokenPrice;
+        uint256 priceCost = getPriceCost(pToken);
+        require(msg.value >= priceCost, "No enough balance to pay oracle price.");
+
+        if (msg.value > priceCost) {
+            msg.sender.transfer(msg.value.sub(priceCost));
         }
 
-        address underlyingToken = address(PErc20(address(pToken)).underlying());
-        uint256 priceCost = getPriceCost(pToken);
+        if (pToken.isForETH()) {
+            return 1e18;
+        }
 
-        require(msg.value == priceCost, "No enough balance to pay oracle price.");
+        uint256 currentBlock = block.number;
+        address underlyingToken = address(PErc20(address(pToken)).underlying());
 
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
-        (uint256 ethAmount, uint256 tokenAmount,) = _offerPrice.updateAndCheckPriceNow{value: msg.value}(underlyingToken);
+        (uint256 ethAmount, uint256 tokenAmount,) = _offerPrice.updateAndCheckPriceNow{value: priceCost}(underlyingToken);
         uint256 ethForToken = ethAmount.mul(1e18).div(tokenAmount);
         prices[underlyingToken] = ethForToken;
         lastUpdateBlocks[underlyingToken] = currentBlock;
@@ -47,9 +49,10 @@ contract NestPriceOracle is PriceOracle {
     }
 
     function getPriceCost(PToken pToken) public view override returns (uint256) {
-        address underlyingToken = address(PErc20(address(pToken)).underlying());
+        // No need to call oracle to get ETH price
+        if (pToken.isForETH()) return 0;
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
-        uint256 priceCost = _offerPrice.checkPriceCost(underlyingToken);
+        uint256 priceCost = _offerPrice.checkPriceCost();
         return priceCost;
     }
 
@@ -73,6 +76,8 @@ contract NestPriceOracle is PriceOracle {
     function getNestOfferPrice() internal view returns (Nest3OfferPrice) {
         return Nest3OfferPrice(address(voteFactory.checkAddress("nest.v3.offerPrice")));
     }
+
+    receive() external payable {}
 }
 
 
@@ -87,7 +92,7 @@ interface Nest3OfferPrice {
     // Update and check the latest price
     function updateAndCheckPriceNow(address tokenAddress) external payable returns(uint256 ethAmount, uint256 erc20Amount, uint256 blockNum);
     // Check call price fee
-    function checkPriceCost(address tokenAddress) external view returns(uint256);
+    function checkPriceCost() external view returns (uint256);
     // Check whether the price-checking functions can be called
     function checkUseNestPrice(address target) external view returns (bool);
 }

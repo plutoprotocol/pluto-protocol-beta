@@ -518,8 +518,20 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
         return (uint(err), liquidity, shortfall);
     }
 
-    function getPriceCost(address asset) external view override returns (uint256) {
-        return oracle.getPriceCost(PToken(asset));
+    function getPriceCost(address assetOwner) external view override returns (uint256) {
+        PToken[] memory assets = accountAssets[assetOwner];
+        uint totalPriceCost;
+        for (uint i = 0; i < assets.length; i++) {
+            (, totalPriceCost) = addUInt(totalPriceCost, oracle.getPriceCost(assets[i]));
+        }
+        return totalPriceCost;
+    }
+
+    function updateTokenPrice(address assetOwner) external override payable {
+        PToken[] memory assets = accountAssets[assetOwner];
+        for (uint i = 0; i < assets.length; i++) {
+            updateAndGetTokenPrice(address(assets[i]));
+        }
     }
 
     function getTokenPrice(address asset) public view returns (uint256) {
@@ -527,13 +539,14 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
         return oraclePriceMantissa;
     }
 
-    function updateAndGetTokenPrice(address asset) external override payable returns (uint256) {
-        (uint256 oraclePriceMantissa, uint256 blockNum) = oracle.getUnderlyingPrice(PToken(asset));
-        if (oraclePriceMantissa != 0 && blockNum == block.number) return oraclePriceMantissa;
+    function updateAndGetTokenPrice(address asset) public override payable returns (uint256) {
+        PToken pToken = PToken(asset);
+        (uint256 oraclePriceMantissa, uint256 blockNum) = oracle.getUnderlyingPrice(pToken);
+        if (oraclePriceMantissa != 0 && pToken.isForETH()) return oraclePriceMantissa;
 
-        uint256 priceCost = oracle.getPriceCost(PToken(asset));
-        require(msg.value == priceCost, "No enough balance.");
-        oraclePriceMantissa = oracle.updateAndGetUnderlyingPrice{value: msg.value}(PToken(asset));
+        uint256 priceCost = oracle.getPriceCost(pToken);
+        require((address(this).balance >= priceCost), "No enough balance.");
+        oraclePriceMantissa = oracle.updateAndGetUnderlyingPrice{value: priceCost}(pToken);
         return oraclePriceMantissa;
     }
 

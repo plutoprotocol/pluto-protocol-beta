@@ -47,7 +47,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -60,7 +61,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -73,7 +75,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -86,7 +89,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -115,7 +119,8 @@
         }
       ],
       "stateMutability": "pure",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -144,7 +149,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -178,19 +184,20 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"baseRatePerYear\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"multiplierPerYear\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"baseRatePerBlock\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"multiplierPerBlock\",\"type\":\"uint256\"}],\"name\":\"NewInterestParams\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"baseRatePerBlock\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"blocksPerYear\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"cash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"borrows\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserves\",\"type\":\"uint256\"}],\"name\":\"getBorrowRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"cash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"borrows\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserves\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserveFactorMantissa\",\"type\":\"uint256\"}],\"name\":\"getSupplyRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isInterestRateModel\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"multiplierPerBlock\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"cash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"borrows\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserves\",\"type\":\"uint256\"}],\"name\":\"utilizationRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"constructor\":{\"params\":{\"baseRatePerYear\":\"The approximate target base APR, as a mantissa (scaled by 1e18)\",\"multiplierPerYear\":\"The rate of increase in interest rate with regard to utilization (scaled by 1e18)\"}},\"getBorrowRate(uint256,uint256,uint256)\":{\"params\":{\"borrows\":\"The amount of borrows in the market\",\"cash\":\"The amount of cash in the market\",\"reserves\":\"The amount of reserves in the market\"},\"returns\":{\"_0\":\"The borrow rate percentage per block as a mantissa (scaled by 1e18)\"}},\"getSupplyRate(uint256,uint256,uint256,uint256)\":{\"params\":{\"borrows\":\"The amount of borrows in the market\",\"cash\":\"The amount of cash in the market\",\"reserves\":\"The amount of reserves in the market\"},\"returns\":{\"_0\":\"The borrow rate percentage per block as a mantissa (scaled by 1e18)\"}},\"utilizationRate(uint256,uint256,uint256)\":{\"params\":{\"borrows\":\"The amount of borrows in the market\",\"cash\":\"The amount of cash in the market\",\"reserves\":\"The amount of reserves in the market (currently unused)\"},\"returns\":{\"_0\":\"The utilization rate as a mantissa between [0, 1e18]\"}}}},\"userdoc\":{\"methods\":{\"baseRatePerBlock()\":{\"notice\":\"The base interest rate which is the y-intercept when utilization rate is 0\"},\"blocksPerYear()\":{\"notice\":\"The approximate number of blocks per year that is assumed by the interest rate model blocksPerYear = (60/15) * 60 * 24 * 365\"},\"constructor\":\"Construct an interest rate model\",\"getBorrowRate(uint256,uint256,uint256)\":{\"notice\":\"Calculates the current borrow rate per block(baseRatePerBlock + utilizationRate * multiplierPerBlock), with the error code expected by the market\"},\"getSupplyRate(uint256,uint256,uint256,uint256)\":{\"notice\":\"Calculates the current borrow rate per block(utilizationRate * BorrowRate * \\uff081 - reserveFactor\\uff09), with the error code expected by the market\"},\"multiplierPerBlock()\":{\"notice\":\"The multiplier of utilization rate that gives the slope of the interest rate\"},\"utilizationRate(uint256,uint256,uint256)\":{\"notice\":\"Calculates the utilization rate of the market: `borrows / (cash + borrows - reserves)`\"}}}},\"settings\":{\"compilationTarget\":{\"/home/plutoadmin/stamen-contracts/contracts/core/DefaultInterestRateModel.sol\":\"DefaultInterestRateModel\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/plutoadmin/stamen-contracts/contracts/core/DefaultInterestRateModel.sol\":{\"keccak256\":\"0xbbb6021bc519c27260d020f7789abfc4ba4ea42fd4d00bf59a0e69e86f1e4e25\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://adc588c0659006c62eabf814b054eec550d649410a380178d234d1ceaa1ea109\",\"dweb:/ipfs/QmP98aAeERFQnKgDpmuDCAzi85acwFPL9LXEqj7MXgLQJP\"]},\"/home/plutoadmin/stamen-contracts/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0x2a404ade7ce788c43f4acafd57e626b342fb1644ba176b1ab451be4c4a9d64e5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://aa229ef7cf18ea3363669dee097b5c01c4b830c14e4d59e922a1bb01a4d46deb\",\"dweb:/ipfs/QmWL94Q3yjHRugPqLbLBTyiM7uD8FYUbWcgnfSakCAfKr2\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xaa0e11a791bc975d581a4f5b7a8d9c16a880a354c89312318ae072ae3e740409\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://982d8b344f76193834260436d74c81e5a8f9e89106bb4cd72bbaabda4f3f59c2\",\"dweb:/ipfs/QmSrvP5TkQRhKDVCTpsV3uaKLBhkt7PjUY89vdtM9o5ybK\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516106db3803806106db8339818101604052604081101561003357600080fd5b5080516020918201519091610056908390622014809061028c6100bc821b17901c565b60015561007181622014806100bc602090811b61028c17901c565b600081905560015460408051918252602082019290925281517ff35fa19c15e9ba782633a5df62a98b20217151addc68e3ff2cd623a48d37ec27929181900390910190a150506101ad565b600061010483836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f00000000000081525061010b60201b60201c565b9392505050565b600081836101975760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561015c578181015183820152602001610144565b50505050905090810190601f1680156101895780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b5060008385816101a357fe5b0495945050505050565b61051f806101bc6000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80638726bb891161005b5780638726bb8914610102578063a385fb961461010a578063b816881614610112578063f14039de146101415761007d565b806315f24053146100825780632191f92a146100bd5780636e71e2d8146100d9575b600080fd5b6100ab6004803603606081101561009857600080fd5b5080359060208101359060400135610149565b60408051918252519081900360200190f35b6100c56101a3565b604080519115158252519081900360200190f35b6100ab600480360360608110156100ef57600080fd5b50803590602081013590604001356101a8565b6100ab6101fa565b6100ab610200565b6100ab6004803603608081101561012857600080fd5b5080359060208101359060408101359060600135610207565b6100ab610286565b6000806101578585856101a8565b905061019860015461018c670de0b6b3a7640000610180600054866102d790919063ffffffff16565b9063ffffffff61028c16565b9063ffffffff61033016565b9150505b9392505050565b600181565b6000826101b75750600061019c565b6101f26101da836101ce878763ffffffff61033016565b9063ffffffff61038a16565b61018085670de0b6b3a764000063ffffffff6102d716565b949350505050565b60005481565b6220148081565b600080610222670de0b6b3a76400008463ffffffff61038a16565b90506000610231878787610149565b90506000610251670de0b6b3a7640000610180848663ffffffff6102d716565b905061027a670de0b6b3a76400006101808361026e8c8c8c6101a8565b9063ffffffff6102d716565b98975050505050505050565b60015481565b60006102ce83836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f0000000000008152506103cc565b90505b92915050565b6000826102e6575060006102d1565b828202828482816102f357fe5b04146102ce5760405162461bcd60e51b81526004018080602001828103825260218152602001806104c96021913960400191505060405180910390fd5b6000828201838110156102ce576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b60006102ce83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525061046e565b600081836104585760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561041d578181015183820152602001610405565b50505050905090810190601f16801561044a5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50600083858161046457fe5b0495945050505050565b600081848411156104c05760405162461bcd60e51b815260206004820181815283516024840152835190928392604490910191908501908083836000831561041d578181015183820152602001610405565b50505090039056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a26469706673582212200187f4a3b47296b5475c496d35ed72ed5e758782214b9cde5be05b869392b9fc64736f6c63430006090033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80638726bb891161005b5780638726bb8914610102578063a385fb961461010a578063b816881614610112578063f14039de146101415761007d565b806315f24053146100825780632191f92a146100bd5780636e71e2d8146100d9575b600080fd5b6100ab6004803603606081101561009857600080fd5b5080359060208101359060400135610149565b60408051918252519081900360200190f35b6100c56101a3565b604080519115158252519081900360200190f35b6100ab600480360360608110156100ef57600080fd5b50803590602081013590604001356101a8565b6100ab6101fa565b6100ab610200565b6100ab6004803603608081101561012857600080fd5b5080359060208101359060408101359060600135610207565b6100ab610286565b6000806101578585856101a8565b905061019860015461018c670de0b6b3a7640000610180600054866102d790919063ffffffff16565b9063ffffffff61028c16565b9063ffffffff61033016565b9150505b9392505050565b600181565b6000826101b75750600061019c565b6101f26101da836101ce878763ffffffff61033016565b9063ffffffff61038a16565b61018085670de0b6b3a764000063ffffffff6102d716565b949350505050565b60005481565b6220148081565b600080610222670de0b6b3a76400008463ffffffff61038a16565b90506000610231878787610149565b90506000610251670de0b6b3a7640000610180848663ffffffff6102d716565b905061027a670de0b6b3a76400006101808361026e8c8c8c6101a8565b9063ffffffff6102d716565b98975050505050505050565b60015481565b60006102ce83836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f0000000000008152506103cc565b90505b92915050565b6000826102e6575060006102d1565b828202828482816102f357fe5b04146102ce5760405162461bcd60e51b81526004018080602001828103825260218152602001806104c96021913960400191505060405180910390fd5b6000828201838110156102ce576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b60006102ce83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525061046e565b600081836104585760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561041d578181015183820152602001610405565b50505050905090810190601f16801561044a5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50600083858161046457fe5b0495945050505050565b600081848411156104c05760405162461bcd60e51b815260206004820181815283516024840152835190928392604490910191908501908083836000831561041d578181015183820152602001610405565b50505090039056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a26469706673582212200187f4a3b47296b5475c496d35ed72ed5e758782214b9cde5be05b869392b9fc64736f6c63430006090033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"baseRatePerYear\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"multiplierPerYear\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"baseRatePerBlock\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"multiplierPerBlock\",\"type\":\"uint256\"}],\"name\":\"NewInterestParams\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"baseRatePerBlock\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"blocksPerYear\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"cash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"borrows\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserves\",\"type\":\"uint256\"}],\"name\":\"getBorrowRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"cash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"borrows\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserves\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserveFactorMantissa\",\"type\":\"uint256\"}],\"name\":\"getSupplyRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isInterestRateModel\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"multiplierPerBlock\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"cash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"borrows\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"reserves\",\"type\":\"uint256\"}],\"name\":\"utilizationRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"constructor\":{\"params\":{\"baseRatePerYear\":\"The approximate target base APR, as a mantissa (scaled by 1e18)\",\"multiplierPerYear\":\"The rate of increase in interest rate with regard to utilization (scaled by 1e18)\"}},\"getBorrowRate(uint256,uint256,uint256)\":{\"params\":{\"borrows\":\"The amount of borrows in the market\",\"cash\":\"The amount of cash in the market\",\"reserves\":\"The amount of reserves in the market\"},\"returns\":{\"_0\":\"The borrow rate percentage per block as a mantissa (scaled by 1e18)\"}},\"getSupplyRate(uint256,uint256,uint256,uint256)\":{\"params\":{\"borrows\":\"The amount of borrows in the market\",\"cash\":\"The amount of cash in the market\",\"reserves\":\"The amount of reserves in the market\"},\"returns\":{\"_0\":\"The borrow rate percentage per block as a mantissa (scaled by 1e18)\"}},\"utilizationRate(uint256,uint256,uint256)\":{\"params\":{\"borrows\":\"The amount of borrows in the market\",\"cash\":\"The amount of cash in the market\",\"reserves\":\"The amount of reserves in the market (currently unused)\"},\"returns\":{\"_0\":\"The utilization rate as a mantissa between [0, 1e18]\"}}}},\"userdoc\":{\"methods\":{\"baseRatePerBlock()\":{\"notice\":\"The base interest rate which is the y-intercept when utilization rate is 0\"},\"blocksPerYear()\":{\"notice\":\"The approximate number of blocks per year that is assumed by the interest rate model blocksPerYear = (60/15) * 60 * 24 * 365\"},\"constructor\":\"Construct an interest rate model\",\"getBorrowRate(uint256,uint256,uint256)\":{\"notice\":\"Calculates the current borrow rate per block(baseRatePerBlock + utilizationRate * multiplierPerBlock), with the error code expected by the market\"},\"getSupplyRate(uint256,uint256,uint256,uint256)\":{\"notice\":\"Calculates the current borrow rate per block(utilizationRate * BorrowRate * \\uff081 - reserveFactor\\uff09), with the error code expected by the market\"},\"multiplierPerBlock()\":{\"notice\":\"The multiplier of utilization rate that gives the slope of the interest rate\"},\"utilizationRate(uint256,uint256,uint256)\":{\"notice\":\"Calculates the utilization rate of the market: `borrows / (cash + borrows - reserves)`\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/DefaultInterestRateModel.sol\":\"DefaultInterestRateModel\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/DefaultInterestRateModel.sol\":{\"keccak256\":\"0xbbb6021bc519c27260d020f7789abfc4ba4ea42fd4d00bf59a0e69e86f1e4e25\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://adc588c0659006c62eabf814b054eec550d649410a380178d234d1ceaa1ea109\",\"dweb:/ipfs/QmP98aAeERFQnKgDpmuDCAzi85acwFPL9LXEqj7MXgLQJP\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0x2a404ade7ce788c43f4acafd57e626b342fb1644ba176b1ab451be4c4a9d64e5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://aa229ef7cf18ea3363669dee097b5c01c4b830c14e4d59e922a1bb01a4d46deb\",\"dweb:/ipfs/QmWL94Q3yjHRugPqLbLBTyiM7uD8FYUbWcgnfSakCAfKr2\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xaa0e11a791bc975d581a4f5b7a8d9c16a880a354c89312318ae072ae3e740409\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://982d8b344f76193834260436d74c81e5a8f9e89106bb4cd72bbaabda4f3f59c2\",\"dweb:/ipfs/QmSrvP5TkQRhKDVCTpsV3uaKLBhkt7PjUY89vdtM9o5ybK\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516106db3803806106db8339818101604052604081101561003357600080fd5b5080516020918201519091610056908390622014809061028c6100bc821b17901c565b60015561007181622014806100bc602090811b61028c17901c565b600081905560015460408051918252602082019290925281517ff35fa19c15e9ba782633a5df62a98b20217151addc68e3ff2cd623a48d37ec27929181900390910190a150506101ad565b600061010483836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f00000000000081525061010b60201b60201c565b9392505050565b600081836101975760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561015c578181015183820152602001610144565b50505050905090810190601f1680156101895780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b5060008385816101a357fe5b0495945050505050565b61051f806101bc6000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80638726bb891161005b5780638726bb8914610102578063a385fb961461010a578063b816881614610112578063f14039de146101415761007d565b806315f24053146100825780632191f92a146100bd5780636e71e2d8146100d9575b600080fd5b6100ab6004803603606081101561009857600080fd5b5080359060208101359060400135610149565b60408051918252519081900360200190f35b6100c56101a3565b604080519115158252519081900360200190f35b6100ab600480360360608110156100ef57600080fd5b50803590602081013590604001356101a8565b6100ab6101fa565b6100ab610200565b6100ab6004803603608081101561012857600080fd5b5080359060208101359060408101359060600135610207565b6100ab610286565b6000806101578585856101a8565b905061019860015461018c670de0b6b3a7640000610180600054866102d790919063ffffffff16565b9063ffffffff61028c16565b9063ffffffff61033016565b9150505b9392505050565b600181565b6000826101b75750600061019c565b6101f26101da836101ce878763ffffffff61033016565b9063ffffffff61038a16565b61018085670de0b6b3a764000063ffffffff6102d716565b949350505050565b60005481565b6220148081565b600080610222670de0b6b3a76400008463ffffffff61038a16565b90506000610231878787610149565b90506000610251670de0b6b3a7640000610180848663ffffffff6102d716565b905061027a670de0b6b3a76400006101808361026e8c8c8c6101a8565b9063ffffffff6102d716565b98975050505050505050565b60015481565b60006102ce83836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f0000000000008152506103cc565b90505b92915050565b6000826102e6575060006102d1565b828202828482816102f357fe5b04146102ce5760405162461bcd60e51b81526004018080602001828103825260218152602001806104c96021913960400191505060405180910390fd5b6000828201838110156102ce576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b60006102ce83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525061046e565b600081836104585760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561041d578181015183820152602001610405565b50505050905090810190601f16801561044a5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50600083858161046457fe5b0495945050505050565b600081848411156104c05760405162461bcd60e51b815260206004820181815283516024840152835190928392604490910191908501908083836000831561041d578181015183820152602001610405565b50505090039056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a26469706673582212200ad564cc7987081d0987eaf84a56cdea23a971cfc5bfad1217cacd382680f6a564736f6c63430006090033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80638726bb891161005b5780638726bb8914610102578063a385fb961461010a578063b816881614610112578063f14039de146101415761007d565b806315f24053146100825780632191f92a146100bd5780636e71e2d8146100d9575b600080fd5b6100ab6004803603606081101561009857600080fd5b5080359060208101359060400135610149565b60408051918252519081900360200190f35b6100c56101a3565b604080519115158252519081900360200190f35b6100ab600480360360608110156100ef57600080fd5b50803590602081013590604001356101a8565b6100ab6101fa565b6100ab610200565b6100ab6004803603608081101561012857600080fd5b5080359060208101359060408101359060600135610207565b6100ab610286565b6000806101578585856101a8565b905061019860015461018c670de0b6b3a7640000610180600054866102d790919063ffffffff16565b9063ffffffff61028c16565b9063ffffffff61033016565b9150505b9392505050565b600181565b6000826101b75750600061019c565b6101f26101da836101ce878763ffffffff61033016565b9063ffffffff61038a16565b61018085670de0b6b3a764000063ffffffff6102d716565b949350505050565b60005481565b6220148081565b600080610222670de0b6b3a76400008463ffffffff61038a16565b90506000610231878787610149565b90506000610251670de0b6b3a7640000610180848663ffffffff6102d716565b905061027a670de0b6b3a76400006101808361026e8c8c8c6101a8565b9063ffffffff6102d716565b98975050505050505050565b60015481565b60006102ce83836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f0000000000008152506103cc565b90505b92915050565b6000826102e6575060006102d1565b828202828482816102f357fe5b04146102ce5760405162461bcd60e51b81526004018080602001828103825260218152602001806104c96021913960400191505060405180910390fd5b6000828201838110156102ce576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b60006102ce83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525061046e565b600081836104585760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561041d578181015183820152602001610405565b50505050905090810190601f16801561044a5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50600083858161046457fe5b0495945050505050565b600081848411156104c05760405162461bcd60e51b815260206004820181815283516024840152835190928392604490910191908501908083836000831561041d578181015183820152602001610405565b50505090039056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a26469706673582212200ad564cc7987081d0987eaf84a56cdea23a971cfc5bfad1217cacd382680f6a564736f6c63430006090033",
   "immutableReferences": {},
   "sourceMap": "151:3511:1:-:0;;;1110:279;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1110:279:1;;;;;;;;;1210:34;;1110:279;;532:7;;1210:19;;;;;:34;;:::i;:::-;1191:16;:53;1275:36;:17;532:7;1275:21;;;;;;;:36;;:::i;:::-;1254:18;:57;;;1345:16;;1327:55;;;;;;;;;;;;;;;;;;;;;;;;;;1110:279;;151:3511;;3066:130:23;3124:7;3150:39;3154:1;3157;3150:39;;;;;;;;;;;;;;;;;:3;;;:39;;:::i;:::-;3143:46;3066:130;-1:-1:-1;;;3066:130:23:o;3671:338::-;3757:7;3857:12;3850:5;3842:28;;;;-1:-1:-1;;;3842:28:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3880:9;3896:1;3892;:5;;;;;;;3671:338;-1:-1:-1;;;;;3671:338:23:o;151:3511:1:-;;;;;;;",
   "deployedSourceMap": "151:3511:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2508:256;;;;;;;;;;;;;;;;-1:-1:-1;2508:256:1;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;107:47:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;1770:302:1;;;;;;;;;;;;;;;;-1:-1:-1;1770:302:1;;;;;;;;;;;;:::i;654:33::-;;;:::i;492:47::-;;;:::i;3199:461::-;;;;;;;;;;;;;;;;-1:-1:-1;3199:461:1;;;;;;;;;;;;;;;;;:::i;800:31::-;;;:::i;2508:256::-;2610:7;2629:10;2642:40;2658:4;2664:7;2673:8;2642:15;:40::i;:::-;2629:53;;2699:58;2740:16;;2699:36;2730:4;2699:26;2706:18;;2699:2;:6;;:26;;;;:::i;:::-;:30;:36;:30;:36;:::i;:::-;:40;:58;:40;:58;:::i;:::-;2692:65;;;2508:256;;;;;;:::o;107:47:3:-;150:4;107:47;:::o;1770:302:1:-;1865:7;1947:12;1943:51;;-1:-1:-1;1982:1:1;1975:8;;1943:51;2011:54;2033:31;2055:8;2033:17;:4;2042:7;2033:17;:8;:17;:::i;:::-;:21;:31;:21;:31;:::i;:::-;2011:17;:7;2023:4;2011:17;:11;:17;:::i;:54::-;2004:61;1770:302;-1:-1:-1;;;;1770:302:1:o;654:33::-;;;;:::o;492:47::-;532:7;492:47;:::o;3199:461::-;3332:7;;3383:40;3391:4;3401:21;3383:40;:17;:40;:::i;:::-;3351:72;;3433:18;3454:38;3468:4;3474:7;3483:8;3454:13;:38::i;:::-;3433:59;-1:-1:-1;3502:18:1;3523:47;3565:4;3523:37;3433:59;3538:21;3523:37;:14;:37;:::i;:47::-;3502:68;;3587:66;3648:4;3587:56;3632:10;3587:40;3603:4;3609:7;3618:8;3587:15;:40::i;:::-;:44;:56;:44;:56;:::i;:66::-;3580:73;3199:461;-1:-1:-1;;;;;;;;3199:461:1:o;800:31::-;;;;:::o;3066:130:23:-;3124:7;3150:39;3154:1;3157;3150:39;;;;;;;;;;;;;;;;;:3;:39::i;:::-;3143:46;;3066:130;;;;;:::o;2152:459::-;2210:7;2451:6;2447:45;;-1:-1:-1;2480:1:23;2473:8;;2447:45;2514:5;;;2518:1;2514;:5;:1;2537:5;;;;;:10;2529:56;;;;-1:-1:-1;;;2529:56:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;867:176;925:7;956:5;;;979:6;;;;971:46;;;;;-1:-1:-1;;;971:46:23;;;;;;;;;;;;;;;;;;;;;;;;;;;1307:134;1365:7;1391:43;1395:1;1398;1391:43;;;;;;;;;;;;;;;;;:3;:43::i;3671:338::-;3757:7;3857:12;3850:5;3842:28;;;;-1:-1:-1;;;3842:28:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3880:9;3896:1;3892;:5;;;;;;;3671:338;-1:-1:-1;;;;;3671:338:23:o;1725:187::-;1811:7;1846:12;1838:6;;;;1830:29;;;;-1:-1:-1;;;1830:29:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1881:5:23;;;1725:187::o",
   "source": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.6.9;\n\nimport \"./InterestRateModel.sol\";\nimport \"@openzeppelin/contracts/math/SafeMath.sol\";\n\ncontract DefaultInterestRateModel is InterestRateModel {\n    using SafeMath for uint256;\n\n    event NewInterestParams(uint256 baseRatePerBlock, uint256 multiplierPerBlock);\n\n    /**\n     * @notice The approximate number of blocks per year that is assumed by the interest rate model\n     * blocksPerYear = (60/15) * 60 * 24 * 365\n     */\n    uint256 public constant blocksPerYear = 2102400;\n\n    /**\n     * @notice The multiplier of utilization rate that gives the slope of the interest rate\n     */\n    uint256 public multiplierPerBlock;\n\n    /**\n     * @notice The base interest rate which is the y-intercept when utilization rate is 0\n     */\n    uint256 public baseRatePerBlock;\n\n    /**\n     * @notice Construct an interest rate model\n     * @param baseRatePerYear The approximate target base APR, as a mantissa (scaled by 1e18)\n     * @param multiplierPerYear The rate of increase in interest rate with regard to utilization (scaled by 1e18)\n     */\n    constructor(uint256 baseRatePerYear, uint256 multiplierPerYear) public {\n        baseRatePerBlock = baseRatePerYear.div(blocksPerYear);\n        multiplierPerBlock = multiplierPerYear.div(blocksPerYear);\n\n        emit NewInterestParams(baseRatePerBlock, multiplierPerBlock);\n    }\n\n    /**\n     * @notice Calculates the utilization rate of the market: `borrows / (cash + borrows - reserves)`\n     * @param cash The amount of cash in the market\n     * @param borrows The amount of borrows in the market\n     * @param reserves The amount of reserves in the market (currently unused)\n     * @return The utilization rate as a mantissa between [0, 1e18]\n     */\n    function utilizationRate(uint256 cash, uint256 borrows, uint256 reserves) public pure returns (uint256) {\n        // Utilization rate is 0 when there are no borrows\n        if (borrows == 0) {\n            return 0;\n        }\n\n        return borrows.mul(1e18).div(cash.add(borrows).sub(reserves));\n    }\n\n    /**\n     * @notice Calculates the current borrow rate per block(baseRatePerBlock + utilizationRate * multiplierPerBlock), with the error code expected by the market\n     * @param cash The amount of cash in the market\n     * @param borrows The amount of borrows in the market\n     * @param reserves The amount of reserves in the market\n     * @return The borrow rate percentage per block as a mantissa (scaled by 1e18)\n     */\n    function getBorrowRate(uint256 cash, uint256 borrows, uint256 reserves) public view override returns (uint256) {\n        uint256 ur = utilizationRate(cash, borrows, reserves);\n        return ur.mul(multiplierPerBlock).div(1e18).add(baseRatePerBlock);\n    }\n\n    /**\n     * @notice Calculates the current borrow rate per block(utilizationRate * BorrowRate * （1 - reserveFactor）), with the error code expected by the market\n     * @param cash The amount of cash in the market\n     * @param borrows The amount of borrows in the market\n     * @param reserves The amount of reserves in the market\n     * @return The borrow rate percentage per block as a mantissa (scaled by 1e18)\n     */\n    function getSupplyRate(uint256 cash, uint256 borrows, uint256 reserves, uint256 reserveFactorMantissa) public view override returns (uint256) {\n        uint256 oneMinusReserveFactor = uint256(1e18).sub(reserveFactorMantissa);\n        uint256 borrowRate = getBorrowRate(cash, borrows, reserves);\n        uint256 rateToPool = borrowRate.mul(oneMinusReserveFactor).div(1e18);\n        return utilizationRate(cash, borrows, reserves).mul(rateToPool).div(1e18);\n    }\n}\n",
-  "sourcePath": "/home/plutoadmin/stamen-contracts/contracts/core/DefaultInterestRateModel.sol",
+  "sourcePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/DefaultInterestRateModel.sol",
   "ast": {
-    "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/core/DefaultInterestRateModel.sol",
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/DefaultInterestRateModel.sol",
     "exportedSymbols": {
       "DefaultInterestRateModel": [
         213
@@ -212,12 +219,12 @@
         "src": "39:23:1"
       },
       {
-        "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/core/InterestRateModel.sol",
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol",
         "file": "./InterestRateModel.sol",
         "id": 39,
         "nodeType": "ImportDirective",
         "scope": 214,
-        "sourceUnit": 393,
+        "sourceUnit": 398,
         "src": "64:33:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -228,7 +235,7 @@
         "id": 40,
         "nodeType": "ImportDirective",
         "scope": 214,
-        "sourceUnit": 11848,
+        "sourceUnit": 11948,
         "src": "98:51:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -243,10 +250,10 @@
               "id": 41,
               "name": "InterestRateModel",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 392,
+              "referencedDeclaration": 397,
               "src": "188:17:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_InterestRateModel_$392",
+                "typeIdentifier": "t_contract$_InterestRateModel_$397",
                 "typeString": "contract InterestRateModel"
               }
             },
@@ -256,7 +263,7 @@
           }
         ],
         "contractDependencies": [
-          392
+          397
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -264,7 +271,7 @@
         "id": 213,
         "linearizedBaseContracts": [
           213,
-          392
+          397
         ],
         "name": "DefaultInterestRateModel",
         "nodeType": "ContractDefinition",
@@ -276,10 +283,10 @@
               "id": 43,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 11847,
+              "referencedDeclaration": 11947,
               "src": "218:8:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$11847",
+                "typeIdentifier": "t_contract$_SafeMath_$11947",
                 "typeString": "library SafeMath"
               }
             },
@@ -564,7 +571,7 @@
                         "lValueRequested": false,
                         "memberName": "div",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 11777,
+                        "referencedDeclaration": 11877,
                         "src": "1210:19:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -663,7 +670,7 @@
                         "lValueRequested": false,
                         "memberName": "div",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 11777,
+                        "referencedDeclaration": 11877,
                         "src": "1275:21:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1022,7 +1029,7 @@
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 11680,
+                              "referencedDeclaration": 11780,
                               "src": "2033:8:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1051,7 +1058,7 @@
                           "lValueRequested": false,
                           "memberName": "sub",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 11697,
+                          "referencedDeclaration": 11797,
                           "src": "2033:21:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1130,7 +1137,7 @@
                           "lValueRequested": false,
                           "memberName": "mul",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 11760,
+                          "referencedDeclaration": 11860,
                           "src": "2011:11:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1159,7 +1166,7 @@
                       "lValueRequested": false,
                       "memberName": "div",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11777,
+                      "referencedDeclaration": 11877,
                       "src": "2011:21:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1336,7 +1343,7 @@
           },
           {
             "baseFunctions": [
-              377
+              382
             ],
             "body": {
               "id": 155,
@@ -1563,7 +1570,7 @@
                               "lValueRequested": false,
                               "memberName": "mul",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 11760,
+                              "referencedDeclaration": 11860,
                               "src": "2699:6:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1592,7 +1599,7 @@
                           "lValueRequested": false,
                           "memberName": "div",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 11777,
+                          "referencedDeclaration": 11877,
                           "src": "2699:30:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1621,7 +1628,7 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11680,
+                      "referencedDeclaration": 11780,
                       "src": "2699:40:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1803,7 +1810,7 @@
           },
           {
             "baseFunctions": [
-              391
+              396
             ],
             "body": {
               "id": 211,
@@ -1942,7 +1949,7 @@
                       "lValueRequested": false,
                       "memberName": "sub",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11697,
+                      "referencedDeclaration": 11797,
                       "src": "3383:17:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -2197,7 +2204,7 @@
                           "lValueRequested": false,
                           "memberName": "mul",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 11760,
+                          "referencedDeclaration": 11860,
                           "src": "3523:14:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -2226,7 +2233,7 @@
                       "lValueRequested": false,
                       "memberName": "div",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11777,
+                      "referencedDeclaration": 11877,
                       "src": "3523:41:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -2396,7 +2403,7 @@
                           "lValueRequested": false,
                           "memberName": "mul",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 11760,
+                          "referencedDeclaration": 11860,
                           "src": "3587:44:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -2425,7 +2432,7 @@
                       "lValueRequested": false,
                       "memberName": "div",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11777,
+                      "referencedDeclaration": 11877,
                       "src": "3587:60:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -2641,7 +2648,7 @@
     "src": "39:3624:1"
   },
   "legacyAST": {
-    "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/core/DefaultInterestRateModel.sol",
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/DefaultInterestRateModel.sol",
     "exportedSymbols": {
       "DefaultInterestRateModel": [
         213
@@ -2663,12 +2670,12 @@
         "src": "39:23:1"
       },
       {
-        "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/core/InterestRateModel.sol",
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol",
         "file": "./InterestRateModel.sol",
         "id": 39,
         "nodeType": "ImportDirective",
         "scope": 214,
-        "sourceUnit": 393,
+        "sourceUnit": 398,
         "src": "64:33:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2679,7 +2686,7 @@
         "id": 40,
         "nodeType": "ImportDirective",
         "scope": 214,
-        "sourceUnit": 11848,
+        "sourceUnit": 11948,
         "src": "98:51:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2694,10 +2701,10 @@
               "id": 41,
               "name": "InterestRateModel",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 392,
+              "referencedDeclaration": 397,
               "src": "188:17:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_InterestRateModel_$392",
+                "typeIdentifier": "t_contract$_InterestRateModel_$397",
                 "typeString": "contract InterestRateModel"
               }
             },
@@ -2707,7 +2714,7 @@
           }
         ],
         "contractDependencies": [
-          392
+          397
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -2715,7 +2722,7 @@
         "id": 213,
         "linearizedBaseContracts": [
           213,
-          392
+          397
         ],
         "name": "DefaultInterestRateModel",
         "nodeType": "ContractDefinition",
@@ -2727,10 +2734,10 @@
               "id": 43,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 11847,
+              "referencedDeclaration": 11947,
               "src": "218:8:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$11847",
+                "typeIdentifier": "t_contract$_SafeMath_$11947",
                 "typeString": "library SafeMath"
               }
             },
@@ -3015,7 +3022,7 @@
                         "lValueRequested": false,
                         "memberName": "div",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 11777,
+                        "referencedDeclaration": 11877,
                         "src": "1210:19:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3114,7 +3121,7 @@
                         "lValueRequested": false,
                         "memberName": "div",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 11777,
+                        "referencedDeclaration": 11877,
                         "src": "1275:21:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3473,7 +3480,7 @@
                               "lValueRequested": false,
                               "memberName": "add",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 11680,
+                              "referencedDeclaration": 11780,
                               "src": "2033:8:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3502,7 +3509,7 @@
                           "lValueRequested": false,
                           "memberName": "sub",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 11697,
+                          "referencedDeclaration": 11797,
                           "src": "2033:21:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3581,7 +3588,7 @@
                           "lValueRequested": false,
                           "memberName": "mul",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 11760,
+                          "referencedDeclaration": 11860,
                           "src": "2011:11:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3610,7 +3617,7 @@
                       "lValueRequested": false,
                       "memberName": "div",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11777,
+                      "referencedDeclaration": 11877,
                       "src": "2011:21:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3787,7 +3794,7 @@
           },
           {
             "baseFunctions": [
-              377
+              382
             ],
             "body": {
               "id": 155,
@@ -4014,7 +4021,7 @@
                               "lValueRequested": false,
                               "memberName": "mul",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 11760,
+                              "referencedDeclaration": 11860,
                               "src": "2699:6:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4043,7 +4050,7 @@
                           "lValueRequested": false,
                           "memberName": "div",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 11777,
+                          "referencedDeclaration": 11877,
                           "src": "2699:30:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4072,7 +4079,7 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11680,
+                      "referencedDeclaration": 11780,
                       "src": "2699:40:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4254,7 +4261,7 @@
           },
           {
             "baseFunctions": [
-              391
+              396
             ],
             "body": {
               "id": 211,
@@ -4393,7 +4400,7 @@
                       "lValueRequested": false,
                       "memberName": "sub",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11697,
+                      "referencedDeclaration": 11797,
                       "src": "3383:17:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4648,7 +4655,7 @@
                           "lValueRequested": false,
                           "memberName": "mul",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 11760,
+                          "referencedDeclaration": 11860,
                           "src": "3523:14:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4677,7 +4684,7 @@
                       "lValueRequested": false,
                       "memberName": "div",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11777,
+                      "referencedDeclaration": 11877,
                       "src": "3523:41:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4847,7 +4854,7 @@
                           "lValueRequested": false,
                           "memberName": "mul",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 11760,
+                          "referencedDeclaration": 11860,
                           "src": "3587:44:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -4876,7 +4883,7 @@
                       "lValueRequested": false,
                       "memberName": "div",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11777,
+                      "referencedDeclaration": 11877,
                       "src": "3587:60:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -5095,9 +5102,37 @@
     "name": "solc",
     "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
   },
-  "networks": {},
-  "schemaVersion": "3.3.1",
-  "updatedAt": "2020-11-06T12:03:32.281Z",
+  "networks": {
+    "5777": {
+      "events": {
+        "0xf35fa19c15e9ba782633a5df62a98b20217151addc68e3ff2cd623a48d37ec27": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "baseRatePerBlock",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "multiplierPerBlock",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewInterestParams",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x8924380bE0346577028E9d2905F2A127194C3FB7",
+      "transactionHash": "0x426e1c3ecc2c1141249a66b24f8fbe65cc3e8f9b42a41d4aed8d23c951ac3d9d"
+    }
+  },
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-11-09T07:50:17.403Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {
       "constructor": {

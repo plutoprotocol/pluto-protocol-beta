@@ -56,7 +56,8 @@ contract PErc20 is PToken, IPErc20 {
      * @param redeemTokens The number of pTokens to redeem into underlying
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
-    function redeem(uint redeemTokens) external override returns (uint) {
+    function redeem(uint redeemTokens) external payable override returns (uint) {
+        updateTokenPrice();
         return redeemInternal(redeemTokens);
     }
 
@@ -66,7 +67,8 @@ contract PErc20 is PToken, IPErc20 {
      * @param redeemAmount The amount of underlying to redeem
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
-    function redeemUnderlying(uint redeemAmount) external override returns (uint) {
+    function redeemUnderlying(uint redeemAmount) external payable override returns (uint) {
+        updateTokenPrice();
         return redeemUnderlyingInternal(redeemAmount);
     }
 
@@ -76,7 +78,7 @@ contract PErc20 is PToken, IPErc20 {
       * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
       */
     function borrow(uint borrowAmount) external payable override returns (uint) {
-        riskManager.updateAndGetTokenPrice{value: msg.value}(address(this));
+        updateTokenPrice();
         return borrowInternal(borrowAmount);
     }
 
@@ -85,8 +87,7 @@ contract PErc20 is PToken, IPErc20 {
      * @param repayAmount The amount to repay
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
-    function repayBorrow(uint repayAmount) external payable override returns (uint) {
-        riskManager.updateAndGetTokenPrice{value: msg.value}(address(this));
+    function repayBorrow(uint repayAmount) external override returns (uint) {
         (uint err,) = repayBorrowInternal(repayAmount);
         return err;
     }
@@ -97,8 +98,7 @@ contract PErc20 is PToken, IPErc20 {
      * @param repayAmount The amount to repay
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
-    function repayBorrowBehalf(address borrower, uint repayAmount) external payable override returns (uint) {
-        riskManager.updateAndGetTokenPrice{value: msg.value}(address(this));
+    function repayBorrowBehalf(address borrower, uint repayAmount) external override returns (uint) {
         (uint err,) = repayBorrowBehalfInternal(borrower, repayAmount);
             return err;
         }
@@ -112,7 +112,7 @@ contract PErc20 is PToken, IPErc20 {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function liquidateBorrow(address borrower, uint repayAmount, IPToken pTokenCollateral) external payable override returns (uint) {
-        riskManager.updateAndGetTokenPrice{value: msg.value}(address(this));
+        updateTokenPrice();
         (uint err,) = liquidateBorrowInternal(borrower, repayAmount, pTokenCollateral);
         return err;
     }
@@ -155,5 +155,15 @@ contract PErc20 is PToken, IPErc20 {
     function doTransferOut(address payable to, uint amount) internal override {
         IERC20 token = IERC20(underlying);
         token.safeTransfer(to, amount);
+    }
+
+    function updateTokenPrice() internal {
+        uint priceCost = riskManager.getPriceCost(msg.sender);
+        require(msg.value >= priceCost, "No enough value to pay price oracle.");
+        if (msg.value > priceCost) {
+            (, uint priceChange) = subUInt(msg.value, priceCost);
+            msg.sender.transfer(priceChange);
+        }
+        riskManager.updateTokenPrice{value: priceCost}(msg.sender);
     }
 }
