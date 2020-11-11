@@ -340,7 +340,20 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "pToken",
+        "name": "assetOwner",
+        "type": "address"
+      }
+    ],
+    "name": "updateTokenPrice",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "assetOwner",
         "type": "address"
       }
     ],

@@ -934,7 +934,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "asset",
+        "name": "assetOwner",
         "type": "address"
       }
     ],
@@ -947,6 +947,19 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "assetOwner",
+        "type": "address"
+      }
+    ],
+    "name": "updateTokenPrice",
+    "outputs": [],
+    "stateMutability": "payable",
     "type": "function"
   },
   {
