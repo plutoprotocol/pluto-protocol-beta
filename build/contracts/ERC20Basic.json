@@ -30306,7 +30306,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-11-11T06:38:49.071Z",
+  "updatedAt": "2020-11-13T08:20:19.516Z",
   "devdoc": {
     "details": "Simpler version of ERC20 interfacesee https://github.com/ethereum/EIPs/issues/20",
     "methods": {},

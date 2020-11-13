@@ -541,7 +541,7 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
 
     function updateAndGetTokenPrice(address asset) public override payable returns (uint256) {
         PToken pToken = PToken(asset);
-        (uint256 oraclePriceMantissa, uint256 blockNum) = oracle.getUnderlyingPrice(pToken);
+        (uint256 oraclePriceMantissa,) = oracle.getUnderlyingPrice(pToken);
         if (oraclePriceMantissa != 0 && pToken.isForETH()) return oraclePriceMantissa;
 
         uint256 priceCost = oracle.getPriceCost(pToken);
