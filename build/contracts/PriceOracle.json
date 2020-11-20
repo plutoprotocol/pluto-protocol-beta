@@ -77,16 +77,16 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract PToken\",\"name\":\"pToken\",\"type\":\"address\"}],\"name\":\"getPriceCost\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract PToken\",\"name\":\"pToken\",\"type\":\"address\"}],\"name\":\"getUnderlyingPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isPriceOracle\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract PToken\",\"name\":\"pToken\",\"type\":\"address\"}],\"name\":\"updateAndGetUnderlyingPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/plutoadmin/stamen-contracts/contracts/oracle/PriceOracle.sol\":\"PriceOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/plutoadmin/stamen-contracts/contracts/core/IRiskManager.sol\":{\"keccak256\":\"0xddc1305705197b02e4a9eb74d213adaa5150332ab7f6120d149b32ab1a86e82c\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://60a9b236ff907ac7897568ea04cc9b0068ebc7fdaa2a1d0c73cb30792d7c795a\",\"dweb:/ipfs/QmQ1CJmYDtXAxUmxPDTiDSGtbGpAzSRegD98C2JH9skS1L\"]},\"/home/plutoadmin/stamen-contracts/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0x2a404ade7ce788c43f4acafd57e626b342fb1644ba176b1ab451be4c4a9d64e5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://aa229ef7cf18ea3363669dee097b5c01c4b830c14e4d59e922a1bb01a4d46deb\",\"dweb:/ipfs/QmWL94Q3yjHRugPqLbLBTyiM7uD8FYUbWcgnfSakCAfKr2\"]},\"/home/plutoadmin/stamen-contracts/contracts/oracle/PriceOracle.sol\":{\"keccak256\":\"0xf2755cce78bf0ad4fc441368938f7153ea9fbe807a1f2ba1ca477ce7d216c745\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://148c396c9ebc29d37a151b67b839f609193337e13eddb946ad56eab16b0df1f4\",\"dweb:/ipfs/QmdehgdfoynZbXZuETQQzc72cXtCgwzsWpVaDebK8ayCTN\"]},\"/home/plutoadmin/stamen-contracts/contracts/tokenization/IPToken.sol\":{\"keccak256\":\"0xdb60c02443cc77267e7935a9e6cfd7b4e398551efe517828303e26efaf4ac716\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3476e4b681140b23a8934bf42ef2faea7ff613906571743f5e9660814f8c4f48\",\"dweb:/ipfs/QmabguFKfFNFR6c1dMUC5he5HNXDDNWj9JWZiJz3KbZ8Fj\"]},\"/home/plutoadmin/stamen-contracts/contracts/tokenization/PToken.sol\":{\"keccak256\":\"0xbfb0eef522b73feb7f8068650059a30ab4fec32afca3d349a7e712b9ef1007a5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://4ae998cbaac492bd07507901f3332be1a78361b1067b98669773d59b192ab2c1\",\"dweb:/ipfs/QmVyWqYXJjaeMEz67RoXPtKnHQAbUK5zUatfqq8P4Mrcno\"]},\"/home/plutoadmin/stamen-contracts/contracts/utils/CarefulMath.sol\":{\"keccak256\":\"0xd6059e7c284e10c49391ebbe7cc3bf7cae051ba61d3133707939f3f6a7bf6228\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8252ab2c06a25f9021b10326d8849e4089059af5c4f1c3c1917328cb7f59d453\",\"dweb:/ipfs/QmdSUk2pPXhW9VXG51pdA8XUrKm9P6WB2LPxwh1Pfj9emo\"]},\"/home/plutoadmin/stamen-contracts/contracts/utils/ErrorReporter.sol\":{\"keccak256\":\"0x668e1f090e060bd2446b02b218c4dd8897a356f319cc3b21bc6eaef0d338fcc8\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://dc3eec3120d4ab26ae71775bf29305d7024abecdd6deb8a5d9cfbefef3aa5fc2\",\"dweb:/ipfs/QmfRny1rvUoLF9bhdyFbzqxKTvRpw4bLhAZuCL6MoUtosF\"]},\"/home/plutoadmin/stamen-contracts/contracts/utils/Exponential.sol\":{\"keccak256\":\"0x1264cbbdcec3f64b790c9145f6911a962e6681f42e5ce16c5b1211584cf6e1d4\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2fa666faf022d092e67a9ea98173224d92e1f50149e72c7fb3bed7ac039bc4ac\",\"dweb:/ipfs/QmXfHb2detnH1q8C9qSoiWgRPq8e35EdipeNJxuCjCKkpe\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract PToken\",\"name\":\"pToken\",\"type\":\"address\"}],\"name\":\"getPriceCost\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract PToken\",\"name\":\"pToken\",\"type\":\"address\"}],\"name\":\"getUnderlyingPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isPriceOracle\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract PToken\",\"name\":\"pToken\",\"type\":\"address\"}],\"name\":\"updateAndGetUnderlyingPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol\":\"PriceOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/IRiskManager.sol\":{\"keccak256\":\"0xddc1305705197b02e4a9eb74d213adaa5150332ab7f6120d149b32ab1a86e82c\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://60a9b236ff907ac7897568ea04cc9b0068ebc7fdaa2a1d0c73cb30792d7c795a\",\"dweb:/ipfs/QmQ1CJmYDtXAxUmxPDTiDSGtbGpAzSRegD98C2JH9skS1L\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0x2a404ade7ce788c43f4acafd57e626b342fb1644ba176b1ab451be4c4a9d64e5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://aa229ef7cf18ea3363669dee097b5c01c4b830c14e4d59e922a1bb01a4d46deb\",\"dweb:/ipfs/QmWL94Q3yjHRugPqLbLBTyiM7uD8FYUbWcgnfSakCAfKr2\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol\":{\"keccak256\":\"0xf2755cce78bf0ad4fc441368938f7153ea9fbe807a1f2ba1ca477ce7d216c745\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://148c396c9ebc29d37a151b67b839f609193337e13eddb946ad56eab16b0df1f4\",\"dweb:/ipfs/QmdehgdfoynZbXZuETQQzc72cXtCgwzsWpVaDebK8ayCTN\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/IPToken.sol\":{\"keccak256\":\"0xdb60c02443cc77267e7935a9e6cfd7b4e398551efe517828303e26efaf4ac716\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3476e4b681140b23a8934bf42ef2faea7ff613906571743f5e9660814f8c4f48\",\"dweb:/ipfs/QmabguFKfFNFR6c1dMUC5he5HNXDDNWj9JWZiJz3KbZ8Fj\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol\":{\"keccak256\":\"0x6e62cb68be6dd017e6b0c332d637c2252e98e5a8a8f1a333e38f48143445b77d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://61fa4c0da6cb49dbca12a1181dd03de8c598a8221a2cacbaf75c901092943d68\",\"dweb:/ipfs/QmdkC9gU5rta2ERMweoTb8Zn8DvQPuhYFFK3zrwucm1NtW\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/CarefulMath.sol\":{\"keccak256\":\"0xd6059e7c284e10c49391ebbe7cc3bf7cae051ba61d3133707939f3f6a7bf6228\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8252ab2c06a25f9021b10326d8849e4089059af5c4f1c3c1917328cb7f59d453\",\"dweb:/ipfs/QmdSUk2pPXhW9VXG51pdA8XUrKm9P6WB2LPxwh1Pfj9emo\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/ErrorReporter.sol\":{\"keccak256\":\"0x668e1f090e060bd2446b02b218c4dd8897a356f319cc3b21bc6eaef0d338fcc8\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://dc3eec3120d4ab26ae71775bf29305d7024abecdd6deb8a5d9cfbefef3aa5fc2\",\"dweb:/ipfs/QmfRny1rvUoLF9bhdyFbzqxKTvRpw4bLhAZuCL6MoUtosF\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/Exponential.sol\":{\"keccak256\":\"0x1264cbbdcec3f64b790c9145f6911a962e6681f42e5ce16c5b1211584cf6e1d4\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2fa666faf022d092e67a9ea98173224d92e1f50149e72c7fb3bed7ac039bc4ac\",\"dweb:/ipfs/QmXfHb2detnH1q8C9qSoiWgRPq8e35EdipeNJxuCjCKkpe\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.6.9;\n\nimport \"../tokenization/PToken.sol\";\n\nabstract contract PriceOracle {\n    bool public constant isPriceOracle = true;\n\n    function getUnderlyingPrice(PToken pToken) public view virtual returns (uint256, uint256);\n\n    function updateAndGetUnderlyingPrice(PToken pToken) external payable virtual returns (uint256);\n\n    function getPriceCost(PToken pToken) public view virtual returns (uint256);\n}",
-  "sourcePath": "/home/plutoadmin/stamen-contracts/contracts/oracle/PriceOracle.sol",
+  "sourcePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
   "ast": {
-    "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/oracle/PriceOracle.sol",
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
     "exportedSymbols": {
       "PriceOracle": [
         5571
@@ -108,12 +108,12 @@
         "src": "39:23:13"
       },
       {
-        "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/tokenization/PToken.sol",
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
         "file": "../tokenization/PToken.sol",
         "id": 5544,
         "nodeType": "ImportDirective",
         "scope": 5572,
-        "sourceUnit": 10657,
+        "sourceUnit": 10628,
         "src": "64:36:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -205,7 +205,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -213,10 +213,10 @@
                     "id": 5548,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "214:6:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -322,7 +322,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -330,10 +330,10 @@
                     "id": 5557,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "319:6:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -411,7 +411,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -419,10 +419,10 @@
                     "id": 5564,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "405:6:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -481,7 +481,7 @@
     "src": "39:421:13"
   },
   "legacyAST": {
-    "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/oracle/PriceOracle.sol",
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
     "exportedSymbols": {
       "PriceOracle": [
         5571
@@ -503,12 +503,12 @@
         "src": "39:23:13"
       },
       {
-        "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/tokenization/PToken.sol",
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
         "file": "../tokenization/PToken.sol",
         "id": 5544,
         "nodeType": "ImportDirective",
         "scope": 5572,
-        "sourceUnit": 10657,
+        "sourceUnit": 10628,
         "src": "64:36:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -600,7 +600,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -608,10 +608,10 @@
                     "id": 5548,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "214:6:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -717,7 +717,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -725,10 +725,10 @@
                     "id": 5557,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "319:6:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -806,7 +806,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -814,10 +814,10 @@
                     "id": 5564,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "405:6:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -880,8 +880,8 @@
     "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.3.1",
-  "updatedAt": "2020-11-13T08:58:20.822Z",
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-11-20T01:23:49.043Z",
   "devdoc": {
     "methods": {}
   },

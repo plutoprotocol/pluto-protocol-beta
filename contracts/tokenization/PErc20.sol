@@ -156,14 +156,4 @@ contract PErc20 is PToken, IPErc20 {
         IERC20 token = IERC20(underlying);
         token.safeTransfer(to, amount);
     }
-
-    function updateTokenPrice() internal {
-        uint priceCost = riskManager.getPriceCost(msg.sender);
-        require(msg.value >= priceCost, "No enough value to pay price oracle.");
-        if (msg.value > priceCost) {
-            (, uint priceChange) = subUInt(msg.value, priceCost);
-            msg.sender.transfer(priceChange);
-        }
-        riskManager.updateTokenPrice{value: priceCost}(msg.sender);
-    }
 }

@@ -87,16 +87,16 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"getAccountLiquidity\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"getAssetsIn\",\"outputs\":[{\"internalType\":\"contract PToken[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"markets\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"oracle\",\"outputs\":[{\"internalType\":\"contract PriceOracle\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/plutoadmin/stamen-contracts/contracts/lens/PlutoLens.sol\":\"PlutoLensInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/plutoadmin/stamen-contracts/contracts/core/IRiskManager.sol\":{\"keccak256\":\"0xddc1305705197b02e4a9eb74d213adaa5150332ab7f6120d149b32ab1a86e82c\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://60a9b236ff907ac7897568ea04cc9b0068ebc7fdaa2a1d0c73cb30792d7c795a\",\"dweb:/ipfs/QmQ1CJmYDtXAxUmxPDTiDSGtbGpAzSRegD98C2JH9skS1L\"]},\"/home/plutoadmin/stamen-contracts/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0x2a404ade7ce788c43f4acafd57e626b342fb1644ba176b1ab451be4c4a9d64e5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://aa229ef7cf18ea3363669dee097b5c01c4b830c14e4d59e922a1bb01a4d46deb\",\"dweb:/ipfs/QmWL94Q3yjHRugPqLbLBTyiM7uD8FYUbWcgnfSakCAfKr2\"]},\"/home/plutoadmin/stamen-contracts/contracts/lens/PlutoLens.sol\":{\"keccak256\":\"0xf2297f6aeef653eaaab3d4361e030e193193b25de17c7b7a6b8e16757f665f11\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8588e799c21ff7608aaac587fe9560bc629a2b3a776143ea2190a81ff818b6ca\",\"dweb:/ipfs/QmW7jQS7qhmPZABxXR7PLcGhHYaRTdD5ecvcnbqTjSKBVP\"]},\"/home/plutoadmin/stamen-contracts/contracts/oracle/PriceOracle.sol\":{\"keccak256\":\"0xf2755cce78bf0ad4fc441368938f7153ea9fbe807a1f2ba1ca477ce7d216c745\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://148c396c9ebc29d37a151b67b839f609193337e13eddb946ad56eab16b0df1f4\",\"dweb:/ipfs/QmdehgdfoynZbXZuETQQzc72cXtCgwzsWpVaDebK8ayCTN\"]},\"/home/plutoadmin/stamen-contracts/contracts/tokenization/IPToken.sol\":{\"keccak256\":\"0xdb60c02443cc77267e7935a9e6cfd7b4e398551efe517828303e26efaf4ac716\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3476e4b681140b23a8934bf42ef2faea7ff613906571743f5e9660814f8c4f48\",\"dweb:/ipfs/QmabguFKfFNFR6c1dMUC5he5HNXDDNWj9JWZiJz3KbZ8Fj\"]},\"/home/plutoadmin/stamen-contracts/contracts/tokenization/PErc20.sol\":{\"keccak256\":\"0x6ec1e85a90585352db34de36a2784bdff614863a87075805bb7f95d81d4b5d31\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://52d19b1b1735e484e9a06a433804df703169836be361aa94c9851abf0a39ac49\",\"dweb:/ipfs/QmPz6EoQnLVo6bXS7NJMyK3erecYBTrEjuECgvYxuDKjRN\"]},\"/home/plutoadmin/stamen-contracts/contracts/tokenization/PToken.sol\":{\"keccak256\":\"0xbfb0eef522b73feb7f8068650059a30ab4fec32afca3d349a7e712b9ef1007a5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://4ae998cbaac492bd07507901f3332be1a78361b1067b98669773d59b192ab2c1\",\"dweb:/ipfs/QmVyWqYXJjaeMEz67RoXPtKnHQAbUK5zUatfqq8P4Mrcno\"]},\"/home/plutoadmin/stamen-contracts/contracts/utils/CarefulMath.sol\":{\"keccak256\":\"0xd6059e7c284e10c49391ebbe7cc3bf7cae051ba61d3133707939f3f6a7bf6228\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8252ab2c06a25f9021b10326d8849e4089059af5c4f1c3c1917328cb7f59d453\",\"dweb:/ipfs/QmdSUk2pPXhW9VXG51pdA8XUrKm9P6WB2LPxwh1Pfj9emo\"]},\"/home/plutoadmin/stamen-contracts/contracts/utils/ErrorReporter.sol\":{\"keccak256\":\"0x668e1f090e060bd2446b02b218c4dd8897a356f319cc3b21bc6eaef0d338fcc8\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://dc3eec3120d4ab26ae71775bf29305d7024abecdd6deb8a5d9cfbefef3aa5fc2\",\"dweb:/ipfs/QmfRny1rvUoLF9bhdyFbzqxKTvRpw4bLhAZuCL6MoUtosF\"]},\"/home/plutoadmin/stamen-contracts/contracts/utils/Exponential.sol\":{\"keccak256\":\"0x1264cbbdcec3f64b790c9145f6911a962e6681f42e5ce16c5b1211584cf6e1d4\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2fa666faf022d092e67a9ea98173224d92e1f50149e72c7fb3bed7ac039bc4ac\",\"dweb:/ipfs/QmXfHb2detnH1q8C9qSoiWgRPq8e35EdipeNJxuCjCKkpe\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xc6fb4c940628ca2cde81ed6d20fc9ff456b60f55aafef555f43a86a2dda7ad9f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f17dda58954a84ffca3d53c0b6435bad7f5c42ab3a9c4603db2f1aef00edae4e\",\"dweb:/ipfs/QmehW99QmmzKvnqTsprsApDF7mK2JVo6nnrZ47znhLTFjh\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xaa0e11a791bc975d581a4f5b7a8d9c16a880a354c89312318ae072ae3e740409\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://982d8b344f76193834260436d74c81e5a8f9e89106bb4cd72bbaabda4f3f59c2\",\"dweb:/ipfs/QmSrvP5TkQRhKDVCTpsV3uaKLBhkt7PjUY89vdtM9o5ybK\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x4daf1e5f59e8ca32aca35cffc32dede6515b06d0d7e5013cd78bb24094fad719\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a93703bec9d9f5e4aa3f027d5db956ce94716f58182fc53ebf90bed7968bca51\",\"dweb:/ipfs/QmPdV3o4ADR9ABUNKwabR3GxaeGQX7xMdQur2aqEi5KnT9\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0x5e4728275b5a93bd2afcf2eb8643c3ed5a6dec046151de12de2c10c490fb2f91\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e29288f76f9e8c63ce6484963947246ef0c385221594c6aa64927c867164ccf5\",\"dweb:/ipfs/QmPPinTHEBKhkpK2FWXQSjwenDVswiuLEU9P7nHpcizt22\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x934dbc549a8df514456047ad1c6ab257127a03f4109272834c30e596bbe10d1d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://33cf247ade00a28c632dfe2c2521e1952f467c6081b89375c34b1eb297441d9b\",\"dweb:/ipfs/QmYGNAHCtN1m3QDynteTeVCfwFZBZRpGJNMjxwVBUifnfB\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"getAccountLiquidity\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"getAssetsIn\",\"outputs\":[{\"internalType\":\"contract PToken[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"markets\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"oracle\",\"outputs\":[{\"internalType\":\"contract PriceOracle\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/lens/PlutoLens.sol\":\"PlutoLensInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/IRiskManager.sol\":{\"keccak256\":\"0xddc1305705197b02e4a9eb74d213adaa5150332ab7f6120d149b32ab1a86e82c\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://60a9b236ff907ac7897568ea04cc9b0068ebc7fdaa2a1d0c73cb30792d7c795a\",\"dweb:/ipfs/QmQ1CJmYDtXAxUmxPDTiDSGtbGpAzSRegD98C2JH9skS1L\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/core/InterestRateModel.sol\":{\"keccak256\":\"0x2a404ade7ce788c43f4acafd57e626b342fb1644ba176b1ab451be4c4a9d64e5\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://aa229ef7cf18ea3363669dee097b5c01c4b830c14e4d59e922a1bb01a4d46deb\",\"dweb:/ipfs/QmWL94Q3yjHRugPqLbLBTyiM7uD8FYUbWcgnfSakCAfKr2\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/lens/PlutoLens.sol\":{\"keccak256\":\"0xf2297f6aeef653eaaab3d4361e030e193193b25de17c7b7a6b8e16757f665f11\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8588e799c21ff7608aaac587fe9560bc629a2b3a776143ea2190a81ff818b6ca\",\"dweb:/ipfs/QmW7jQS7qhmPZABxXR7PLcGhHYaRTdD5ecvcnbqTjSKBVP\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol\":{\"keccak256\":\"0xf2755cce78bf0ad4fc441368938f7153ea9fbe807a1f2ba1ca477ce7d216c745\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://148c396c9ebc29d37a151b67b839f609193337e13eddb946ad56eab16b0df1f4\",\"dweb:/ipfs/QmdehgdfoynZbXZuETQQzc72cXtCgwzsWpVaDebK8ayCTN\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/IPToken.sol\":{\"keccak256\":\"0xdb60c02443cc77267e7935a9e6cfd7b4e398551efe517828303e26efaf4ac716\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3476e4b681140b23a8934bf42ef2faea7ff613906571743f5e9660814f8c4f48\",\"dweb:/ipfs/QmabguFKfFNFR6c1dMUC5he5HNXDDNWj9JWZiJz3KbZ8Fj\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PErc20.sol\":{\"keccak256\":\"0x54baaa7a95acd873fccfde1866f188a02f9286d95dc8ee72e9c41def0e96e8cd\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://5420d1d80fc78bb15ea25b316edb8bb978d64d0b0d4e6e2d78e0b71a8ad02e47\",\"dweb:/ipfs/QmaCMG536cMezSEKegifv8iJv1FwjeKM5qjH24c5tMotdp\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol\":{\"keccak256\":\"0x6e62cb68be6dd017e6b0c332d637c2252e98e5a8a8f1a333e38f48143445b77d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://61fa4c0da6cb49dbca12a1181dd03de8c598a8221a2cacbaf75c901092943d68\",\"dweb:/ipfs/QmdkC9gU5rta2ERMweoTb8Zn8DvQPuhYFFK3zrwucm1NtW\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/CarefulMath.sol\":{\"keccak256\":\"0xd6059e7c284e10c49391ebbe7cc3bf7cae051ba61d3133707939f3f6a7bf6228\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://8252ab2c06a25f9021b10326d8849e4089059af5c4f1c3c1917328cb7f59d453\",\"dweb:/ipfs/QmdSUk2pPXhW9VXG51pdA8XUrKm9P6WB2LPxwh1Pfj9emo\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/ErrorReporter.sol\":{\"keccak256\":\"0x668e1f090e060bd2446b02b218c4dd8897a356f319cc3b21bc6eaef0d338fcc8\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://dc3eec3120d4ab26ae71775bf29305d7024abecdd6deb8a5d9cfbefef3aa5fc2\",\"dweb:/ipfs/QmfRny1rvUoLF9bhdyFbzqxKTvRpw4bLhAZuCL6MoUtosF\"]},\"/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/utils/Exponential.sol\":{\"keccak256\":\"0x1264cbbdcec3f64b790c9145f6911a962e6681f42e5ce16c5b1211584cf6e1d4\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2fa666faf022d092e67a9ea98173224d92e1f50149e72c7fb3bed7ac039bc4ac\",\"dweb:/ipfs/QmXfHb2detnH1q8C9qSoiWgRPq8e35EdipeNJxuCjCKkpe\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xc6fb4c940628ca2cde81ed6d20fc9ff456b60f55aafef555f43a86a2dda7ad9f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f17dda58954a84ffca3d53c0b6435bad7f5c42ab3a9c4603db2f1aef00edae4e\",\"dweb:/ipfs/QmehW99QmmzKvnqTsprsApDF7mK2JVo6nnrZ47znhLTFjh\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xaa0e11a791bc975d581a4f5b7a8d9c16a880a354c89312318ae072ae3e740409\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://982d8b344f76193834260436d74c81e5a8f9e89106bb4cd72bbaabda4f3f59c2\",\"dweb:/ipfs/QmSrvP5TkQRhKDVCTpsV3uaKLBhkt7PjUY89vdtM9o5ybK\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x4daf1e5f59e8ca32aca35cffc32dede6515b06d0d7e5013cd78bb24094fad719\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a93703bec9d9f5e4aa3f027d5db956ce94716f58182fc53ebf90bed7968bca51\",\"dweb:/ipfs/QmPdV3o4ADR9ABUNKwabR3GxaeGQX7xMdQur2aqEi5KnT9\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]},\"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0x5e4728275b5a93bd2afcf2eb8643c3ed5a6dec046151de12de2c10c490fb2f91\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e29288f76f9e8c63ce6484963947246ef0c385221594c6aa64927c867164ccf5\",\"dweb:/ipfs/QmPPinTHEBKhkpK2FWXQSjwenDVswiuLEU9P7nHpcizt22\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x934dbc549a8df514456047ad1c6ab257127a03f4109272834c30e596bbe10d1d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://33cf247ade00a28c632dfe2c2521e1952f467c6081b89375c34b1eb297441d9b\",\"dweb:/ipfs/QmYGNAHCtN1m3QDynteTeVCfwFZBZRpGJNMjxwVBUifnfB\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.6.9;\npragma experimental ABIEncoderV2;\n\nimport \"../tokenization/PErc20.sol\";\nimport \"../tokenization/PToken.sol\";\nimport \"../oracle/PriceOracle.sol\";\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\ninterface PlutoLensInterface {\n    function markets(address) external view returns (bool, uint);\n    function oracle() external view returns (PriceOracle);\n    function getAccountLiquidity(address) external view returns (uint, uint, uint);\n    function getAssetsIn(address) external view returns (PToken[] memory);\n}\n\ncontract PlutoLens {\n    struct PTokenMetadata {\n        address pToken;\n        uint exchangeRateCurrent;\n        uint supplyRatePerBlock;\n        uint borrowRatePerBlock;\n        uint reserveFactorMantissa;\n        uint totalBorrows;\n        uint totalReserves;\n        uint totalSupply;\n        uint totalCash;\n        bool isListed;\n        uint collateralFactorMantissa;\n        address underlyingAssetAddress;\n        uint pTokenDecimals;\n        uint underlyingDecimals;\n    }\n\n    function pTokenMetadata(PToken pToken) public returns (PTokenMetadata memory) {\n        uint exchangeRateCurrent = pToken.exchangeRateCurrent();\n        PlutoLensInterface plutoLens = PlutoLensInterface(address(pToken.riskManager()));\n        (bool isListed, uint collateralFactorMantissa) = plutoLens.markets(address(pToken));\n        address underlyingAssetAddress;\n        uint underlyingDecimals;\n\n        if (compareStrings(pToken.symbol(), \"pETH\")) {\n            underlyingAssetAddress = address(0);\n            underlyingDecimals = 18;\n        } else {\n            PErc20 pErc20 = PErc20(address(pToken));\n            underlyingAssetAddress = pErc20.underlying();\n            underlyingDecimals = ERC20(pErc20.underlying()).decimals();\n        }\n\n        return PTokenMetadata({\n        pToken: address(pToken),\n        exchangeRateCurrent: exchangeRateCurrent,\n        supplyRatePerBlock: pToken.supplyRatePerBlock(),\n        borrowRatePerBlock: pToken.borrowRatePerBlock(),\n        reserveFactorMantissa: pToken.reserveFactorMantissa(),\n        totalBorrows: pToken.totalBorrows(),\n        totalReserves: pToken.totalReserves(),\n        totalSupply: pToken.totalSupply(),\n        totalCash: pToken.getCash(),\n        isListed: isListed,\n        collateralFactorMantissa: collateralFactorMantissa,\n        underlyingAssetAddress: underlyingAssetAddress,\n        pTokenDecimals: pToken.decimals(),\n        underlyingDecimals: underlyingDecimals\n        });\n    }\n\n    function pTokenMetadataAll(PToken[] calldata pTokens) external returns (PTokenMetadata[] memory) {\n        uint pTokenCount = pTokens.length;\n        PTokenMetadata[] memory res = new PTokenMetadata[](pTokenCount);\n        for (uint i = 0; i < pTokenCount; i++) {\n            res[i] = pTokenMetadata(pTokens[i]);\n        }\n        return res;\n    }\n\n    struct PTokenBalances {\n        address pToken;\n        uint balanceOf;\n        uint borrowBalanceCurrent;\n        uint balanceOfUnderlying;\n        uint tokenBalance;\n        uint tokenAllowance;\n    }\n\n    function pTokenBalances(PToken pToken, address payable account) public returns (PTokenBalances memory) {\n        uint balanceOf = pToken.balanceOf(account);\n        uint borrowBalanceCurrent = pToken.borrowBalanceCurrent(account);\n        uint balanceOfUnderlying = pToken.balanceOfUnderlying(account);\n        uint tokenBalance;\n        uint tokenAllowance;\n\n        if (compareStrings(pToken.symbol(), \"pETH\")) {\n            tokenBalance = account.balance;\n            tokenAllowance = account.balance;\n        } else {\n            PErc20 pErc20 = PErc20(address(pToken));\n            IERC20 underlying = IERC20(pErc20.underlying());\n            tokenBalance = underlying.balanceOf(account);\n            tokenAllowance = underlying.allowance(account, address(pToken));\n        }\n\n        return PTokenBalances({\n        pToken: address(pToken),\n        balanceOf: balanceOf,\n        borrowBalanceCurrent: borrowBalanceCurrent,\n        balanceOfUnderlying: balanceOfUnderlying,\n        tokenBalance: tokenBalance,\n        tokenAllowance: tokenAllowance\n        });\n    }\n\n    function pTokenBalancesAll(PToken[] calldata pTokens, address payable account) external returns (PTokenBalances[] memory) {\n        uint pTokenCount = pTokens.length;\n        PTokenBalances[] memory res = new PTokenBalances[](pTokenCount);\n        for (uint i = 0; i < pTokenCount; i++) {\n            res[i] = pTokenBalances(pTokens[i], account);\n        }\n        return res;\n    }\n\n    struct PTokenUnderlyingPrice {\n        address pToken;\n        uint underlyingPrice;\n    }\n\n    function pTokenUnderlyingPrice(PToken pToken) public view returns (PTokenUnderlyingPrice memory) {\n        PlutoLensInterface plutoLens = PlutoLensInterface(address(pToken.riskManager()));\n        PriceOracle priceOracle = plutoLens.oracle();\n\n        return PTokenUnderlyingPrice({\n        pToken: address(pToken),\n        underlyingPrice: getUnderlyingPrice(priceOracle, pToken)\n        });\n    }\n\n    function getUnderlyingPrice(PriceOracle priceOracle, PToken pToken) private view returns (uint256) {\n        (uint256 price, ) = priceOracle.getUnderlyingPrice(pToken);\n        return price;\n    }\n\n    function pTokenUnderlyingPriceAll(PToken[] calldata pTokens) external view returns (PTokenUnderlyingPrice[] memory) {\n        uint pTokenCount = pTokens.length;\n        PTokenUnderlyingPrice[] memory res = new PTokenUnderlyingPrice[](pTokenCount);\n        for (uint i = 0; i < pTokenCount; i++) {\n            res[i] = pTokenUnderlyingPrice(pTokens[i]);\n        }\n        return res;\n    }\n\n    struct AccountLimits {\n        PToken[] markets;\n        uint liquidity;\n        uint shortfall;\n    }\n\n    function getAccountLimits(PlutoLensInterface plutoLens, address account) public view returns (AccountLimits memory) {\n        (uint errorCode, uint liquidity, uint shortfall) = plutoLens.getAccountLiquidity(account);\n        require(errorCode == 0);\n\n        return AccountLimits({\n        markets: plutoLens.getAssetsIn(account),\n        liquidity: liquidity,\n        shortfall: shortfall\n        });\n    }\n\n    function compareStrings(string memory a, string memory b) internal pure returns (bool) {\n        return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))));\n    }\n\n    function add(uint a, uint b, string memory errorMessage) internal pure returns (uint) {\n        uint c = a + b;\n        require(c >= a, errorMessage);\n        return c;\n    }\n\n    function sub(uint a, uint b, string memory errorMessage) internal pure returns (uint) {\n        require(b <= a, errorMessage);\n        uint c = a - b;\n        return c;\n    }\n}\n",
-  "sourcePath": "/home/plutoadmin/stamen-contracts/contracts/lens/PlutoLens.sol",
+  "sourcePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/lens/PlutoLens.sol",
   "ast": {
-    "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/lens/PlutoLens.sol",
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/lens/PlutoLens.sol",
     "exportedSymbols": {
       "PlutoLens": [
         3797
@@ -130,29 +130,29 @@
         "src": "63:33:6"
       },
       {
-        "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/tokenization/PErc20.sol",
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PErc20.sol",
         "file": "../tokenization/PErc20.sol",
         "id": 3155,
         "nodeType": "ImportDirective",
         "scope": 3798,
-        "sourceUnit": 6580,
+        "sourceUnit": 6529,
         "src": "98:36:6",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/tokenization/PToken.sol",
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
         "file": "../tokenization/PToken.sol",
         "id": 3156,
         "nodeType": "ImportDirective",
         "scope": 3798,
-        "sourceUnit": 10657,
+        "sourceUnit": 10628,
         "src": "135:36:6",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/oracle/PriceOracle.sol",
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
         "file": "../oracle/PriceOracle.sol",
         "id": 3157,
         "nodeType": "ImportDirective",
@@ -168,7 +168,7 @@
         "id": 3158,
         "nodeType": "ImportDirective",
         "scope": 3798,
-        "sourceUnit": 12481,
+        "sourceUnit": 12452,
         "src": "208:55:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -570,7 +570,7 @@
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_memory_ptr",
                     "typeString": "contract PToken[]"
                   },
                   "typeName": {
@@ -579,10 +579,10 @@
                       "id": 3187,
                       "name": "PToken",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 10656,
+                      "referencedDeclaration": 10627,
                       "src": "562:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PToken_$10656",
+                        "typeIdentifier": "t_contract$_PToken_$10627",
                         "typeString": "contract PToken"
                       }
                     },
@@ -591,7 +591,7 @@
                     "nodeType": "ArrayTypeName",
                     "src": "562:8:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                       "typeString": "contract PToken[]"
                     }
                   },
@@ -1085,7 +1085,7 @@
                         "referencedDeclaration": 3223,
                         "src": "1187:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       },
@@ -1096,7 +1096,7 @@
                       "lValueRequested": false,
                       "memberName": "exchangeRateCurrent",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7889,
+                      "referencedDeclaration": 7809,
                       "src": "1187:26:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_uint256_$",
@@ -1178,7 +1178,7 @@
                                 "referencedDeclaration": 3223,
                                 "src": "1283:6:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               },
@@ -1372,7 +1372,7 @@
                             "referencedDeclaration": 3223,
                             "src": "1390:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           }
@@ -1380,7 +1380,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           ],
@@ -1571,7 +1571,7 @@
                             "referencedDeclaration": 3223,
                             "src": "1501:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -1682,7 +1682,7 @@
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PErc20_$6579",
+                              "typeIdentifier": "t_contract$_PErc20_$6528",
                               "typeString": "contract PErc20"
                             },
                             "typeName": {
@@ -1690,10 +1690,10 @@
                               "id": 3281,
                               "name": "PErc20",
                               "nodeType": "UserDefinedTypeName",
-                              "referencedDeclaration": 6579,
+                              "referencedDeclaration": 6528,
                               "src": "1644:6:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_PErc20_$6579",
+                                "typeIdentifier": "t_contract$_PErc20_$6528",
                                 "typeString": "contract PErc20"
                               }
                             },
@@ -1717,7 +1717,7 @@
                                   "referencedDeclaration": 3223,
                                   "src": "1675:6:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_PToken_$10656",
+                                    "typeIdentifier": "t_contract$_PToken_$10627",
                                     "typeString": "contract PToken"
                                   }
                                 }
@@ -1725,7 +1725,7 @@
                               "expression": {
                                 "argumentTypes": [
                                   {
-                                    "typeIdentifier": "t_contract$_PToken_$10656",
+                                    "typeIdentifier": "t_contract$_PToken_$10627",
                                     "typeString": "contract PToken"
                                   }
                                 ],
@@ -1778,10 +1778,10 @@
                             "name": "PErc20",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6579,
+                            "referencedDeclaration": 6528,
                             "src": "1660:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_PErc20_$6579_$",
+                              "typeIdentifier": "t_type$_t_contract$_PErc20_$6528_$",
                               "typeString": "type(contract PErc20)"
                             }
                           },
@@ -1796,7 +1796,7 @@
                           "src": "1660:23:6",
                           "tryCall": false,
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_PErc20_$6579",
+                            "typeIdentifier": "t_contract$_PErc20_$6528",
                             "typeString": "contract PErc20"
                           }
                         },
@@ -1840,7 +1840,7 @@
                                 "referencedDeclaration": 3282,
                                 "src": "1722:6:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PErc20_$6579",
+                                  "typeIdentifier": "t_contract$_PErc20_$6528",
                                   "typeString": "contract PErc20"
                                 }
                               },
@@ -1928,7 +1928,7 @@
                                         "referencedDeclaration": 3282,
                                         "src": "1782:6:6",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_contract$_PErc20_$6579",
+                                          "typeIdentifier": "t_contract$_PErc20_$6528",
                                           "typeString": "contract PErc20"
                                         }
                                       },
@@ -1973,10 +1973,10 @@
                                   "name": "ERC20",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 12480,
+                                  "referencedDeclaration": 12451,
                                   "src": "1776:5:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_ERC20_$12480_$",
+                                    "typeIdentifier": "t_type$_t_contract$_ERC20_$12451_$",
                                     "typeString": "type(contract ERC20)"
                                   }
                                 },
@@ -1991,7 +1991,7 @@
                                 "src": "1776:26:6",
                                 "tryCall": false,
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_ERC20_$12480",
+                                  "typeIdentifier": "t_contract$_ERC20_$12451",
                                   "typeString": "contract ERC20"
                                 }
                               },
@@ -2002,7 +2002,7 @@
                               "lValueRequested": false,
                               "memberName": "decimals",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 12056,
+                              "referencedDeclaration": 12027,
                               "src": "1776:35:6",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$__$returns$_t_uint8_$",
@@ -2213,7 +2213,7 @@
                             "referencedDeclaration": 3223,
                             "src": "1882:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           }
@@ -2221,7 +2221,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           ],
@@ -2289,7 +2289,7 @@
                             "referencedDeclaration": 3223,
                             "src": "1969:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -2300,7 +2300,7 @@
                           "lValueRequested": false,
                           "memberName": "supplyRatePerBlock",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7702,
+                          "referencedDeclaration": 7622,
                           "src": "1969:25:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
@@ -2336,7 +2336,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2026:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -2347,7 +2347,7 @@
                           "lValueRequested": false,
                           "memberName": "borrowRatePerBlock",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7685,
+                          "referencedDeclaration": 7605,
                           "src": "2026:25:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
@@ -2383,7 +2383,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2086:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -2430,7 +2430,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2140:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -2477,7 +2477,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2186:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -2524,7 +2524,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2231:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -2571,7 +2571,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2272:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -2582,7 +2582,7 @@
                           "lValueRequested": false,
                           "memberName": "getCash",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 8008,
+                          "referencedDeclaration": 7928,
                           "src": "2272:14:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
@@ -2657,7 +2657,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2458:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -2836,7 +2836,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -2844,10 +2844,10 @@
                     "id": 3222,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "1096:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -2952,7 +2952,7 @@
                       "referencedDeclaration": 3348,
                       "src": "2673:7:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                        "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                         "typeString": "contract PToken[] calldata"
                       }
                     },
@@ -3166,7 +3166,7 @@
                                   "referencedDeclaration": 3348,
                                   "src": "2847:7:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                                     "typeString": "contract PToken[] calldata"
                                   }
                                 },
@@ -3191,7 +3191,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "2847:10:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               }
@@ -3199,7 +3199,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               ],
@@ -3210,7 +3210,7 @@
                               "referencedDeclaration": 3345,
                               "src": "2832:14:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_PToken_$10656_$returns$_t_struct$_PTokenMetadata_$3221_memory_ptr_$",
+                                "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_PToken_$10627_$returns$_t_struct$_PTokenMetadata_$3221_memory_ptr_$",
                                 "typeString": "function (contract PToken) returns (struct PlutoLens.PTokenMetadata memory)"
                               }
                             },
@@ -3426,7 +3426,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                     "typeString": "contract PToken[]"
                   },
                   "typeName": {
@@ -3435,10 +3435,10 @@
                       "id": 3346,
                       "name": "PToken",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 10656,
+                      "referencedDeclaration": 10627,
                       "src": "2574:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PToken_$10656",
+                        "typeIdentifier": "t_contract$_PToken_$10627",
                         "typeString": "contract PToken"
                       }
                     },
@@ -3447,7 +3447,7 @@
                     "nodeType": "ArrayTypeName",
                     "src": "2574:8:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                       "typeString": "contract PToken[]"
                     }
                   },
@@ -3764,7 +3764,7 @@
                         "referencedDeclaration": 3409,
                         "src": "3239:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       },
@@ -3775,7 +3775,7 @@
                       "lValueRequested": false,
                       "memberName": "balanceOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7533,
+                      "referencedDeclaration": 7453,
                       "src": "3239:16:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -3868,7 +3868,7 @@
                         "referencedDeclaration": 3409,
                         "src": "3302:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       },
@@ -3879,7 +3879,7 @@
                       "lValueRequested": false,
                       "memberName": "borrowBalanceCurrent",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7754,
+                      "referencedDeclaration": 7674,
                       "src": "3302:27:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$_t_uint256_$",
@@ -3972,7 +3972,7 @@
                         "referencedDeclaration": 3409,
                         "src": "3375:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       },
@@ -3983,7 +3983,7 @@
                       "lValueRequested": false,
                       "memberName": "balanceOfUnderlying",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7571,
+                      "referencedDeclaration": 7491,
                       "src": "3375:26:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$_t_uint256_$",
@@ -4104,7 +4104,7 @@
                             "referencedDeclaration": 3409,
                             "src": "3496:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -4215,7 +4215,7 @@
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PErc20_$6579",
+                              "typeIdentifier": "t_contract$_PErc20_$6528",
                               "typeString": "contract PErc20"
                             },
                             "typeName": {
@@ -4223,10 +4223,10 @@
                               "id": 3460,
                               "name": "PErc20",
                               "nodeType": "UserDefinedTypeName",
-                              "referencedDeclaration": 6579,
+                              "referencedDeclaration": 6528,
                               "src": "3643:6:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_PErc20_$6579",
+                                "typeIdentifier": "t_contract$_PErc20_$6528",
                                 "typeString": "contract PErc20"
                               }
                             },
@@ -4250,7 +4250,7 @@
                                   "referencedDeclaration": 3409,
                                   "src": "3674:6:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_PToken_$10656",
+                                    "typeIdentifier": "t_contract$_PToken_$10627",
                                     "typeString": "contract PToken"
                                   }
                                 }
@@ -4258,7 +4258,7 @@
                               "expression": {
                                 "argumentTypes": [
                                   {
-                                    "typeIdentifier": "t_contract$_PToken_$10656",
+                                    "typeIdentifier": "t_contract$_PToken_$10627",
                                     "typeString": "contract PToken"
                                   }
                                 ],
@@ -4311,10 +4311,10 @@
                             "name": "PErc20",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6579,
+                            "referencedDeclaration": 6528,
                             "src": "3659:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_PErc20_$6579_$",
+                              "typeIdentifier": "t_type$_t_contract$_PErc20_$6528_$",
                               "typeString": "type(contract PErc20)"
                             }
                           },
@@ -4329,7 +4329,7 @@
                           "src": "3659:23:6",
                           "tryCall": false,
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_PErc20_$6579",
+                            "typeIdentifier": "t_contract$_PErc20_$6528",
                             "typeString": "contract PErc20"
                           }
                         },
@@ -4353,7 +4353,7 @@
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_IERC20_$12558",
+                              "typeIdentifier": "t_contract$_IERC20_$12529",
                               "typeString": "contract IERC20"
                             },
                             "typeName": {
@@ -4361,10 +4361,10 @@
                               "id": 3469,
                               "name": "IERC20",
                               "nodeType": "UserDefinedTypeName",
-                              "referencedDeclaration": 12558,
+                              "referencedDeclaration": 12529,
                               "src": "3696:6:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IERC20_$12558",
+                                "typeIdentifier": "t_contract$_IERC20_$12529",
                                 "typeString": "contract IERC20"
                               }
                             },
@@ -4390,7 +4390,7 @@
                                   "referencedDeclaration": 3461,
                                   "src": "3723:6:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_PErc20_$6579",
+                                    "typeIdentifier": "t_contract$_PErc20_$6528",
                                     "typeString": "contract PErc20"
                                   }
                                 },
@@ -4435,10 +4435,10 @@
                             "name": "IERC20",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 12558,
+                            "referencedDeclaration": 12529,
                             "src": "3716:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_IERC20_$12558_$",
+                              "typeIdentifier": "t_type$_t_contract$_IERC20_$12529_$",
                               "typeString": "type(contract IERC20)"
                             }
                           },
@@ -4453,7 +4453,7 @@
                           "src": "3716:27:6",
                           "tryCall": false,
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_IERC20_$12558",
+                            "typeIdentifier": "t_contract$_IERC20_$12529",
                             "typeString": "contract IERC20"
                           }
                         },
@@ -4516,7 +4516,7 @@
                                 "referencedDeclaration": 3470,
                                 "src": "3772:10:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_IERC20_$12558",
+                                  "typeIdentifier": "t_contract$_IERC20_$12529",
                                   "typeString": "contract IERC20"
                                 }
                               },
@@ -4527,7 +4527,7 @@
                               "lValueRequested": false,
                               "memberName": "balanceOf",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 12497,
+                              "referencedDeclaration": 12468,
                               "src": "3772:20:6",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -4610,7 +4610,7 @@
                                     "referencedDeclaration": 3409,
                                     "src": "3870:6:6",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_PToken_$10656",
+                                      "typeIdentifier": "t_contract$_PToken_$10627",
                                       "typeString": "contract PToken"
                                     }
                                   }
@@ -4618,7 +4618,7 @@
                                 "expression": {
                                   "argumentTypes": [
                                     {
-                                      "typeIdentifier": "t_contract$_PToken_$10656",
+                                      "typeIdentifier": "t_contract$_PToken_$10627",
                                       "typeString": "contract PToken"
                                     }
                                   ],
@@ -4680,7 +4680,7 @@
                                 "referencedDeclaration": 3470,
                                 "src": "3832:10:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_IERC20_$12558",
+                                  "typeIdentifier": "t_contract$_IERC20_$12529",
                                   "typeString": "contract IERC20"
                                 }
                               },
@@ -4691,7 +4691,7 @@
                               "lValueRequested": false,
                               "memberName": "allowance",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 12517,
+                              "referencedDeclaration": 12488,
                               "src": "3832:20:6",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_uint256_$",
@@ -4876,7 +4876,7 @@
                             "referencedDeclaration": 3409,
                             "src": "3947:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           }
@@ -4884,7 +4884,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           ],
@@ -5083,7 +5083,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -5091,10 +5091,10 @@
                     "id": 3408,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "3133:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -5228,7 +5228,7 @@
                       "referencedDeclaration": 3513,
                       "src": "4337:7:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                        "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                         "typeString": "contract PToken[] calldata"
                       }
                     },
@@ -5442,7 +5442,7 @@
                                   "referencedDeclaration": 3513,
                                   "src": "4511:7:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                                     "typeString": "contract PToken[] calldata"
                                   }
                                 },
@@ -5467,7 +5467,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "4511:10:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               },
@@ -5488,7 +5488,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 },
                                 {
@@ -5503,7 +5503,7 @@
                               "referencedDeclaration": 3510,
                               "src": "4496:14:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_PToken_$10656_$_t_address_payable_$returns$_t_struct$_PTokenBalances_$3407_memory_ptr_$",
+                                "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_PToken_$10627_$_t_address_payable_$returns$_t_struct$_PTokenBalances_$3407_memory_ptr_$",
                                 "typeString": "function (contract PToken,address payable) returns (struct PlutoLens.PTokenBalances memory)"
                               }
                             },
@@ -5719,7 +5719,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                     "typeString": "contract PToken[]"
                   },
                   "typeName": {
@@ -5728,10 +5728,10 @@
                       "id": 3511,
                       "name": "PToken",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 10656,
+                      "referencedDeclaration": 10627,
                       "src": "4213:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PToken_$10656",
+                        "typeIdentifier": "t_contract$_PToken_$10627",
                         "typeString": "contract PToken"
                       }
                     },
@@ -5740,7 +5740,7 @@
                     "nodeType": "ArrayTypeName",
                     "src": "4213:8:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                       "typeString": "contract PToken[]"
                     }
                   },
@@ -5963,7 +5963,7 @@
                                 "referencedDeclaration": 3569,
                                 "src": "4835:6:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               },
@@ -6181,7 +6181,7 @@
                             "referencedDeclaration": 3569,
                             "src": "4977:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           }
@@ -6189,7 +6189,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           ],
@@ -6255,7 +6255,7 @@
                             "referencedDeclaration": 3569,
                             "src": "5043:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           }
@@ -6267,7 +6267,7 @@
                               "typeString": "contract PriceOracle"
                             },
                             {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           ],
@@ -6278,7 +6278,7 @@
                           "referencedDeclaration": 3622,
                           "src": "5011:18:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_internal_view$_t_contract$_PriceOracle_$5571_$_t_contract$_PToken_$10656_$returns$_t_uint256_$",
+                            "typeIdentifier": "t_function_internal_view$_t_contract$_PriceOracle_$5571_$_t_contract$_PToken_$10627_$returns$_t_uint256_$",
                             "typeString": "function (contract PriceOracle,contract PToken) view returns (uint256)"
                           }
                         },
@@ -6370,7 +6370,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -6378,10 +6378,10 @@
                     "id": 3568,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "4701:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -6489,7 +6489,7 @@
                         "referencedDeclaration": 3607,
                         "src": "5234:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       }
@@ -6497,7 +6497,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       ],
@@ -6524,7 +6524,7 @@
                       "referencedDeclaration": 5556,
                       "src": "5203:30:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_external_view$_t_contract$_PToken_$10656_$returns$_t_uint256_$_t_uint256_$",
+                        "typeIdentifier": "t_function_external_view$_t_contract$_PToken_$10627_$returns$_t_uint256_$_t_uint256_$",
                         "typeString": "function (contract PToken) view external returns (uint256,uint256)"
                       }
                     },
@@ -6621,7 +6621,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -6629,10 +6629,10 @@
                     "id": 3606,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "5127:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -6735,7 +6735,7 @@
                       "referencedDeclaration": 3625,
                       "src": "5421:7:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                        "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                         "typeString": "contract PToken[] calldata"
                       }
                     },
@@ -6949,7 +6949,7 @@
                                   "referencedDeclaration": 3625,
                                   "src": "5616:7:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                                     "typeString": "contract PToken[] calldata"
                                   }
                                 },
@@ -6974,7 +6974,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "5616:10:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               }
@@ -6982,7 +6982,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               ],
@@ -6993,7 +6993,7 @@
                               "referencedDeclaration": 3603,
                               "src": "5594:21:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_function_internal_view$_t_contract$_PToken_$10656_$returns$_t_struct$_PTokenUnderlyingPrice_$3567_memory_ptr_$",
+                                "typeIdentifier": "t_function_internal_view$_t_contract$_PToken_$10627_$returns$_t_struct$_PTokenUnderlyingPrice_$3567_memory_ptr_$",
                                 "typeString": "function (contract PToken) view returns (struct PlutoLens.PTokenUnderlyingPrice memory)"
                               }
                             },
@@ -7209,7 +7209,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                     "typeString": "contract PToken[]"
                   },
                   "typeName": {
@@ -7218,10 +7218,10 @@
                       "id": 3623,
                       "name": "PToken",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 10656,
+                      "referencedDeclaration": 10627,
                       "src": "5310:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PToken_$10656",
+                        "typeIdentifier": "t_contract$_PToken_$10627",
                         "typeString": "contract PToken"
                       }
                     },
@@ -7230,7 +7230,7 @@
                     "nodeType": "ArrayTypeName",
                     "src": "5310:8:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                       "typeString": "contract PToken[]"
                     }
                   },
@@ -7309,7 +7309,7 @@
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                   "typeString": "contract PToken[]"
                 },
                 "typeName": {
@@ -7318,10 +7318,10 @@
                     "id": 3672,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "5701:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -7330,7 +7330,7 @@
                   "nodeType": "ArrayTypeName",
                   "src": "5701:8:6",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                     "typeString": "contract PToken[]"
                   }
                 },
@@ -7714,7 +7714,7 @@
                           "referencedDeclaration": 3191,
                           "src": "6077:21:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_array$_t_contract$_PToken_$10656_$dyn_memory_ptr_$",
+                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_array$_t_contract$_PToken_$10627_$dyn_memory_ptr_$",
                             "typeString": "function (address) view external returns (contract PToken[] memory)"
                           }
                         },
@@ -7729,7 +7729,7 @@
                         "src": "6077:30:6",
                         "tryCall": false,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_memory_ptr",
                           "typeString": "contract PToken[] memory"
                         }
                       },
@@ -7763,7 +7763,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_memory_ptr",
                           "typeString": "contract PToken[] memory"
                         },
                         {
@@ -9054,7 +9054,7 @@
     "src": "39:6696:6"
   },
   "legacyAST": {
-    "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/lens/PlutoLens.sol",
+    "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/lens/PlutoLens.sol",
     "exportedSymbols": {
       "PlutoLens": [
         3797
@@ -9088,29 +9088,29 @@
         "src": "63:33:6"
       },
       {
-        "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/tokenization/PErc20.sol",
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PErc20.sol",
         "file": "../tokenization/PErc20.sol",
         "id": 3155,
         "nodeType": "ImportDirective",
         "scope": 3798,
-        "sourceUnit": 6580,
+        "sourceUnit": 6529,
         "src": "98:36:6",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/tokenization/PToken.sol",
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/tokenization/PToken.sol",
         "file": "../tokenization/PToken.sol",
         "id": 3156,
         "nodeType": "ImportDirective",
         "scope": 3798,
-        "sourceUnit": 10657,
+        "sourceUnit": 10628,
         "src": "135:36:6",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/plutoadmin/stamen-contracts/contracts/oracle/PriceOracle.sol",
+        "absolutePath": "/Users/ashton/repo/blockchain/eth/smartcontracts/PoolX/contracts/oracle/PriceOracle.sol",
         "file": "../oracle/PriceOracle.sol",
         "id": 3157,
         "nodeType": "ImportDirective",
@@ -9126,7 +9126,7 @@
         "id": 3158,
         "nodeType": "ImportDirective",
         "scope": 3798,
-        "sourceUnit": 12481,
+        "sourceUnit": 12452,
         "src": "208:55:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -9528,7 +9528,7 @@
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_memory_ptr",
                     "typeString": "contract PToken[]"
                   },
                   "typeName": {
@@ -9537,10 +9537,10 @@
                       "id": 3187,
                       "name": "PToken",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 10656,
+                      "referencedDeclaration": 10627,
                       "src": "562:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PToken_$10656",
+                        "typeIdentifier": "t_contract$_PToken_$10627",
                         "typeString": "contract PToken"
                       }
                     },
@@ -9549,7 +9549,7 @@
                     "nodeType": "ArrayTypeName",
                     "src": "562:8:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                       "typeString": "contract PToken[]"
                     }
                   },
@@ -10043,7 +10043,7 @@
                         "referencedDeclaration": 3223,
                         "src": "1187:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       },
@@ -10054,7 +10054,7 @@
                       "lValueRequested": false,
                       "memberName": "exchangeRateCurrent",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7889,
+                      "referencedDeclaration": 7809,
                       "src": "1187:26:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_uint256_$",
@@ -10136,7 +10136,7 @@
                                 "referencedDeclaration": 3223,
                                 "src": "1283:6:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               },
@@ -10330,7 +10330,7 @@
                             "referencedDeclaration": 3223,
                             "src": "1390:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           }
@@ -10338,7 +10338,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           ],
@@ -10529,7 +10529,7 @@
                             "referencedDeclaration": 3223,
                             "src": "1501:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -10640,7 +10640,7 @@
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PErc20_$6579",
+                              "typeIdentifier": "t_contract$_PErc20_$6528",
                               "typeString": "contract PErc20"
                             },
                             "typeName": {
@@ -10648,10 +10648,10 @@
                               "id": 3281,
                               "name": "PErc20",
                               "nodeType": "UserDefinedTypeName",
-                              "referencedDeclaration": 6579,
+                              "referencedDeclaration": 6528,
                               "src": "1644:6:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_PErc20_$6579",
+                                "typeIdentifier": "t_contract$_PErc20_$6528",
                                 "typeString": "contract PErc20"
                               }
                             },
@@ -10675,7 +10675,7 @@
                                   "referencedDeclaration": 3223,
                                   "src": "1675:6:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_PToken_$10656",
+                                    "typeIdentifier": "t_contract$_PToken_$10627",
                                     "typeString": "contract PToken"
                                   }
                                 }
@@ -10683,7 +10683,7 @@
                               "expression": {
                                 "argumentTypes": [
                                   {
-                                    "typeIdentifier": "t_contract$_PToken_$10656",
+                                    "typeIdentifier": "t_contract$_PToken_$10627",
                                     "typeString": "contract PToken"
                                   }
                                 ],
@@ -10736,10 +10736,10 @@
                             "name": "PErc20",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6579,
+                            "referencedDeclaration": 6528,
                             "src": "1660:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_PErc20_$6579_$",
+                              "typeIdentifier": "t_type$_t_contract$_PErc20_$6528_$",
                               "typeString": "type(contract PErc20)"
                             }
                           },
@@ -10754,7 +10754,7 @@
                           "src": "1660:23:6",
                           "tryCall": false,
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_PErc20_$6579",
+                            "typeIdentifier": "t_contract$_PErc20_$6528",
                             "typeString": "contract PErc20"
                           }
                         },
@@ -10798,7 +10798,7 @@
                                 "referencedDeclaration": 3282,
                                 "src": "1722:6:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PErc20_$6579",
+                                  "typeIdentifier": "t_contract$_PErc20_$6528",
                                   "typeString": "contract PErc20"
                                 }
                               },
@@ -10886,7 +10886,7 @@
                                         "referencedDeclaration": 3282,
                                         "src": "1782:6:6",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_contract$_PErc20_$6579",
+                                          "typeIdentifier": "t_contract$_PErc20_$6528",
                                           "typeString": "contract PErc20"
                                         }
                                       },
@@ -10931,10 +10931,10 @@
                                   "name": "ERC20",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 12480,
+                                  "referencedDeclaration": 12451,
                                   "src": "1776:5:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_ERC20_$12480_$",
+                                    "typeIdentifier": "t_type$_t_contract$_ERC20_$12451_$",
                                     "typeString": "type(contract ERC20)"
                                   }
                                 },
@@ -10949,7 +10949,7 @@
                                 "src": "1776:26:6",
                                 "tryCall": false,
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_ERC20_$12480",
+                                  "typeIdentifier": "t_contract$_ERC20_$12451",
                                   "typeString": "contract ERC20"
                                 }
                               },
@@ -10960,7 +10960,7 @@
                               "lValueRequested": false,
                               "memberName": "decimals",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 12056,
+                              "referencedDeclaration": 12027,
                               "src": "1776:35:6",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$__$returns$_t_uint8_$",
@@ -11171,7 +11171,7 @@
                             "referencedDeclaration": 3223,
                             "src": "1882:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           }
@@ -11179,7 +11179,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           ],
@@ -11247,7 +11247,7 @@
                             "referencedDeclaration": 3223,
                             "src": "1969:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -11258,7 +11258,7 @@
                           "lValueRequested": false,
                           "memberName": "supplyRatePerBlock",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7702,
+                          "referencedDeclaration": 7622,
                           "src": "1969:25:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
@@ -11294,7 +11294,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2026:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -11305,7 +11305,7 @@
                           "lValueRequested": false,
                           "memberName": "borrowRatePerBlock",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7685,
+                          "referencedDeclaration": 7605,
                           "src": "2026:25:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
@@ -11341,7 +11341,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2086:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -11388,7 +11388,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2140:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -11435,7 +11435,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2186:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -11482,7 +11482,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2231:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -11529,7 +11529,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2272:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -11540,7 +11540,7 @@
                           "lValueRequested": false,
                           "memberName": "getCash",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 8008,
+                          "referencedDeclaration": 7928,
                           "src": "2272:14:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
@@ -11615,7 +11615,7 @@
                             "referencedDeclaration": 3223,
                             "src": "2458:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -11794,7 +11794,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -11802,10 +11802,10 @@
                     "id": 3222,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "1096:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -11910,7 +11910,7 @@
                       "referencedDeclaration": 3348,
                       "src": "2673:7:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                        "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                         "typeString": "contract PToken[] calldata"
                       }
                     },
@@ -12124,7 +12124,7 @@
                                   "referencedDeclaration": 3348,
                                   "src": "2847:7:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                                     "typeString": "contract PToken[] calldata"
                                   }
                                 },
@@ -12149,7 +12149,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "2847:10:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               }
@@ -12157,7 +12157,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               ],
@@ -12168,7 +12168,7 @@
                               "referencedDeclaration": 3345,
                               "src": "2832:14:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_PToken_$10656_$returns$_t_struct$_PTokenMetadata_$3221_memory_ptr_$",
+                                "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_PToken_$10627_$returns$_t_struct$_PTokenMetadata_$3221_memory_ptr_$",
                                 "typeString": "function (contract PToken) returns (struct PlutoLens.PTokenMetadata memory)"
                               }
                             },
@@ -12384,7 +12384,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                     "typeString": "contract PToken[]"
                   },
                   "typeName": {
@@ -12393,10 +12393,10 @@
                       "id": 3346,
                       "name": "PToken",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 10656,
+                      "referencedDeclaration": 10627,
                       "src": "2574:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PToken_$10656",
+                        "typeIdentifier": "t_contract$_PToken_$10627",
                         "typeString": "contract PToken"
                       }
                     },
@@ -12405,7 +12405,7 @@
                     "nodeType": "ArrayTypeName",
                     "src": "2574:8:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                       "typeString": "contract PToken[]"
                     }
                   },
@@ -12722,7 +12722,7 @@
                         "referencedDeclaration": 3409,
                         "src": "3239:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       },
@@ -12733,7 +12733,7 @@
                       "lValueRequested": false,
                       "memberName": "balanceOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7533,
+                      "referencedDeclaration": 7453,
                       "src": "3239:16:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -12826,7 +12826,7 @@
                         "referencedDeclaration": 3409,
                         "src": "3302:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       },
@@ -12837,7 +12837,7 @@
                       "lValueRequested": false,
                       "memberName": "borrowBalanceCurrent",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7754,
+                      "referencedDeclaration": 7674,
                       "src": "3302:27:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$_t_uint256_$",
@@ -12930,7 +12930,7 @@
                         "referencedDeclaration": 3409,
                         "src": "3375:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       },
@@ -12941,7 +12941,7 @@
                       "lValueRequested": false,
                       "memberName": "balanceOfUnderlying",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7571,
+                      "referencedDeclaration": 7491,
                       "src": "3375:26:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$_t_uint256_$",
@@ -13062,7 +13062,7 @@
                             "referencedDeclaration": 3409,
                             "src": "3496:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           },
@@ -13173,7 +13173,7 @@
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PErc20_$6579",
+                              "typeIdentifier": "t_contract$_PErc20_$6528",
                               "typeString": "contract PErc20"
                             },
                             "typeName": {
@@ -13181,10 +13181,10 @@
                               "id": 3460,
                               "name": "PErc20",
                               "nodeType": "UserDefinedTypeName",
-                              "referencedDeclaration": 6579,
+                              "referencedDeclaration": 6528,
                               "src": "3643:6:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_PErc20_$6579",
+                                "typeIdentifier": "t_contract$_PErc20_$6528",
                                 "typeString": "contract PErc20"
                               }
                             },
@@ -13208,7 +13208,7 @@
                                   "referencedDeclaration": 3409,
                                   "src": "3674:6:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_PToken_$10656",
+                                    "typeIdentifier": "t_contract$_PToken_$10627",
                                     "typeString": "contract PToken"
                                   }
                                 }
@@ -13216,7 +13216,7 @@
                               "expression": {
                                 "argumentTypes": [
                                   {
-                                    "typeIdentifier": "t_contract$_PToken_$10656",
+                                    "typeIdentifier": "t_contract$_PToken_$10627",
                                     "typeString": "contract PToken"
                                   }
                                 ],
@@ -13269,10 +13269,10 @@
                             "name": "PErc20",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6579,
+                            "referencedDeclaration": 6528,
                             "src": "3659:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_PErc20_$6579_$",
+                              "typeIdentifier": "t_type$_t_contract$_PErc20_$6528_$",
                               "typeString": "type(contract PErc20)"
                             }
                           },
@@ -13287,7 +13287,7 @@
                           "src": "3659:23:6",
                           "tryCall": false,
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_PErc20_$6579",
+                            "typeIdentifier": "t_contract$_PErc20_$6528",
                             "typeString": "contract PErc20"
                           }
                         },
@@ -13311,7 +13311,7 @@
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_IERC20_$12558",
+                              "typeIdentifier": "t_contract$_IERC20_$12529",
                               "typeString": "contract IERC20"
                             },
                             "typeName": {
@@ -13319,10 +13319,10 @@
                               "id": 3469,
                               "name": "IERC20",
                               "nodeType": "UserDefinedTypeName",
-                              "referencedDeclaration": 12558,
+                              "referencedDeclaration": 12529,
                               "src": "3696:6:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IERC20_$12558",
+                                "typeIdentifier": "t_contract$_IERC20_$12529",
                                 "typeString": "contract IERC20"
                               }
                             },
@@ -13348,7 +13348,7 @@
                                   "referencedDeclaration": 3461,
                                   "src": "3723:6:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_PErc20_$6579",
+                                    "typeIdentifier": "t_contract$_PErc20_$6528",
                                     "typeString": "contract PErc20"
                                   }
                                 },
@@ -13393,10 +13393,10 @@
                             "name": "IERC20",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 12558,
+                            "referencedDeclaration": 12529,
                             "src": "3716:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_IERC20_$12558_$",
+                              "typeIdentifier": "t_type$_t_contract$_IERC20_$12529_$",
                               "typeString": "type(contract IERC20)"
                             }
                           },
@@ -13411,7 +13411,7 @@
                           "src": "3716:27:6",
                           "tryCall": false,
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_IERC20_$12558",
+                            "typeIdentifier": "t_contract$_IERC20_$12529",
                             "typeString": "contract IERC20"
                           }
                         },
@@ -13474,7 +13474,7 @@
                                 "referencedDeclaration": 3470,
                                 "src": "3772:10:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_IERC20_$12558",
+                                  "typeIdentifier": "t_contract$_IERC20_$12529",
                                   "typeString": "contract IERC20"
                                 }
                               },
@@ -13485,7 +13485,7 @@
                               "lValueRequested": false,
                               "memberName": "balanceOf",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 12497,
+                              "referencedDeclaration": 12468,
                               "src": "3772:20:6",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -13568,7 +13568,7 @@
                                     "referencedDeclaration": 3409,
                                     "src": "3870:6:6",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_PToken_$10656",
+                                      "typeIdentifier": "t_contract$_PToken_$10627",
                                       "typeString": "contract PToken"
                                     }
                                   }
@@ -13576,7 +13576,7 @@
                                 "expression": {
                                   "argumentTypes": [
                                     {
-                                      "typeIdentifier": "t_contract$_PToken_$10656",
+                                      "typeIdentifier": "t_contract$_PToken_$10627",
                                       "typeString": "contract PToken"
                                     }
                                   ],
@@ -13638,7 +13638,7 @@
                                 "referencedDeclaration": 3470,
                                 "src": "3832:10:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_IERC20_$12558",
+                                  "typeIdentifier": "t_contract$_IERC20_$12529",
                                   "typeString": "contract IERC20"
                                 }
                               },
@@ -13649,7 +13649,7 @@
                               "lValueRequested": false,
                               "memberName": "allowance",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 12517,
+                              "referencedDeclaration": 12488,
                               "src": "3832:20:6",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_uint256_$",
@@ -13834,7 +13834,7 @@
                             "referencedDeclaration": 3409,
                             "src": "3947:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           }
@@ -13842,7 +13842,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           ],
@@ -14041,7 +14041,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -14049,10 +14049,10 @@
                     "id": 3408,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "3133:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -14186,7 +14186,7 @@
                       "referencedDeclaration": 3513,
                       "src": "4337:7:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                        "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                         "typeString": "contract PToken[] calldata"
                       }
                     },
@@ -14400,7 +14400,7 @@
                                   "referencedDeclaration": 3513,
                                   "src": "4511:7:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                                     "typeString": "contract PToken[] calldata"
                                   }
                                 },
@@ -14425,7 +14425,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "4511:10:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               },
@@ -14446,7 +14446,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 },
                                 {
@@ -14461,7 +14461,7 @@
                               "referencedDeclaration": 3510,
                               "src": "4496:14:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_PToken_$10656_$_t_address_payable_$returns$_t_struct$_PTokenBalances_$3407_memory_ptr_$",
+                                "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_PToken_$10627_$_t_address_payable_$returns$_t_struct$_PTokenBalances_$3407_memory_ptr_$",
                                 "typeString": "function (contract PToken,address payable) returns (struct PlutoLens.PTokenBalances memory)"
                               }
                             },
@@ -14677,7 +14677,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                     "typeString": "contract PToken[]"
                   },
                   "typeName": {
@@ -14686,10 +14686,10 @@
                       "id": 3511,
                       "name": "PToken",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 10656,
+                      "referencedDeclaration": 10627,
                       "src": "4213:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PToken_$10656",
+                        "typeIdentifier": "t_contract$_PToken_$10627",
                         "typeString": "contract PToken"
                       }
                     },
@@ -14698,7 +14698,7 @@
                     "nodeType": "ArrayTypeName",
                     "src": "4213:8:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                       "typeString": "contract PToken[]"
                     }
                   },
@@ -14921,7 +14921,7 @@
                                 "referencedDeclaration": 3569,
                                 "src": "4835:6:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               },
@@ -15139,7 +15139,7 @@
                             "referencedDeclaration": 3569,
                             "src": "4977:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           }
@@ -15147,7 +15147,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           ],
@@ -15213,7 +15213,7 @@
                             "referencedDeclaration": 3569,
                             "src": "5043:6:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           }
@@ -15225,7 +15225,7 @@
                               "typeString": "contract PriceOracle"
                             },
                             {
-                              "typeIdentifier": "t_contract$_PToken_$10656",
+                              "typeIdentifier": "t_contract$_PToken_$10627",
                               "typeString": "contract PToken"
                             }
                           ],
@@ -15236,7 +15236,7 @@
                           "referencedDeclaration": 3622,
                           "src": "5011:18:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_internal_view$_t_contract$_PriceOracle_$5571_$_t_contract$_PToken_$10656_$returns$_t_uint256_$",
+                            "typeIdentifier": "t_function_internal_view$_t_contract$_PriceOracle_$5571_$_t_contract$_PToken_$10627_$returns$_t_uint256_$",
                             "typeString": "function (contract PriceOracle,contract PToken) view returns (uint256)"
                           }
                         },
@@ -15328,7 +15328,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -15336,10 +15336,10 @@
                     "id": 3568,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "4701:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -15447,7 +15447,7 @@
                         "referencedDeclaration": 3607,
                         "src": "5234:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       }
@@ -15455,7 +15455,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_PToken_$10656",
+                          "typeIdentifier": "t_contract$_PToken_$10627",
                           "typeString": "contract PToken"
                         }
                       ],
@@ -15482,7 +15482,7 @@
                       "referencedDeclaration": 5556,
                       "src": "5203:30:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_external_view$_t_contract$_PToken_$10656_$returns$_t_uint256_$_t_uint256_$",
+                        "typeIdentifier": "t_function_external_view$_t_contract$_PToken_$10627_$returns$_t_uint256_$_t_uint256_$",
                         "typeString": "function (contract PToken) view external returns (uint256,uint256)"
                       }
                     },
@@ -15579,7 +15579,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PToken_$10656",
+                    "typeIdentifier": "t_contract$_PToken_$10627",
                     "typeString": "contract PToken"
                   },
                   "typeName": {
@@ -15587,10 +15587,10 @@
                     "id": 3606,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "5127:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -15693,7 +15693,7 @@
                       "referencedDeclaration": 3625,
                       "src": "5421:7:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                        "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                         "typeString": "contract PToken[] calldata"
                       }
                     },
@@ -15907,7 +15907,7 @@
                                   "referencedDeclaration": 3625,
                                   "src": "5616:7:6",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                                     "typeString": "contract PToken[] calldata"
                                   }
                                 },
@@ -15932,7 +15932,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "5616:10:6",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               }
@@ -15940,7 +15940,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_PToken_$10656",
+                                  "typeIdentifier": "t_contract$_PToken_$10627",
                                   "typeString": "contract PToken"
                                 }
                               ],
@@ -15951,7 +15951,7 @@
                               "referencedDeclaration": 3603,
                               "src": "5594:21:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_function_internal_view$_t_contract$_PToken_$10656_$returns$_t_struct$_PTokenUnderlyingPrice_$3567_memory_ptr_$",
+                                "typeIdentifier": "t_function_internal_view$_t_contract$_PToken_$10627_$returns$_t_struct$_PTokenUnderlyingPrice_$3567_memory_ptr_$",
                                 "typeString": "function (contract PToken) view returns (struct PlutoLens.PTokenUnderlyingPrice memory)"
                               }
                             },
@@ -16167,7 +16167,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_calldata_ptr",
+                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_calldata_ptr",
                     "typeString": "contract PToken[]"
                   },
                   "typeName": {
@@ -16176,10 +16176,10 @@
                       "id": 3623,
                       "name": "PToken",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 10656,
+                      "referencedDeclaration": 10627,
                       "src": "5310:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PToken_$10656",
+                        "typeIdentifier": "t_contract$_PToken_$10627",
                         "typeString": "contract PToken"
                       }
                     },
@@ -16188,7 +16188,7 @@
                     "nodeType": "ArrayTypeName",
                     "src": "5310:8:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                       "typeString": "contract PToken[]"
                     }
                   },
@@ -16267,7 +16267,7 @@
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                   "typeString": "contract PToken[]"
                 },
                 "typeName": {
@@ -16276,10 +16276,10 @@
                     "id": 3672,
                     "name": "PToken",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 10656,
+                    "referencedDeclaration": 10627,
                     "src": "5701:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PToken_$10656",
+                      "typeIdentifier": "t_contract$_PToken_$10627",
                       "typeString": "contract PToken"
                     }
                   },
@@ -16288,7 +16288,7 @@
                   "nodeType": "ArrayTypeName",
                   "src": "5701:8:6",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_storage_ptr",
+                    "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_storage_ptr",
                     "typeString": "contract PToken[]"
                   }
                 },
@@ -16672,7 +16672,7 @@
                           "referencedDeclaration": 3191,
                           "src": "6077:21:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_array$_t_contract$_PToken_$10656_$dyn_memory_ptr_$",
+                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_array$_t_contract$_PToken_$10627_$dyn_memory_ptr_$",
                             "typeString": "function (address) view external returns (contract PToken[] memory)"
                           }
                         },
@@ -16687,7 +16687,7 @@
                         "src": "6077:30:6",
                         "tryCall": false,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_memory_ptr",
                           "typeString": "contract PToken[] memory"
                         }
                       },
@@ -16721,7 +16721,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_array$_t_contract$_PToken_$10656_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_contract$_PToken_$10627_$dyn_memory_ptr",
                           "typeString": "contract PToken[] memory"
                         },
                         {
@@ -18016,8 +18016,8 @@
     "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.3.1",
-  "updatedAt": "2020-11-13T08:58:20.582Z",
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-11-20T01:23:48.837Z",
   "devdoc": {
     "methods": {}
   },

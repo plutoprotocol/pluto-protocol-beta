@@ -1358,6 +1358,16 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
         return uint(Error.NO_ERROR);
     }
 
+    function updateTokenPrice() internal {
+        uint priceCost = riskManager.getPriceCost(msg.sender);
+        require(msg.value >= priceCost, "No enough value to pay price oracle.");
+        if (msg.value > priceCost) {
+            (, uint priceChange) = subUInt(msg.value, priceCost);
+            msg.sender.transfer(priceChange);
+        }
+        riskManager.updateTokenPrice{value: priceCost}(msg.sender);
+    }
+
     /*** Safe Token ***/
 
     /**

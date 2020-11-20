@@ -177,10 +177,4 @@ contract PEther is PToken {
 
         require(errCode == uint(Error.NO_ERROR), string(fullMessage));
     }
-
-    function updateTokenPrice() internal {
-        uint priceCost = riskManager.getPriceCost(msg.sender);
-        require(msg.value >= priceCost, "No enough value to pay price oracle.");
-        riskManager.updateTokenPrice{value: priceCost}(msg.sender);
-    }
 }
