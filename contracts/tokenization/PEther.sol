@@ -4,6 +4,7 @@ pragma solidity ^0.6.9;
 import "../tokenization/PToken.sol";
 
 contract PEther is PToken {
+    uint private msgValue;
     /**
      * @notice Construct a new PEther money market
      * @param riskManager_ The address of the RiskManager
@@ -38,6 +39,7 @@ contract PEther is PToken {
      * @dev Reverts upon any failure
      */
     function mint() external payable {
+        updateMsgValue(msg.value);
         (uint err,) = mintInternal(msg.value);
         requireNoError(err, "mint failed");
     }
@@ -49,6 +51,7 @@ contract PEther is PToken {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function redeem(uint redeemTokens) external payable returns (uint) {
+        updateMsgValue(0);
         updateTokenPrice();
         return redeemInternal(redeemTokens);
     }
@@ -60,6 +63,7 @@ contract PEther is PToken {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function redeemUnderlying(uint redeemAmount) external payable returns (uint) {
+        updateMsgValue(0);
         updateTokenPrice();
         return redeemUnderlyingInternal(redeemAmount);
     }
@@ -70,6 +74,7 @@ contract PEther is PToken {
       * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
       */
     function borrow(uint borrowAmount) external payable returns (uint) {
+        updateMsgValue(0);
         updateTokenPrice();
         return borrowInternal(borrowAmount);
     }
@@ -79,6 +84,7 @@ contract PEther is PToken {
      * @dev Reverts upon any failure
      */
     function repayBorrow() external payable {
+        updateMsgValue(msg.value);
         (uint err,) = repayBorrowInternal(msg.value);
         requireNoError(err, "repayBorrow failed");
     }
@@ -89,6 +95,7 @@ contract PEther is PToken {
      * @param borrower the account with the debt being payed off
      */
     function repayBorrowBehalf(address borrower) external payable {
+        updateMsgValue(msg.value);
         (uint err,) = repayBorrowBehalfInternal(borrower, msg.value);
         requireNoError(err, "repayBorrowBehalf failed");
     }
@@ -106,6 +113,7 @@ contract PEther is PToken {
         (MathError mathErr, uint256 repayAmount) = subUInt(msg.value, priceCost);
         require(mathErr == MathError.NO_ERROR, "liquidateBorrow failed to subtract price cost.");
         riskManager.updateTokenPrice{value: priceCost}(msg.sender);
+        updateMsgValue(repayAmount);
         (uint err,) = liquidateBorrowInternal(borrower, repayAmount, pTokenCollateral);
         requireNoError(err, "liquidateBorrow failed");
     }
@@ -114,6 +122,7 @@ contract PEther is PToken {
      * @notice Send Ether to PEther to mint
      */
     receive() external payable {
+        updateMsgValue(msg.value);
         (uint err,) = mintInternal(msg.value);
         requireNoError(err, "mint failed");
     }
@@ -126,12 +135,15 @@ contract PEther is PToken {
      * @return The quantity of Ether owned by this contract
      */
     function getCashPrior() internal override view returns (uint) {
-        (MathError err, uint startingBalance) = subUInt(address(this).balance, msg.value);
+        uint localMsgValue = 0;
+        if (msg.value > 0) localMsgValue = msgValue;
+        (MathError err, uint startingBalance) = subUInt(address(this).balance, localMsgValue);
         require(err == MathError.NO_ERROR);
         return startingBalance;
     }
 
     function _addReserves(uint addAmount) external payable returns (uint) {
+        updateMsgValue(msg.value);
         return _addReservesInternal(addAmount);
     }
 
@@ -176,5 +188,9 @@ contract PEther is PToken {
         fullMessage[i+4] = byte(uint8(41));
 
         require(errCode == uint(Error.NO_ERROR), string(fullMessage));
+    }
+
+    function updateMsgValue(uint value) internal {
+        msgValue = value;
     }
 }

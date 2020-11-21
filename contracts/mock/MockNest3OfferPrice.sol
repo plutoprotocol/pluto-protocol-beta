@@ -33,6 +33,7 @@ contract MockNest3OfferPrice is Nest3OfferPrice {
     function checkPriceCost() public view override returns(uint256) {
         // 0.01 ETH
         return 1e16;
+        //return 0;
     }
 
     // Check whether the price-checking functions can be called
