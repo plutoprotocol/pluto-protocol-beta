@@ -22,7 +22,7 @@ module.exports = async function(deployer, network, accounts) {
         voteFactory = MockNest3VoteFactory.address;
     }
 
-    if (network == 'mainnet') {
+    if (network == 'mainnet' || network == 'mainnet-fork') {
         tetherToken = "0xdac17f958d2ee523a2206206994597c13d831ec7";
         nestToken = "0x04abEdA201850aC0124161F037Efd70c74ddC74C";
         voteFactory = "0x6Cd5698E8854Fb6879d6B1C694223b389B465dea";

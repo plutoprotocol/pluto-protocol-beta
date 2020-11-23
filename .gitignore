@@ -4,5 +4,6 @@ node_modules/
 *.pem
 .idea/
 .secret
+.env
 build
 .DS_Store

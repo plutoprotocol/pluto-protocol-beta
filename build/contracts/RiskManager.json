@@ -73791,6 +73791,291 @@
     "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
   },
   "networks": {
+    "1": {
+      "events": {
+        "0xef159d9a32b2472e32b098f954f3ce62d232939f1c207070b584df1814de2de0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "action",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "pauseState",
+              "type": "bool"
+            }
+          ],
+          "name": "ActionPaused",
+          "type": "event"
+        },
+        "0x71aec636243f9709bb0007ae15e9afb8150ab01716d75fd7573be5cc096e03b0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract PToken",
+              "name": "pToken",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "action",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "pauseState",
+              "type": "bool"
+            }
+          ],
+          "name": "ActionPaused",
+          "type": "event"
+        },
+        "0x45b96fe442630264581b197e84bbada861235052c5a1aadfff9ea4e40a969aa0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "error",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "info",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "detail",
+              "type": "uint256"
+            }
+          ],
+          "name": "Failure",
+          "type": "event"
+        },
+        "0x3ab23ab0d51cccc0c3085aec51f99228625aa1a922b3a8ca89a26b0f2027a1a5": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract PToken",
+              "name": "pToken",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "MarketEntered",
+          "type": "event"
+        },
+        "0xe699a64c18b07ac5b7301aa273f36a2287239eb9501d81950672794afba29a0d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract PToken",
+              "name": "pToken",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "MarketExited",
+          "type": "event"
+        },
+        "0xcf583bb0c569eb967f806b11601c4cb93c10310485c67add5f8362c2f212321f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract PToken",
+              "name": "pToken",
+              "type": "address"
+            }
+          ],
+          "name": "MarketListed",
+          "type": "event"
+        },
+        "0xf9ffabca9c8276e99321725bcb43fb076a6c66a54b7f21c4e8146d8519b417dc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "oldAdmin",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "newAdmin",
+              "type": "address"
+            }
+          ],
+          "name": "NewAdmin",
+          "type": "event"
+        },
+        "0x3b9670cf975d26958e754b57098eaa2ac914d8d2a31b83257997b9f346110fd9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "oldCloseFactorMantissa",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "newCloseFactorMantissa",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewCloseFactor",
+          "type": "event"
+        },
+        "0x70483e6592cd5182d45ac970e05bc62cdcc90e9d8ef2c2dbe686cf383bcd7fc5": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract PToken",
+              "name": "pToken",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "oldCollateralFactorMantissa",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "newCollateralFactorMantissa",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewCollateralFactor",
+          "type": "event"
+        },
+        "0xaeba5a6c40a8ac138134bff1aaa65debf25971188a58804bad717f82f0ec1316": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "oldLiquidationIncentiveMantissa",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "newLiquidationIncentiveMantissa",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewLiquidationIncentive",
+          "type": "event"
+        },
+        "0x7093cf1eb653f749c3ff531d6df7f92764536a7fa0d13530cd26e070780c32ea": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "oldMaxAssets",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "newMaxAssets",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewMaxAssets",
+          "type": "event"
+        },
+        "0x0613b6ee6a04f0d09f390e4d9318894b9f6ac7fd83897cd8d18896ba579c401e": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "oldPauseGuardian",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "newPauseGuardian",
+              "type": "address"
+            }
+          ],
+          "name": "NewPauseGuardian",
+          "type": "event"
+        },
+        "0xca4f2f25d0898edd99413412fb94012f9e54ec8142f9b093e7720646a95b16a9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "oldPendingAdmin",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "newPendingAdmin",
+              "type": "address"
+            }
+          ],
+          "name": "NewPendingAdmin",
+          "type": "event"
+        },
+        "0xd52b2b9b7e9ee655fcb95d2e5b9e0c9f69e7ef2b8e9d2d0ea78402d576d22e22": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract PriceOracle",
+              "name": "oldPriceOracle",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "contract PriceOracle",
+              "name": "newPriceOracle",
+              "type": "address"
+            }
+          ],
+          "name": "NewPriceOracle",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x8F3Cb53Fe6BddfE5e16fb2eE94d57c4412C3aC10",
+      "transactionHash": "0x81b57118f77785500c657d8228e2b8e8f35e112dd6a57fb08f8190231bdd2f60"
+    },
     "3": {
       "events": {
         "0xef159d9a32b2472e32b098f954f3ce62d232939f1c207070b584df1814de2de0": {
@@ -74358,12 +74643,12 @@
         }
       },
       "links": {},
-      "address": "0xE32c24c931c819A682E6C6a50a1Fe637497f928F",
-      "transactionHash": "0xbe1ac7ef3b8e5f8986b105ee6557c5820d6f7379787be6843284f6611fab718b"
+      "address": "0x554ac89623b339b518DB0b8C6cA4A92e1E945c5C",
+      "transactionHash": "0x7391bc806dc8f29566ac0dd14ba598d1b6a8b5ce7606056667ff074117d44064"
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-11-21T00:14:21.305Z",
+  "updatedAt": "2020-11-23T07:20:46.353Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {

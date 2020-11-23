@@ -19,9 +19,10 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
+require('dotenv').config();
 
-const fs = require('fs');
-const mnemonic = fs.readFileSync(".secret").toString().trim();
+// const fs = require('fs');
+// const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 module.exports = {
   /**
@@ -42,9 +43,10 @@ module.exports = {
     // options below to some value.
     //
     development: {
-     host: "127.0.0.1",     // Localhost (default: none)
-     port: 7545,            // Standard Ethereum port (default: none)
-     network_id: "*",       // Any network (default: none)
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 7545,            // Standard Ethereum port (default: none)
+      gasPrice: 50000000000,
+      network_id: "*",       // Any network (default: none)
     },
 
     // Another network with more advanced options...
@@ -58,11 +60,12 @@ module.exports = {
     // },
 
     mainnet: {
-      provider: () => new HDWalletProvider(mnemonic, `wss://mainnet.infura.io/ws/v3/98520c87aac949ac9c2310084b2d48b8`),
+      provider: () => new HDWalletProvider(process.env.mainnet_mnemonic, `wss://mainnet.infura.io/ws/v3/98520c87aac949ac9c2310084b2d48b8`),
       network_id: 1,
       gas: 5500000,
       confirmations: 2,
       timeoutBlocks: 200,
+      gasPrice: 50000000000,
       skipDryRun: false,
       websockets: true
     },
@@ -70,7 +73,7 @@ module.exports = {
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     ropsten: {
-      provider: () => new HDWalletProvider(mnemonic, `wss://ropsten.infura.io/ws/v3/98520c87aac949ac9c2310084b2d48b8`),
+      provider: () => new HDWalletProvider(process.env.mnemonic, `wss://ropsten.infura.io/ws/v3/98520c87aac949ac9c2310084b2d48b8`),
       network_id: 3,       // Ropsten's id
       gas: 5500000,        // Ropsten has a lower block limit than mainnet
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
