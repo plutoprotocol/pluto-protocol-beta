@@ -32,7 +32,7 @@ contract NestPriceOracle is PriceOracle {
             msg.sender.transfer(msg.value.sub(priceCost));
         }
 
-        if (pToken.isForETH()) {
+        if (pToken.isNativeToken()) {
             return 1e18;
         }
 
@@ -50,14 +50,14 @@ contract NestPriceOracle is PriceOracle {
 
     function getPriceCost(PToken pToken) public view override returns (uint256) {
         // No need to call oracle to get ETH price
-        if (pToken.isForETH()) return 0;
+        if (pToken.isNativeToken()) return 0;
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
         uint256 priceCost = _offerPrice.checkPriceCost();
         return priceCost;
     }
 
     function getUnderlyingPrice(PToken pToken) public view override returns (uint256, uint256) {
-        if (pToken.isForETH()) {
+        if (pToken.isNativeToken()) {
             return (1e18, block.number);
         }
         address underlyingToken = address(PErc20(address(pToken)).underlying());

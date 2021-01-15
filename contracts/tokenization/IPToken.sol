@@ -11,21 +11,6 @@ contract PTokenStorage {
     bool internal _notEntered;
 
     /**
-     * @notice EIP-20 token name for this token
-     */
-    string public name;
-
-    /**
-     * @notice EIP-20 token symbol for this token
-     */
-    string public symbol;
-
-    /**
-     * @notice EIP-20 token decimals for this token
-     */
-    uint8 public decimals;
-
-    /**
      * @dev
      * @notice Maximum borrow rate that can ever be applied (.0005% / block)
      */
@@ -98,12 +83,6 @@ contract PTokenStorage {
      * @notice Official record of token balances for each account
      */
     mapping (address => uint) internal accountTokens;
-
-    /**
-     * @dev
-     * @notice Approved token transfer amounts on behalf of others
-     */
-    mapping (address => mapping (address => uint)) internal transferAllowances;
 
     /**
      * @dev
@@ -217,11 +196,6 @@ abstract contract IPToken is PTokenStorage {
 
 
     /*** User Interface ***/
-
-    function transfer(address dst, uint amount) external virtual returns (bool);
-    function transferFrom(address src, address dst, uint amount) external virtual returns (bool);
-    function approve(address spender, uint amount) external virtual returns (bool);
-    function allowance(address owner, address spender) external view virtual returns (uint);
     function balanceOf(address owner) external view virtual returns (uint);
     function balanceOfUnderlying(address owner) external virtual returns (uint);
     function getAccountSnapshot(address account) external view virtual returns (uint, uint, uint, uint);
@@ -235,7 +209,7 @@ abstract contract IPToken is PTokenStorage {
     function getCash() external view virtual returns (uint);
     function accrueInterest() public virtual returns (uint);
     function seize(address liquidator, address borrower, uint seizeTokens) external virtual returns (uint);
-    function isForETH() public view virtual returns (bool);
+    function isNativeToken() public pure virtual returns (bool);
 
     /*** Admin Functions ***/
 

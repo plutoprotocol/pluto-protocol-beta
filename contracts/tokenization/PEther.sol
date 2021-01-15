@@ -10,22 +10,16 @@ contract PEther is PToken {
      * @param riskManager_ The address of the RiskManager
      * @param interestRateModel_ The address of the interest rate model
      * @param initialExchangeRateMantissa_ The initial exchange rate, scaled by 1e18
-     * @param name_ ERC-20 name of this token
-     * @param symbol_ ERC-20 symbol of this token
-     * @param decimals_ ERC-20 decimal precision of this token
      * @param admin_ Address of the administrator of this token
      */
     constructor(IRiskManager riskManager_,
                 InterestRateModel interestRateModel_,
                 uint initialExchangeRateMantissa_,
-                string memory name_,
-                string memory symbol_,
-                uint8 decimals_,
                 address payable admin_) public {
         // Creator of the contract is admin during initialization
         admin = msg.sender;
 
-        initialize(riskManager_, interestRateModel_, initialExchangeRateMantissa_, name_, symbol_, decimals_);
+        initialize(riskManager_, interestRateModel_, initialExchangeRateMantissa_);
 
         // Set the proper admin now that initialization is done
         admin = admin_;
@@ -147,7 +141,7 @@ contract PEther is PToken {
         return _addReservesInternal(addAmount);
     }
 
-    function isForETH() public view override returns (bool) {
+    function isNativeToken() public pure override returns (bool) {
         return true;
     }
 

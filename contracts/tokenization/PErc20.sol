@@ -13,22 +13,16 @@ contract PErc20 is PToken, IPErc20 {
      * @param riskManager_ The address of the RiskManager
      * @param interestRateModel_ The address of the interest rate model
      * @param initialExchangeRateMantissa_ The initial exchange rate, scaled by 1e18
-     * @param name_ ERC-20 name of this token
-     * @param symbol_ ERC-20 symbol of this token
-     * @param decimals_ ERC-20 decimal precision of this token
      */
     constructor(address underlying_,
                         IRiskManager riskManager_,
                         InterestRateModel interestRateModel_,
                         uint initialExchangeRateMantissa_,
-                        string memory name_,
-                        string memory symbol_,
-                        uint8 decimals_,
                         address payable admin_) public {
         admin = msg.sender;
 
         // pToken initialize does the bulk of the work
-        super.initialize(riskManager_, interestRateModel_, initialExchangeRateMantissa_, name_, symbol_, decimals_);
+        super.initialize(riskManager_, interestRateModel_, initialExchangeRateMantissa_);
 
         // Set underlying and sanity check it
         underlying = underlying_;
@@ -126,7 +120,7 @@ contract PErc20 is PToken, IPErc20 {
         return _addReservesInternal(addAmount);
     }
 
-    function isForETH() public view override returns (bool) {
+    function isNativeToken() public pure override returns (bool) {
         return false;
     }
     /*** Safe Token ***/

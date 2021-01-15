@@ -28,7 +28,6 @@ contract PlutoLens {
         bool isListed;
         uint collateralFactorMantissa;
         address underlyingAssetAddress;
-        uint pTokenDecimals;
         uint underlyingDecimals;
     }
 
@@ -39,7 +38,7 @@ contract PlutoLens {
         address underlyingAssetAddress;
         uint underlyingDecimals;
 
-        if (compareStrings(pToken.symbol(), "pETH")) {
+        if (pToken.isNativeToken()) {
             underlyingAssetAddress = address(0);
             underlyingDecimals = 18;
         } else {
@@ -61,7 +60,6 @@ contract PlutoLens {
         isListed: isListed,
         collateralFactorMantissa: collateralFactorMantissa,
         underlyingAssetAddress: underlyingAssetAddress,
-        pTokenDecimals: pToken.decimals(),
         underlyingDecimals: underlyingDecimals
         });
     }
@@ -91,7 +89,7 @@ contract PlutoLens {
         uint tokenBalance;
         uint tokenAllowance;
 
-        if (compareStrings(pToken.symbol(), "pETH")) {
+        if (pToken.isNativeToken()) {
             tokenBalance = account.balance;
             tokenAllowance = account.balance;
         } else {

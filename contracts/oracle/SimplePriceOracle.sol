@@ -9,7 +9,7 @@ contract SimplePriceOracle {
     event PricePosted(address asset, uint previousPriceMantissa, uint requestedPriceMantissa, uint newPriceMantissa);
 
     function getUnderlyingPrice(PToken pToken) public view returns (uint) {
-        if (compareStrings(pToken.symbol(), "pETH")) {
+        if (pToken.isNativeToken()) {
             return 1e18;
         } else {
             return prices[address(PErc20(address(pToken)).underlying())];
