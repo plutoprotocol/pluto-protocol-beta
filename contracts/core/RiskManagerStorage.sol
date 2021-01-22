@@ -36,6 +36,9 @@ contract RiskManagerStorage {
      */
     uint public maxAssets = 10;
 
+    /// @notice A list of all markets
+    PToken[] public allMarkets;
+
     /**
      * @notice Per-account mapping of "assets you are in", capped by maxAssets
      */
@@ -48,6 +51,8 @@ contract RiskManagerStorage {
         uint collateralFactorMantissa;
 
         mapping(address => bool) accountMembership;
+
+        bool isComped;
     }
 
     /**
@@ -55,9 +60,6 @@ contract RiskManagerStorage {
      * @dev Used e.g. to determine if a market is supported
      */
     mapping(address => Market) public markets;
-
-    /// @notice A list of all markets
-    PToken[] public allMarkets;
 
     /**
      * @notice The Pause Guardian can pause certain actions as a safety mechanism.

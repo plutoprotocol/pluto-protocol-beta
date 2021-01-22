@@ -82,6 +82,17 @@ module.exports = {
       websockets: true
     },
 
+    heco: {
+      provider: () => new HDWalletProvider(process.env.mnemonic, `wss://ws-mainnet-node1.hecochain.com`),
+      network_id: "128",   // This network is yours, in the cloud.
+      timeoutBlocks: 200,
+      confirmations: 2,
+      gasPrice: 2000000000,
+      skipDryRun: true,
+      networkCheckTimeout: 100000000,
+      websockets: true
+    },
+
     // Useful for private networks
     // private: {
       // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),

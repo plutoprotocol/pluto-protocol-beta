@@ -67,6 +67,11 @@ contract NestPriceOracle is PriceOracle {
     function activation() public {
         Nest3OfferPrice _offerPrice = getNestOfferPrice();
         require(!_offerPrice.checkUseNestPrice(address(this)), "Already activated.");
+
+        if (nestToken == address(0x0)) {
+            _offerPrice.activation();
+            return;
+        }
         IERC20(nestToken).safeTransferFrom(msg.sender, address(this), DESTRUCTION_AMOUNT);
         IERC20(nestToken).safeApprove(address(_offerPrice), DESTRUCTION_AMOUNT);
         _offerPrice.activation();

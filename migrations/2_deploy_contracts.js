@@ -6,6 +6,7 @@ const NestPriceOracle = artifacts.require("NestPriceOracle");
 const pETH = artifacts.require("PEther");
 const pUSDT = artifacts.require("PErc20");
 const PlutoLens = artifacts.require("PlutoLens");
+const Maximillion = artifacts.require("Maximillion");
 
 module.exports = async function(deployer, network, accounts) {
     console.log(`truffle deploying to ${network} network`);
@@ -13,10 +14,11 @@ module.exports = async function(deployer, network, accounts) {
     let tetherToken = "0xf17D721369F540f7485E1033194eBf92e3f88079";
     let nestToken = "0xf565422eBd4A8976e1e447a849b8B483C68EFD0C";
     let voteFactory = "0xa43f89dE7f9da44aa4d11106D7b829cf6ac0b561";
-    if (network == "development" || network == "ropsten") {
-        if (network == "development") {
+    if (network == "development" || network == "ropsten" || network == "heco") {
+        if (network == "development" || network == "heco") {
             await deployer.deploy(TetherToken, "1000000000000000", "Tether USD", "USDT", 6);
             tetherToken = TetherToken.address;
+            nestToken = "0x0000000000000000000000000000000000000000";
         }
         await deployer.deploy(MockNest3VoteFactory);
         voteFactory = MockNest3VoteFactory.address;
@@ -36,6 +38,7 @@ module.exports = async function(deployer, network, accounts) {
     await deployer.deploy(pETH, RiskManager.address, InterestModel.address, 0.02e18.toString(), accounts[0])
     // 1 USDT = 50 pUSDT
     await deployer.deploy(pUSDT, tetherToken, RiskManager.address, InterestModel.address, 0.02e6.toString(), accounts[0])
+    await deployer.deploy(Maximillion, pETH.address);
 
     // ============== Initial Parameters Setting ============
     let riskManagerInstance = await RiskManager.deployed();
@@ -64,4 +67,5 @@ module.exports = async function(deployer, network, accounts) {
     console.log(`| pETH | ${pETH.address} |`);
     console.log(`| pUSDT | ${pUSDT.address} |`);
     console.log(`| PlutoLens | ${PlutoLens.address} |`);
+    console.log(`| Maximillion | ${Maximillion.address} |`);
 };

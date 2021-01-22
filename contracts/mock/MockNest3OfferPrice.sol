@@ -32,13 +32,13 @@ contract MockNest3OfferPrice is Nest3OfferPrice {
     // Check call price fee
     function checkPriceCost() public view override returns(uint256) {
         // 0.01 ETH
-        return 1e16;
+        return 1e9;
         //return 0;
     }
 
     // Check whether the price-checking functions can be called
     function checkUseNestPrice(address target) public view override returns (bool) {
-        if (_addressEffect[target] < now && _addressEffect[target] != 0) {
+        if (_addressEffect[target] <= now && _addressEffect[target] != 0) {
             return true;
         } else {
             return false;

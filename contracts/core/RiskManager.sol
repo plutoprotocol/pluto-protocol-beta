@@ -858,7 +858,7 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
 
         pToken.isPToken(); // Sanity check to make sure its really a PToken
 
-        markets[address(pToken)] = Market({isListed: true, collateralFactorMantissa: 0});
+        markets[address(pToken)] = Market({isListed: true, isComped: false, collateralFactorMantissa: 0});
 
         _addMarketInternal(address(pToken));
 
