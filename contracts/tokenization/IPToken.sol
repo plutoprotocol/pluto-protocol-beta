@@ -10,6 +10,8 @@ contract PTokenStorage {
      */
     bool internal _notEntered;
 
+    string public name;
+
     /**
      * @dev
      * @notice Maximum borrow rate that can ever be applied (.0005% / block)
@@ -107,7 +109,6 @@ abstract contract IPToken is PTokenStorage {
      * @notice Indicator that this is a PToken contract (for inspection)
      */
     bool public constant isPToken = true;
-
 
     /*** Market Events ***/
 

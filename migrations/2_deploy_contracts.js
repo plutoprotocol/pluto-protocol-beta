@@ -35,9 +35,9 @@ module.exports = async function(deployer, network, accounts) {
     // Interest model with 2% base rate and 20% multiplier
     await deployer.deploy(InterestModel, 0.02e18.toString(), 0.2e18.toString());
     // 1 ETH = 50 pETH
-    await deployer.deploy(pETH, RiskManager.address, InterestModel.address, 0.02e18.toString(), accounts[0])
+    await deployer.deploy(pETH, RiskManager.address, InterestModel.address, 0.02e18.toString(), "PlutoETH", accounts[0])
     // 1 USDT = 50 pUSDT
-    await deployer.deploy(pUSDT, tetherToken, RiskManager.address, InterestModel.address, 0.02e6.toString(), accounts[0])
+    await deployer.deploy(pUSDT, tetherToken, RiskManager.address, InterestModel.address, 0.02e6.toString(), "PlutoUSDT", accounts[0])
     await deployer.deploy(Maximillion, pETH.address);
 
     // ============== Initial Parameters Setting ============

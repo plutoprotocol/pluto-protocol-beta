@@ -18,11 +18,12 @@ contract PErc20 is PToken, IPErc20 {
                         IRiskManager riskManager_,
                         InterestRateModel interestRateModel_,
                         uint initialExchangeRateMantissa_,
+                        string memory name_,
                         address payable admin_) public {
         admin = msg.sender;
 
         // pToken initialize does the bulk of the work
-        super.initialize(riskManager_, interestRateModel_, initialExchangeRateMantissa_);
+        super.initialize(riskManager_, interestRateModel_, initialExchangeRateMantissa_, name_);
 
         // Set underlying and sanity check it
         underlying = underlying_;

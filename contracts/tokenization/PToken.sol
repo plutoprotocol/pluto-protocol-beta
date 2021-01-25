@@ -19,7 +19,8 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
      */
     function initialize(IRiskManager riskManager_,
                         InterestRateModel interestRateModel_,
-                        uint initialExchangeRateMantissa_
+                        uint initialExchangeRateMantissa_,
+                        string memory name_
                         ) public {
         require(msg.sender == admin, "only admin may initialize the market");
         require(accrualBlockNumber == 0 && borrowIndex == 0, "market may only be initialized once");
@@ -37,6 +38,8 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
         // Set the interest rate model (depends on block number / borrow index)
         err = _setInterestRateModelFresh(interestRateModel_);
         require(err == uint(Error.NO_ERROR), "setting interest rate model failed");
+
+        name = name_;
 
         // The counter starts true to prevent changing it from zero to non-zero (i.e. smaller cost/refund)
         _notEntered = true;

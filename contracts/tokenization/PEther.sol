@@ -15,11 +15,12 @@ contract PEther is PToken {
     constructor(IRiskManager riskManager_,
                 InterestRateModel interestRateModel_,
                 uint initialExchangeRateMantissa_,
+                string memory name_,
                 address payable admin_) public {
         // Creator of the contract is admin during initialization
         admin = msg.sender;
 
-        initialize(riskManager_, interestRateModel_, initialExchangeRateMantissa_);
+        initialize(riskManager_, interestRateModel_, initialExchangeRateMantissa_, name_);
 
         // Set the proper admin now that initialization is done
         admin = admin_;
