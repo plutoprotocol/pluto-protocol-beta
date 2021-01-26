@@ -1,4 +1,4 @@
-const MockNest3VoteFactory = artifacts.require("MockNest3VoteFactory");
+const MockNestQuery = artifacts.require("MockNestQuery");
 const TetherToken = artifacts.require("TetherToken");
 const InterestModel = artifacts.require("DefaultInterestRateModel");
 const RiskManager = artifacts.require("RiskManager");
@@ -7,30 +7,32 @@ const pETH = artifacts.require("PEther");
 const pUSDT = artifacts.require("PErc20");
 const PlutoLens = artifacts.require("PlutoLens");
 const Maximillion = artifacts.require("Maximillion");
+const NestQuery = artifacts.require("INestQuery");
 
 module.exports = async function(deployer, network, accounts) {
     console.log(`truffle deploying to ${network} network`);
 
     let tetherToken = "0xf17D721369F540f7485E1033194eBf92e3f88079";
-    let nestToken = "0xf565422eBd4A8976e1e447a849b8B483C68EFD0C";
-    let voteFactory = "0xa43f89dE7f9da44aa4d11106D7b829cf6ac0b561";
+    let nestQuery = "0xc726A3ae2c9bB2A904b4B62Cf59f5092ba8B6126";
     if (network == "development" || network == "ropsten" || network == "heco") {
         if (network == "development" || network == "heco") {
             await deployer.deploy(TetherToken, "1000000000000000", "Tether USD", "USDT", 6);
             tetherToken = TetherToken.address;
             nestToken = "0x0000000000000000000000000000000000000000";
         }
-        await deployer.deploy(MockNest3VoteFactory);
-        voteFactory = MockNest3VoteFactory.address;
+        await deployer.deploy(MockNestQuery);
+        nestQuery = MockNestQuery.address;
     }
 
     if (network == 'mainnet' || network == 'mainnet-fork') {
         tetherToken = "0xdac17f958d2ee523a2206206994597c13d831ec7";
-        nestToken = "0x04abEdA201850aC0124161F037Efd70c74ddC74C";
-        voteFactory = "0x6Cd5698E8854Fb6879d6B1C694223b389B465dea";
+        nestQuery = "0x3bf046c114385357838D9cAE9509C6fBBfE306d2";
     }
     await deployer.deploy(PlutoLens);
-    await deployer.deploy(NestPriceOracle, voteFactory, nestToken);
+    await deployer.deploy(NestPriceOracle, nestQuery);
+    let nestQueryInstance = await NestQuery.at(nestQuery);
+    await nestQueryInstance.activate(NestPriceOracle.address);
+
     await deployer.deploy(RiskManager);
     // Interest model with 2% base rate and 20% multiplier
     await deployer.deploy(InterestModel, 0.02e18.toString(), 0.2e18.toString());
@@ -47,7 +49,6 @@ module.exports = async function(deployer, network, accounts) {
     await riskManagerInstance._supportMarket(pUSDT.address);
     // Activate nest price oracle
     let nestPriceOracleInstance = await NestPriceOracle.deployed();
-    await nestPriceOracleInstance.activation();
 
     let priceCost = await nestPriceOracleInstance.getPriceCost(pETH.address);
     await riskManagerInstance._setCollateralFactor(pETH.address, 0.5e18.toString(), {value: priceCost});
@@ -60,8 +61,8 @@ module.exports = async function(deployer, network, accounts) {
     console.log(`Contract Deployed Summary\n=========================`);
     console.log(`| USDT | ${tetherToken} |`);
     console.log(`| NEST | ${nestToken} |`);
-    console.log(`| NEST3VoteFactory | ${voteFactory} |`);
     console.log(`| NestPriceOracle | ${NestPriceOracle.address} |`);
+    console.log(`| NestQuery | ${nestQuery} |`);
     console.log(`| RiskManager | ${RiskManager.address} |`);
     console.log(`| InterestModel | ${InterestModel.address} |`);
     console.log(`| pETH | ${pETH.address} |`);

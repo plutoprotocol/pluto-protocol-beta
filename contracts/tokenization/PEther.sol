@@ -47,7 +47,7 @@ contract PEther is PToken {
      */
     function redeem(uint redeemTokens) external payable returns (uint) {
         updateMsgValue(0);
-        updateTokenPrice();
+        updateTokenPrice(address(this));
         return redeemInternal(redeemTokens);
     }
 
@@ -59,7 +59,7 @@ contract PEther is PToken {
      */
     function redeemUnderlying(uint redeemAmount) external payable returns (uint) {
         updateMsgValue(0);
-        updateTokenPrice();
+        updateTokenPrice(address(this));
         return redeemUnderlyingInternal(redeemAmount);
     }
 
@@ -70,7 +70,7 @@ contract PEther is PToken {
       */
     function borrow(uint borrowAmount) external payable returns (uint) {
         updateMsgValue(0);
-        updateTokenPrice();
+        updateTokenPrice(address(this));
         return borrowInternal(borrowAmount);
     }
 
@@ -103,11 +103,11 @@ contract PEther is PToken {
      * @param pTokenCollateral The market in which to seize collateral from the borrower
      */
     function liquidateBorrow(address borrower, PToken pTokenCollateral) external payable {
-        uint256 priceCost = riskManager.getPriceCost(msg.sender);
+        uint256 priceCost = riskManager.getPriceCost(address(this), msg.sender);
         require(msg.value >= priceCost, "No enough value to pay price oracle.");
         (MathError mathErr, uint256 repayAmount) = subUInt(msg.value, priceCost);
         require(mathErr == MathError.NO_ERROR, "liquidateBorrow failed to subtract price cost.");
-        riskManager.updateTokenPrice{value: priceCost}(msg.sender);
+        riskManager.updateTokenPrice{value: priceCost}(address(this), msg.sender);
         updateMsgValue(repayAmount);
         (uint err,) = liquidateBorrowInternal(borrower, repayAmount, pTokenCollateral);
         requireNoError(err, "liquidateBorrow failed");

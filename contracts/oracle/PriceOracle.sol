@@ -11,4 +11,7 @@ abstract contract PriceOracle {
     function updateAndGetUnderlyingPrice(PToken pToken) external payable virtual returns (uint256);
 
     function getPriceCost(PToken pToken) public view virtual returns (uint256);
+
+    function getSinglePriceFee() public view virtual returns (uint256);
+
 }

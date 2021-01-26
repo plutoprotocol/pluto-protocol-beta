@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: UNLICENSED
+
 pragma solidity ^0.6.9;
 
 import "../tokenization/PEther.sol";
@@ -34,10 +36,10 @@ contract Maximillion {
         uint received = msg.value;
         uint borrows = pEther_.borrowBalanceCurrent(borrower);
         if (received > borrows) {
-            pEther_.repayBorrowBehalf.value(borrows)(borrower);
+            pEther_.repayBorrowBehalf{value:borrows}(borrower);
             msg.sender.transfer(received - borrows);
         } else {
-            pEther_.repayBorrowBehalf.value(received)(borrower);
+            pEther_.repayBorrowBehalf{value:received}(borrower);
         }
     }
 }

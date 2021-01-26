@@ -518,19 +518,38 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
         return (uint(err), liquidity, shortfall);
     }
 
-    function getPriceCost(address assetOwner) external view override returns (uint256) {
+    function getPriceCost(address assetAddress, address assetOwner) external view override returns (uint256) {
         PToken[] memory assets = accountAssets[assetOwner];
+        uint assetPriceFee = oracle.getSinglePriceFee();
         uint totalPriceCost;
         for (uint i = 0; i < assets.length; i++) {
-            (, totalPriceCost) = addUInt(totalPriceCost, oracle.getPriceCost(assets[i]));
+            if (!assets[i].isNativeToken()) {
+                (, totalPriceCost) = addUInt(totalPriceCost, assetPriceFee);
+            }
+        }
+
+        if (PToken(assetAddress).isNativeToken()) {
+            return totalPriceCost;
+        }
+
+        if (!markets[assetAddress].accountMembership[assetOwner]) {
+            (, totalPriceCost) = addUInt(totalPriceCost, assetPriceFee);
         }
         return totalPriceCost;
     }
 
-    function updateTokenPrice(address assetOwner) external override payable {
+    function updateTokenPrice(address assetAddress, address assetOwner) external override payable {
         PToken[] memory assets = accountAssets[assetOwner];
         for (uint i = 0; i < assets.length; i++) {
             updateAndGetTokenPrice(address(assets[i]));
+        }
+
+        if (PToken(assetAddress).isNativeToken()) {
+            return;
+        }
+
+        if (!markets[assetAddress].accountMembership[assetOwner]) {
+            updateAndGetTokenPrice(assetAddress);
         }
     }
 

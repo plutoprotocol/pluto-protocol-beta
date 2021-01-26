@@ -52,7 +52,7 @@ contract PErc20 is PToken, IPErc20 {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function redeem(uint redeemTokens) external payable override returns (uint) {
-        updateTokenPrice();
+        updateTokenPrice(address(this));
         return redeemInternal(redeemTokens);
     }
 
@@ -63,7 +63,7 @@ contract PErc20 is PToken, IPErc20 {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function redeemUnderlying(uint redeemAmount) external payable override returns (uint) {
-        updateTokenPrice();
+        updateTokenPrice(address(this));
         return redeemUnderlyingInternal(redeemAmount);
     }
 
@@ -73,7 +73,7 @@ contract PErc20 is PToken, IPErc20 {
       * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
       */
     function borrow(uint borrowAmount) external payable override returns (uint) {
-        updateTokenPrice();
+        updateTokenPrice(address(this));
         return borrowInternal(borrowAmount);
     }
 
@@ -107,7 +107,7 @@ contract PErc20 is PToken, IPErc20 {
      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
      */
     function liquidateBorrow(address borrower, uint repayAmount, IPToken pTokenCollateral) external payable override returns (uint) {
-        updateTokenPrice();
+        updateTokenPrice(address(this));
         (uint err,) = liquidateBorrowInternal(borrower, repayAmount, pTokenCollateral);
         return err;
     }
