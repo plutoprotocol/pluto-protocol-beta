@@ -10,6 +10,16 @@
         "internalType": "uint256",
         "name": "multiplierPerYear",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "jumpMultiplierPerYear",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "kink_",
+        "type": "uint256"
       }
     ],
     "stateMutability": "nonpayable",
@@ -28,6 +38,18 @@
         "indexed": false,
         "internalType": "uint256",
         "name": "multiplierPerBlock",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "jumpMultiplierPerBlock",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "kink",
         "type": "uint256"
       }
     ],
@@ -68,6 +90,32 @@
         "internalType": "bool",
         "name": "",
         "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "jumpMultiplierPerBlock",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "kink",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",

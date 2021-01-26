@@ -47,10 +47,6 @@ contract NestPriceOracle is PriceOracle {
         return singleFee;
     }
 
-    function getSinglePriceFee() public view override returns (uint256) {
-        return singleFee;
-    }
-
     function getUnderlyingPrice(PToken pToken) public view override returns (uint256, uint256) {
         if (pToken.isNativeToken()) {
             return (1e18, block.number);
@@ -58,4 +54,9 @@ contract NestPriceOracle is PriceOracle {
         address underlyingToken = address(PErc20(address(pToken)).underlying());
         return (prices[underlyingToken], lastUpdateBlocks[underlyingToken]);
     }
+
+    function getSinglePriceFee() public view override returns (uint256) {
+        return singleFee;
+    }
+
 }

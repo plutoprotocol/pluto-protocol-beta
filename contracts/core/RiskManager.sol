@@ -116,8 +116,8 @@ contract RiskManager is RiskManagerStorage, IRiskManager, RiskManagerErrorReport
       * @param pToken The pToken to check
       * @return True if the account is in the asset, otherwise false.
       */
-    function checkMembership(address account, PToken pToken) external view returns (bool) {
-        return markets[address(pToken)].accountMembership[account];
+    function checkMembership(address account, address pToken) external view override returns (bool) {
+        return markets[pToken].accountMembership[account];
     }
 
     /**

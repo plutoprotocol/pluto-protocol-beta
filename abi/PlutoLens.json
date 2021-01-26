@@ -73,11 +73,6 @@
           },
           {
             "internalType": "uint256",
-            "name": "pTokenDecimals",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
             "name": "underlyingDecimals",
             "type": "uint256"
           }
@@ -161,11 +156,6 @@
             "internalType": "address",
             "name": "underlyingAssetAddress",
             "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "pTokenDecimals",
-            "type": "uint256"
           },
           {
             "internalType": "uint256",

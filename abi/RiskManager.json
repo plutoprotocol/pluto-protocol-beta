@@ -441,6 +441,11 @@
         "internalType": "uint256",
         "name": "collateralFactorMantissa",
         "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isComped",
+        "type": "bool"
       }
     ],
     "stateMutability": "view",
@@ -570,7 +575,7 @@
         "type": "address"
       },
       {
-        "internalType": "contract PToken",
+        "internalType": "address",
         "name": "pToken",
         "type": "address"
       }
@@ -934,6 +939,11 @@
     "inputs": [
       {
         "internalType": "address",
+        "name": "assetAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
         "name": "assetOwner",
         "type": "address"
       }
@@ -951,6 +961,11 @@
   },
   {
     "inputs": [
+      {
+        "internalType": "address",
+        "name": "assetAddress",
+        "type": "address"
+      },
       {
         "internalType": "address",
         "name": "assetOwner",

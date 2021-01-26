@@ -18,7 +18,6 @@ module.exports = async function(deployer, network, accounts) {
         if (network == "development" || network == "heco") {
             await deployer.deploy(TetherToken, "1000000000000000", "Tether USD", "USDT", 6);
             tetherToken = TetherToken.address;
-            nestToken = "0x0000000000000000000000000000000000000000";
         }
         await deployer.deploy(MockNestQuery);
         nestQuery = MockNestQuery.address;
@@ -35,7 +34,7 @@ module.exports = async function(deployer, network, accounts) {
 
     await deployer.deploy(RiskManager);
     // Interest model with 2% base rate and 20% multiplier
-    await deployer.deploy(InterestModel, 0.02e18.toString(), 0.2e18.toString());
+    await deployer.deploy(InterestModel, 0.02e18.toString(), 0.2e18.toString(), 0.9e18.toString(), 5e18.toString());
     // 1 ETH = 50 pETH
     await deployer.deploy(pETH, RiskManager.address, InterestModel.address, 0.02e18.toString(), "PlutoETH", accounts[0])
     // 1 USDT = 50 pUSDT
@@ -60,7 +59,6 @@ module.exports = async function(deployer, network, accounts) {
 
     console.log(`Contract Deployed Summary\n=========================`);
     console.log(`| USDT | ${tetherToken} |`);
-    console.log(`| NEST | ${nestToken} |`);
     console.log(`| NestPriceOracle | ${NestPriceOracle.address} |`);
     console.log(`| NestQuery | ${nestQuery} |`);
     console.log(`| RiskManager | ${RiskManager.address} |`);
