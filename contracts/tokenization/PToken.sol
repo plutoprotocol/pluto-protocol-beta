@@ -414,9 +414,8 @@ abstract contract PToken is IPToken, Exponential, TokenErrorReporter {
         totalSupply = vars.totalSupplyNew;
         accountTokens[minter] = vars.accountTokensNew;
 
-        /* We emit a Mint event, and a Transfer event */
+        /* We emit a Mint event */
         emit Mint(minter, vars.actualMintAmount, vars.mintTokens);
-        emit Transfer(address(this), minter, vars.mintTokens);
 
         return (uint(Error.NO_ERROR), vars.actualMintAmount);
     }

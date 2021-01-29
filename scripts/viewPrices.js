@@ -1,5 +1,4 @@
 const RiskManager = artifacts.require("RiskManager");
-const PToken = artifacts.require("PToken");
 const NestPriceOracle = artifacts.require("NestPriceOracle");
 
 module.exports = async function(callback) {

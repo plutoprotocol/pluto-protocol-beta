@@ -16,6 +16,8 @@ contract MockNestQuery is INestQuery {
 
     function params() external override view returns(uint256 single, uint64 leadTime, uint256 nestAmount) {
         single = singleFee;
+        leadTime;
+        nestAmount;
     }
 
     /// @notice The main function called by DeFi clients, compatible to Nest Protocol v3.0
@@ -29,6 +31,7 @@ contract MockNestQuery is INestQuery {
         require(msg.value >= singleFee, "No enough oracle cost paid.");
         require(activated[msg.sender], "Need to activate it before using.");
 
+        tokenAddress;
         return (10e18, 8000 * 1e6, block.number);
     }
 
@@ -37,6 +40,7 @@ contract MockNestQuery is INestQuery {
     function latestPrice(address token) external override view returns (uint256 ethAmount, uint256 tokenAmount, uint128 avgPrice, int128 vola, uint256 bn) {
         require(address(msg.sender) == address(tx.origin), "Contract is not allowed!");
 
+        token;
         return (10e18, 9000 * 1e6, 0, 0, block.number);
     }
 }

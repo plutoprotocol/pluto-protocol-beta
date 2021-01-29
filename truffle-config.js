@@ -65,7 +65,7 @@ module.exports = {
       gas: 5500000,
       confirmations: 2,
       timeoutBlocks: 200,
-      gasPrice: 50000000000,
+      gasPrice: 160000000000,
       skipDryRun: false,
       websockets: true
     },
@@ -78,6 +78,7 @@ module.exports = {
       gas: 5500000,        // Ropsten has a lower block limit than mainnet
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+      gasPrice: 160000000000,
       skipDryRun: true,     // Skip dry run before migrations? (default: false for public nets )
       websockets: true
     },

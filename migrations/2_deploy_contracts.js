@@ -25,7 +25,7 @@ module.exports = async function(deployer, network, accounts) {
 
     if (network == 'mainnet' || network == 'mainnet-fork') {
         tetherToken = "0xdac17f958d2ee523a2206206994597c13d831ec7";
-        nestQuery = "0x3bf046c114385357838D9cAE9509C6fBBfE306d2";
+        nestQuery = "0x086bfB19dD7d9a7c382E87B1473dFd7894797326";
     }
     await deployer.deploy(PlutoLens);
     await deployer.deploy(NestPriceOracle, nestQuery);
