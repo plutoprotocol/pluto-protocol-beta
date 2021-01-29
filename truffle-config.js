@@ -75,10 +75,10 @@ module.exports = {
     ropsten: {
       provider: () => new HDWalletProvider(process.env.mnemonic, `wss://ropsten.infura.io/ws/v3/98520c87aac949ac9c2310084b2d48b8`),
       network_id: 3,       // Ropsten's id
-      gas: 5500000,        // Ropsten has a lower block limit than mainnet
+     // gas: 7500000,        // Ropsten has a lower block limit than mainnet
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-      gasPrice: 160000000000,
+      gasPrice: 100000000000,
       skipDryRun: true,     // Skip dry run before migrations? (default: false for public nets )
       websockets: true
     },
