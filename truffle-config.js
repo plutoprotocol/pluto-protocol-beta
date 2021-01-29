@@ -65,7 +65,7 @@ module.exports = {
       gas: 5500000,
       confirmations: 2,
       timeoutBlocks: 200,
-      gasPrice: 160000000000,
+      gasPrice: 88000000000,
       skipDryRun: false,
       websockets: true
     },

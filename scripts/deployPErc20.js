@@ -8,7 +8,7 @@ const argv = require('yargs').argv;
 let reserveFactor = 0.15e18.toString();
 let underlyingTokenAddr = "0xd3f1be7f74d25f39184d2d0670966e2e837562e3";
 let collateralFactor = 0.05e18.toString();
-let interestModelAddress = "0x84A2EF7467001d970CE79AD71f2Cf4d553f15403";
+let interestModelAddress = "0x30126F38e9243740fE4359aF6c1f52c2FF06dC92";
 module.exports = async function(callback) {
     try {
         console.log(`argv> token=${argv.token}, collateralFactor=${argv.collateralFactor}`);
